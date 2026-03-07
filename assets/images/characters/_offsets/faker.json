@@ -6,28 +6,28 @@
 	"animOffsets": [
 		[
 			"singDOWN",
-			-8,
-			0
+			31,
+			-21
 		],
 		[
 			"singUP",
-			3,
-			-11
+			-6,
+			8
 		],
 		[
 			"singLEFT",
-			-15,
-			-1
+			-25,
+			7
 		],
 		[
 			"singRIGHT",
-			36,
-			-6
+			9,
+			-23
 		],
 		[
 			"idle",
 			0,
-			-3
+			-1
 		]
 	],
 	"ratingsOffset": [
