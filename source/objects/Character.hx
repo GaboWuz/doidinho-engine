@@ -64,11 +64,11 @@ class Character extends FlxAnimate
 				doidoChar.spritesheet += 'gabolegacy/gagbis_assets';
 				
 				doidoChar.anims = [
-					['idle',		'idle', 12, false],
-					['singRIGHT',	'right', 12, false],
-					['singDOWN', 	'down', 12, false],
-					['singUP', 		'up', 12, false],
-					['singLEFT',	'left', 12, false],
+					['idle',		'idle', 24, false],
+					['singRIGHT',	'right', 24, false],
+					['singDOWN', 	'down', 24, false],
+					['singUP', 		'up', 24, false],
+					['singLEFT',	'left', 24, false],
 				];
 			scale.set(1.3,1.3);
 				
@@ -76,11 +76,11 @@ class Character extends FlxAnimate
 				doidoChar.spritesheet += 'fakerlegacy/fakerer_assets';
 				
 				doidoChar.anims = [
-					['idle',		'idle', 12, false],
-					['singRIGHT',	'right', 12, false],
-					['singDOWN', 	'down', 12, false],
-					['singUP', 		'up', 12, false],
-					['singLEFT',	'left', 12, false]
+					['idle',		'idle', 24, false],
+					['singRIGHT',	'right', 24, false],
+					['singDOWN', 	'down', 24, false],
+					['singUP', 		'up', 24, false],
+					['singLEFT',	'left', 24, false]
 				];
 			scale.set(1.3,1.3);
 				

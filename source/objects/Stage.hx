@@ -164,10 +164,10 @@ class Stage extends FlxGroup
 				
 				bfPos.x = 1070;
 				dadPos.x = 400;
-				gfPos.x = 700;
-				bfPos.y += 300;
-				dadPos.y += 330;
-				gfPos.y += 300;
+				gfPos.x = 750;
+				bfPos.y += 500;
+				dadPos.y += 550;
+				gfPos.y += 450;
 				
 				fundo = new FlxSprite(0, -400).loadGraphic(Paths.image("stages/legacy/gabofundotarde0009"));
 				fundo.setGraphicSize(Std.int(fundo.width * 2));
@@ -226,10 +226,10 @@ class Stage extends FlxGroup
 				
 				bfPos.x = 1070;
 				dadPos.x = 400;
-				gfPos.x = 700;
-				bfPos.y = 800;
-				dadPos.y = 830;
-				gfPos.y = 800;
+				gfPos.x = 750;
+				bfPos.y += 500;
+				dadPos.y += 550;
+				gfPos.y += 450;
 				
 				fundo = new FlxSprite(0, -400).loadGraphic(Paths.image("stages/legacy/gabofundonoite0008"));
 				fundo.setGraphicSize(Std.int(fundo.width * 2));
