@@ -218,7 +218,7 @@ class Stage extends FlxGroup
 				frente.setGraphicSize(Std.int(frente.width * 2));
 				frente.scrollFactor.set(0.1,0.1);
 				frente.alpha = 0.25;
-				frente.blend = 1;
+				frente.blend = BlendMode.SCREEN; 
 				add(frente);
 				
 			case "nightlegacy":
@@ -275,7 +275,7 @@ class Stage extends FlxGroup
 				frente.setGraphicSize(Std.int(frente.width * 2));
 				frente.scrollFactor.set(0.1,0.1);
 				frente.alpha = 0.25;
-				frente.blend = 1;
+				frente.blend = BlendMode.MULTIPLY;
 				add(frente);
 		}
 	}
