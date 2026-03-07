@@ -165,9 +165,9 @@ class Stage extends FlxGroup
 				bfPos.x = 1070;
 				dadPos.x = 400;
 				gfPos.x = 700;
-				bfPos.y = 800;
-				dadPos.y = 830;
-				gfPos.y = 800;
+				bfPos.y += 300;
+				dadPos.y += 330;
+				gfPos.y += 300;
 				
 				fundo = new FlxSprite(0, -400).loadGraphic(Paths.image("stages/legacy/gabofundotarde0009"));
 				fundo.setGraphicSize(Std.int(fundo.width * 2));

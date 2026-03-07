@@ -65,22 +65,24 @@ class Character extends FlxAnimate
 				
 				doidoChar.anims = [
 					['idle',		'idle', 12, false],
-					['singRIGHT',	'left', 12, false],
+					['singRIGHT',	'right', 12, false],
 					['singDOWN', 	'down', 12, false],
 					['singUP', 		'up', 12, false],
-					['singLEFT',	'right', 12, false],
+					['singLEFT',	'left', 12, false],
 				];
+			scale.set(1.3,1.3);
 				
 			case "faker":
 				doidoChar.spritesheet += 'fakerlegacy/fakerer_assets';
 				
 				doidoChar.anims = [
 					['idle',		'idle', 12, false],
-					['singRIGHT',	'left', 12, false],
+					['singRIGHT',	'right', 12, false],
 					['singDOWN', 	'down', 12, false],
 					['singUP', 		'up', 12, false],
-					['singLEFT',	'right', 12, false]
+					['singLEFT',	'left', 12, false]
 				];
+			scale.set(1.3,1.3);
 				
 			case "gf":
 				spriteType = ATLAS;
