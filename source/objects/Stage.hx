@@ -31,6 +31,17 @@ class Stage extends FlxGroup
 	var lowQuality:Bool = false;
 
 	var gfSong:String = "stage-set";
+	
+	var fundo:FlxSprite;
+	var coisa:FlxSprite;
+	var nuvens:FlxSprite;
+	var sol:FlxSprite;
+	var arbuto:FlxSprite;
+	var predio:FlxSprite;
+	var th:FlxSprite;
+	var rua:FlxSprite;
+	var chao:FlxSprite;
+	var frente:FlxSprite;
 
 	public function new() {
 		super();
