@@ -5,6 +5,7 @@ import flixel.FlxSprite;
 import flixel.group.FlxGroup;
 import flixel.math.FlxPoint;
 import states.PlayState;
+import openfl.display.BlendMode
 
 class Stage extends FlxGroup
 {
