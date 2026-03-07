@@ -162,14 +162,14 @@ class Stage extends FlxGroup
 			case "daylegacy":
 				camZoom = 0.675;
 				
-				bfPos.x = 1070;
-				dadPos.x = 400;
-				gfPos.x = 750;
-				bfPos.y += 500;
-				dadPos.y += 550;
-				gfPos.y += 450;
+				bfPos.x = 1470;
+				dadPos.x = 800;
+				gfPos.x = 1150;
+				bfPos.y += 800;
+				dadPos.y += 850;
+				gfPos.y += 780;
 				
-				fundo = new FlxSprite(0, -400).loadGraphic(Paths.image("stages/legacy/gabofundotarde0009"));
+				fundo = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/legacy/gabofundotarde0009"));
 				fundo.setGraphicSize(Std.int(fundo.width * 2));
 				fundo.scrollFactor.set(0.1,0.1);
 				add(fundo);
@@ -209,7 +209,7 @@ class Stage extends FlxGroup
 				rua.scrollFactor.set(0.9,0.9);
 				add(rua);
 				
-				chao = new FlxSprite(210, 360).loadGraphic(Paths.image("stages/legacy/gabofundotarde0002"));
+				chao = new FlxSprite(210, 360).loadGraphic(Paths.image("stages/legacy/gabofundotarde0001"));
 				chao.setGraphicSize(Std.int(chao.width * 2.1267));
 				chao.scrollFactor.set(0.9,0.9);
 				add(chao);
@@ -220,16 +220,17 @@ class Stage extends FlxGroup
 				frente.alpha = 0.25;
 				frente.blend = BlendMode.SCREEN; 
 				add(frente);
+				frente.cameras = [PlayState.instance.camHUD];
 				
 			case "nightlegacy":
 				camZoom = 0.767;
 				
-				bfPos.x = 1070;
-				dadPos.x = 400;
-				gfPos.x = 750;
-				bfPos.y += 500;
-				dadPos.y += 550;
-				gfPos.y += 450;
+				bfPos.x = 1470;
+				dadPos.x = 800;
+				gfPos.x = 1150;
+				bfPos.y += 800;
+				dadPos.y += 850;
+				gfPos.y += 780;
 				
 				fundo = new FlxSprite(0, -400).loadGraphic(Paths.image("stages/legacy/gabofundonoite0008"));
 				fundo.setGraphicSize(Std.int(fundo.width * 2));
@@ -266,7 +267,7 @@ class Stage extends FlxGroup
 				rua.scrollFactor.set(0.9,0.9);
 				add(rua);
 				
-				chao = new FlxSprite(210, 360).loadGraphic(Paths.image("stages/legacy/gabofundotarde0002"));
+				chao = new FlxSprite(210, 360).loadGraphic(Paths.image("stages/legacy/gabofundotarde0001"));
 				chao.setGraphicSize(Std.int(chao.width * 2.1267));
 				chao.scrollFactor.set(0.9,0.9);
 				add(chao);
@@ -277,6 +278,7 @@ class Stage extends FlxGroup
 				frente.alpha = 0.25;
 				frente.blend = BlendMode.MULTIPLY;
 				add(frente);
+				frente.cameras = [PlayState.instance.camHUD];
 		}
 	}
 
