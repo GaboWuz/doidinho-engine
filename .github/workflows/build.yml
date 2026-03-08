@@ -78,8 +78,8 @@ jobs:
           path: 'export/release/linux/bin'
             
   build-macos:
-    # hoping setting this to macos 13 will keep it working on intel macs??? i don't actually own any apple hardware so i'm just guessing here...
-    runs-on: macos-13
+    # hoping setting this to macos 14 will keep it working on intel macs??? i don't actually own any apple hardware so i'm just guessing here...
+    runs-on: macos-14
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it

@@ -1116,22 +1116,22 @@ class PlayState extends MusicBeatState
 			Conductor.songPos += elapsed * 1000 * songSpeed;
 
 		pressed = [
-			Controls.pressed(LEFT) #if TOUCH_CONTROLS || hitbox.buttonLeft.pressed #end,
-			Controls.pressed(DOWN) #if TOUCH_CONTROLS || hitbox.buttonDown.pressed #end,
-			Controls.pressed(UP) #if TOUCH_CONTROLS || hitbox.buttonUp.pressed #end,
-			Controls.pressed(RIGHT) #if TOUCH_CONTROLS || hitbox.buttonRight.pressed #end,
+			Controls.pressed(LEFT) #if TOUCH_CONTROLS || hitbox.checkButton(left, PRESSED) #end,
+			Controls.pressed(DOWN) #if TOUCH_CONTROLS || hitbox.checkButton(down, PRESSED) #end,
+			Controls.pressed(UP) #if TOUCH_CONTROLS || hitbox.checkButton(up, PRESSED) #end,
+			Controls.pressed(RIGHT) #if TOUCH_CONTROLS || hitbox.checkButton(right, PRESSED) #end,
 		];
 		justPressed = [
-			Controls.justPressed(LEFT) #if TOUCH_CONTROLS || hitbox.buttonLeft.justPressed #end,
-			Controls.justPressed(DOWN) #if TOUCH_CONTROLS || hitbox.buttonDown.justPressed #end,
-			Controls.justPressed(UP) #if TOUCH_CONTROLS || hitbox.buttonUp.justPressed #end,
-			Controls.justPressed(RIGHT) #if TOUCH_CONTROLS || hitbox.buttonRight.justPressed #end,
+			Controls.justPressed(LEFT) #if TOUCH_CONTROLS || hitbox.checkButton(left, JUST_PRESSED) #end,
+			Controls.justPressed(DOWN) #if TOUCH_CONTROLS || hitbox.checkButton(down, JUST_PRESSED) #end,
+			Controls.justPressed(UP) #if TOUCH_CONTROLS || hitbox.checkButton(up, JUST_PRESSED) #end,
+			Controls.justPressed(RIGHT) #if TOUCH_CONTROLS || hitbox.checkButton(right, JUST_PRESSED) #end,
 		];
 		released = [
-			Controls.released(LEFT) #if TOUCH_CONTROLS || hitbox.buttonLeft.released #end,
-			Controls.released(DOWN) #if TOUCH_CONTROLS || hitbox.buttonDown.released #end,
-			Controls.released(UP) #if TOUCH_CONTROLS || hitbox.buttonUp.released #end,
-			Controls.released(RIGHT) #if TOUCH_CONTROLS || hitbox.buttonRight.released #end,
+			Controls.released(LEFT) #if TOUCH_CONTROLS || hitbox.checkButton(left, RELEASED) #end,
+			Controls.released(DOWN) #if TOUCH_CONTROLS || hitbox.checkButton(down, RELEASED) #end,
+			Controls.released(UP) #if TOUCH_CONTROLS || hitbox.checkButton(up, RELEASED) #end,
+			Controls.released(RIGHT) #if TOUCH_CONTROLS || hitbox.checkButton(right, RELEASED) #end,
 		];
 		
 		/*#if TOUCH_CONTROLS
