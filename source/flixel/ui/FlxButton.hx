@@ -1,4 +1,4 @@
-package mobile;
+package flixel.ui;
 
 import flixel.FlxCamera;
 import flixel.FlxG;
@@ -471,4 +471,5 @@ private class FlxButtonEvent implements IFlxDestroyable
 			sound.play(true);
 		#end
 	}
+
 }
