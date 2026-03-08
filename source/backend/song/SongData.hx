@@ -58,8 +58,8 @@ class SongData
 		},
 		{
 			songs: [
-				["lapoluz", "dad"],
-				["faker-identity", "dad"],
+				["lapoluz", "gabos"],
+				["faker-identity", "faker"],
 			],
 			diffs: ['easy', 'normal'],
 			freeplayOnly: true,
