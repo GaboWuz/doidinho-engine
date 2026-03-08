@@ -1,5 +1,10 @@
 package objects;
 
+// text here
+import backend.song.*;
+import backend.song.SongData.SwagSong;
+import backend.song.SongData.SwagSection;
+
 import crowplexus.iris.Iris;
 import flixel.FlxSprite;
 import flixel.group.FlxGroup;
@@ -14,6 +19,7 @@ class Stage extends FlxGroup
 	public var curStage:String = "";
 	public var gfVersion:String = "no-gf";
 	public var camZoom:Float = 1;
+	public var curSong:String = "";
 
 	// things to help your stage get better
 	public var bfPos:FlxPoint  = new FlxPoint();
@@ -95,7 +101,7 @@ class Stage extends FlxGroup
 		else
 			loadCode(curStage);
 
-		PlayState.defaultCamZoom = camZoom;
+		PlayState.camZoom = camZoom;
 	}
 
 	public function preloadScript(stage:String = "")
@@ -164,12 +170,12 @@ class Stage extends FlxGroup
 				
 				bfPos.x = 1470;
 				dadPos.x = 800;
-				gfPos.x = 1170;
+				gfPos.x = 1150;
 				bfPos.y += 850;
 				dadPos.y += 900;
 				gfPos.y += 790;
 				
-				bfCam.x -= 70;
+				bfCam.x -= 85;
 				
 				fundo = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/legacy/gabofundotarde0009"));
 				fundo.setGraphicSize(Std.int(fundo.width * 2));
@@ -228,7 +234,7 @@ class Stage extends FlxGroup
 				
 				bfPos.x = 1470;
 				dadPos.x = 800;
-				gfPos.x = 1170;
+				gfPos.x = 1150;
 				bfPos.y += 850;
 				dadPos.y += 900;
 				gfPos.y += 790;
@@ -305,6 +311,145 @@ class Stage extends FlxGroup
 	{
 		// beat hit
 		// if(curStep % 4 == 0)
+		
+		switch(PlayState.SONG.song)
+		{
+		case "lapoluz": // legacy
+			if (curStep == 256)
+			{
+			camZoom = 0.675;
+			}
+			if (curStep == 320)
+			{
+			camZoom = 0.715;
+			}
+			if (curStep == 352)
+			{
+			camZoom = 0.915;
+			}
+			if (curStep == 356)
+			{
+			camZoom = 0.715;
+			}
+			if (curStep == 358)
+			{
+			camZoom = 0.815;
+			}
+			if (curStep == 362)
+			{
+			camZoom = 0.715;
+			}
+			if (curStep == 364)
+			{
+			camZoom = 0.615;
+			}
+			if (curStep == 380)
+			{
+			camZoom = 0.515;
+			}
+			if (curStep == 382)
+			{
+			camZoom = 0.615;
+			}
+			if (curStep == 384)
+			{
+			camZoom = 0.715;
+			}
+			if (curStep == 512)
+			{
+			camZoom = 1;
+			}
+			if (curStep == 539)
+			{
+			camZoom = 1.25;
+			}
+			if (curStep == 544)
+			{
+			camZoom = 1;
+			}
+			if (curStep == 576)
+			{
+			camZoom = 1.15;
+			}
+			if (curStep == 640)
+			{
+			camZoom = 1;
+			}
+			if (curStep == 667)
+			{
+			camZoom = 1.25;
+			}
+			if (curStep == 672)
+			{
+			camZoom = 1;
+			}
+			if (curStep == 704)
+			{
+			camZoom = 1.15;
+			}
+			if (curStep == 768)
+			{
+			camZoom = 1;
+			}
+			if (curStep == 910)
+			{
+			camZoom = 0.915;
+			}
+			if (curStep == 918)
+			{
+			camZoom = 0.815;
+			}
+			if (curStep == 960)
+			{
+			camZoom = 1;
+			}
+			if (curStep == 976)
+			{
+			camZoom = 0.915;
+			}
+			if (curStep == 1008)
+			{
+			camZoom = 0.615;
+			}
+			if (curStep == 1016)
+			{
+			camZoom = 0.515;
+			}
+			if (curStep == 1026)
+			{
+			camZoom = 0.615;
+			}
+			if (curStep == 1068)
+			{
+			camZoom = 0.915;
+			}
+			if (curStep == 1090)
+			{
+			camZoom = 0.815;
+			}
+			if (curStep == 1136)
+			{
+			camZoom = 0.515;
+			}
+			if (curStep == 1152)
+			{
+			camZoom = 0.815;
+			}
+			if (curStep == 1280)
+			{
+			camZoom = 1.15;
+			}
+			if (curStep == 1344)
+			{
+			camZoom = 1.25;
+			}
+			if (curStep == 1408)
+			{
+			camZoom = 0.615;
+			}
+		case "faker-identity":
+			// nunca teve events
+		}
 
 		callScript("stepHit", [curStep]);
 	}
