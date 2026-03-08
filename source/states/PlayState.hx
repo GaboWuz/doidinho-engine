@@ -1116,22 +1116,22 @@ class PlayState extends MusicBeatState
 			Conductor.songPos += elapsed * 1000 * songSpeed;
 
 		pressed = [
-			Controls.pressed(LEFT) #if TOUCH_CONTROLS || hitbox.left.pressed #end,
-			Controls.pressed(DOWN) #if TOUCH_CONTROLS || hitbox.down.pressed #end,
-			Controls.pressed(UP) #if TOUCH_CONTROLS || hitbox.up.pressed #end,
-			Controls.pressed(RIGHT) #if TOUCH_CONTROLS || hitbox.right.pressed #end,
+			Controls.pressed(LEFT) #if TOUCH_CONTROLS || hitbox.buttonLeft.pressed #end,
+			Controls.pressed(DOWN) #if TOUCH_CONTROLS || hitbox.buttonDown.pressed #end,
+			Controls.pressed(UP) #if TOUCH_CONTROLS || hitbox.buttonUp.pressed #end,
+			Controls.pressed(RIGHT) #if TOUCH_CONTROLS || hitbox.buttonRight.pressed #end,
 		];
 		justPressed = [
-			Controls.justPressed(LEFT) #if TOUCH_CONTROLS || hitbox.left.justPressed #end,
-			Controls.justPressed(DOWN) #if TOUCH_CONTROLS || hitbox.down.justPressed #end,
-			Controls.justPressed(UP) #if TOUCH_CONTROLS || hitbox.up.justPressed #end,
-			Controls.justPressed(RIGHT) #if TOUCH_CONTROLS || hitbox.right.justPressed #end,
+			Controls.justPressed(LEFT) #if TOUCH_CONTROLS || hitbox.buttonLeft.justPressed #end,
+			Controls.justPressed(DOWN) #if TOUCH_CONTROLS || hitbox.buttonDown.justPressed #end,
+			Controls.justPressed(UP) #if TOUCH_CONTROLS || hitbox.buttonUp.justPressed #end,
+			Controls.justPressed(RIGHT) #if TOUCH_CONTROLS || hitbox.buttonRight.justPressed #end,
 		];
 		released = [
-			Controls.released(LEFT) #if TOUCH_CONTROLS || hitbox.left.released #end,
-			Controls.released(DOWN) #if TOUCH_CONTROLS || hitbox.down.released #end,
-			Controls.released(UP) #if TOUCH_CONTROLS || hitbox.up.released #end,
-			Controls.released(RIGHT) #if TOUCH_CONTROLS || hitbox.right.released #end,
+			Controls.released(LEFT) #if TOUCH_CONTROLS || hitbox.buttonLeft.released #end,
+			Controls.released(DOWN) #if TOUCH_CONTROLS || hitbox.buttonDown.released #end,
+			Controls.released(UP) #if TOUCH_CONTROLS || hitbox.buttonUp.released #end,
+			Controls.released(RIGHT) #if TOUCH_CONTROLS || hitbox.buttonRight.released #end,
 		];
 
 		/*#if TOUCH_CONTROLS
