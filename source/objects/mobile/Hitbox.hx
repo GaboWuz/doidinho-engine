@@ -3,7 +3,6 @@ package objects.mobile;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.group.FlxSpriteGroup;
-import flixel.ui.FlxButton;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.input.FlxInput.FlxInputState;
