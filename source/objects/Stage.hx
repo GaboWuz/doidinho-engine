@@ -242,7 +242,7 @@ class Stage extends FlxGroup
 				dadPos.y += 900;
 				gfPos.y += 790;
 				
-				fundo = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/legacy/gabofundonoite0008"));
+				fundo = new FlxSprite(-200, -200).loadGraphic(Paths.image("stages/legacy/gabofundonoite0008"));
 				fundo.setGraphicSize(Std.int(fundo.width * 2));
 				fundo.scrollFactor.set(0.1,0.1);
 				add(fundo);
@@ -282,7 +282,7 @@ class Stage extends FlxGroup
 				chao.scrollFactor.set(0.9,0.9);
 				add(chao);
 				
-				frente = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/legacy/gabofundonoite0008"));
+				frente = new FlxSprite(-200, -200).loadGraphic(Paths.image("stages/legacy/gabofundonoite0008"));
 				frente.setGraphicSize(Std.int(frente.width * 2.9));
 				frente.scrollFactor.set(0.1,0.1);
 				frente.alpha = 0.35;
@@ -295,45 +295,45 @@ class Stage extends FlxGroup
 	{
 		switch(curStep)
 		{
-			case 128:  tweenCamZoom(1, 5.50);
-			case 256:  camZoom = 0.675;
-			case 320:  camZoom = 0.715;
-			case 352:  camZoom = 0.915;
-			case 356:  camZoom = 0.715;
-			case 358:  camZoom = 0.815;
-			case 362:  camZoom = 0.715;
-			case 364:  camZoom = 0.615;
-			case 380:  camZoom = 0.515;
-			case 382:  camZoom = 0.615;
-			case 384:  camZoom = 0.715;
-			case 512:  camZoom = 1;
-			case 539:  camZoom = 1.25;
-			case 544:  camZoom = 1;
-			case 576:  camZoom = 1.15;
-			case 640:  camZoom = 1;
-			case 667:  camZoom = 1.25;
-			case 672:  camZoom = 1;
-			case 704:  camZoom = 1.15;
-			case 768:  camZoom = 1;
-			case 910:  camZoom = 0.915;
-			case 918:  camZoom = 0.815;
-			case 960:  camZoom = 1;
-			case 976:  camZoom = 0.915;
-			case 1008: camZoom = 0.615;
-			case 1016: camZoom = 0.515;
-			case 1026: camZoom = 0.615;
-			case 1068: camZoom = 0.915;
-			case 1090: camZoom = 0.815;
-			case 1136: camZoom = 0.515;
-			case 1152: camZoom = 0.815;
-			case 1280: camZoom = 1.15;
-			case 1344: camZoom = 1.25;
-			case 1408: camZoom = 0.615;
+			case 128: tweenCamZoom(1, 5.50);
+			case 256: tweenCamZoom(0.675);
+		    case 320: tweenCamZoom(0.715);
+		    case 352: tweenCamZoom(0.915);
+		    case 356: tweenCamZoom(0.715);
+		    case 358: tweenCamZoom(0.815);
+		    case 362: tweenCamZoom(0.715);
+		    case 364: tweenCamZoom(0.615);
+		    case 380: tweenCamZoom(0.595);
+		    case 382: tweenCamZoom(0.615);
+		    case 384: tweenCamZoom(0.715);
+		    case 512: tweenCamZoom(1.0);
+		    case 539: tweenCamZoom(1.25);
+		    case 544: tweenCamZoom(1.0);
+		    case 576: tweenCamZoom(1.15);
+		    case 640: tweenCamZoom(1.0);
+		    case 667: tweenCamZoom(1.25);
+		    case 672: tweenCamZoom(1.0);
+		    case 704: tweenCamZoom(1.15);
+		    case 768: tweenCamZoom(1.0);
+		    case 910: tweenCamZoom(0.915);
+		    case 918: tweenCamZoom(0.815);
+		    case 960: tweenCamZoom(1.0);
+		    case 976: tweenCamZoom(0.915);
+		    case 1008: tweenCamZoom(0.615);
+		    case 1016: tweenCamZoom(0.595);
+		    case 1026: tweenCamZoom(0.615);
+		    case 1068: tweenCamZoom(0.915);
+		    case 1090: tweenCamZoom(0.815);
+		    case 1136: tweenCamZoom(0.595);
+		    case 1152: tweenCamZoom(0.815);
+		    case 1280: tweenCamZoom(1.15);
+		    case 1344: tweenCamZoom(1.25);
+		    case 1408: tweenCamZoom(0.615);
 		}
 		PlayState.defaultCamZoom = camZoom;
 	}
 	
-	private function tweenCamZoom(zoomAlvo:Float, duracao:Float = 0.8):Void
+	private function tweenCamZoom(zoomAlvo:Float, duracao:Float = 0.95):Void
 	{
 	    FlxTween.tween(PlayState.instance.camGame, {zoom: zoomAlvo}, duracao, {
 	        ease: FlxEase.sineInOut,
