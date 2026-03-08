@@ -1116,25 +1116,25 @@ class PlayState extends MusicBeatState
 			Conductor.songPos += elapsed * 1000 * songSpeed;
 
 		pressed = [
-			Controls.pressed(LEFT) #if TOUCH_CONTROLS || hitbox.checkButton(CoolUtil.getDirection(0), PRESSED) #end,
-			Controls.pressed(DOWN) #if TOUCH_CONTROLS || hitbox.checkButton(CoolUtil.getDirection(1), PRESSED) #end,
-			Controls.pressed(UP) #if TOUCH_CONTROLS || hitbox.checkButton(CoolUtil.getDirection(2), PRESSED) #end,
-			Controls.pressed(RIGHT) #if TOUCH_CONTROLS || hitbox.checkButton(CoolUtil.getDirection(3), PRESSED) #end,
+			Controls.pressed(LEFT),
+			Controls.pressed(DOWN),
+			Controls.pressed(UP),
+			Controls.pressed(RIGHT),
 		];
 		justPressed = [
-			Controls.justPressed(LEFT) #if TOUCH_CONTROLS || hitbox.checkButton(CoolUtil.getDirection(0), JUST_PRESSED) #end,
-			Controls.justPressed(DOWN) #if TOUCH_CONTROLS || hitbox.checkButton(CoolUtil.getDirection(1), JUST_PRESSED) #end,
-			Controls.justPressed(UP) #if TOUCH_CONTROLS || hitbox.checkButton(CoolUtil.getDirection(2), JUST_PRESSED) #end,
-			Controls.justPressed(RIGHT) #if TOUCH_CONTROLS || hitbox.checkButton(CoolUtil.getDirection(3), JUST_PRESSED) #end,
+			Controls.justPressed(LEFT),
+			Controls.justPressed(DOWN),
+			Controls.justPressed(UP),
+			Controls.justPressed(RIGHT),
 		];
 		released = [
-			Controls.released(LEFT) #if TOUCH_CONTROLS || hitbox.checkButton(CoolUtil.getDirection(0), RELEASED) #end,
-			Controls.released(DOWN) #if TOUCH_CONTROLS || hitbox.checkButton(CoolUtil.getDirection(1), RELEASED) #end,
-			Controls.released(UP) #if TOUCH_CONTROLS || hitbox.checkButton(CoolUtil.getDirection(2), RELEASED) #end,
-			Controls.released(RIGHT) #if TOUCH_CONTROLS || hitbox.checkButton(CoolUtil.getDirection(3), RELEASED) #end,
+			Controls.released(LEFT),
+			Controls.released(DOWN),
+			Controls.released(UP),
+			Controls.released(RIGHT),
 		];
 		
-		/*#if TOUCH_CONTROLS
+       #if TOUCH_CONTROLS
 		for(i in 0...CoolUtil.directions.length) {
 			if(hitbox.checkButton(CoolUtil.directions[i], PRESSED))
 				pressed[i] = true;
@@ -1145,7 +1145,7 @@ class PlayState extends MusicBeatState
 			if(hitbox.checkButton(CoolUtil.directions[i], RELEASED))
 				released[i] = true;
 		}
-		#end*/
+		#end
 
 		playerSinging = false;
 
