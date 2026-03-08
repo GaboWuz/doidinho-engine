@@ -1133,7 +1133,7 @@ class PlayState extends MusicBeatState
 			Controls.released(UP) #if TOUCH_CONTROLS || hitbox.buttonUp.released #end,
 			Controls.released(RIGHT) #if TOUCH_CONTROLS || hitbox.buttonRight.released #end,
 		];
-
+		
 		/*#if TOUCH_CONTROLS
 		for(i in 0...CoolUtil.directions.length) {
 			if(hitbox.checkButton(CoolUtil.directions[i], PRESSED))
