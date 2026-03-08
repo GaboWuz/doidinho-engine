@@ -12,6 +12,9 @@ import flixel.math.FlxPoint;
 import states.PlayState;
 import openfl.display.BlendMode;
 
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+
 class Stage extends FlxGroup
 {
 	public static var instance:Stage;
@@ -292,6 +295,7 @@ class Stage extends FlxGroup
 	{
 		switch(curStep)
 		{
+			case 128:  tweenCamZoom(1, 5.50);
 			case 256:  camZoom = 0.675;
 			case 320:  camZoom = 0.715;
 			case 352:  camZoom = 0.915;
@@ -327,6 +331,16 @@ class Stage extends FlxGroup
 			case 1408: camZoom = 0.615;
 		}
 		PlayState.defaultCamZoom = camZoom;
+	}
+	
+	private function tweenCamZoom(zoomAlvo:Float, duracao:Float = 0.8):Void
+	{
+	    FlxTween.tween(PlayState.instance.camGame, {zoom: zoomAlvo}, duracao, {
+	        ease: FlxEase.sineInOut,
+	        onComplete: function(_) {
+	            PlayState.defaultCamZoom = zoomAlvo;
+	        }
+	    });
 	}
 
 	public function getGfVersion(curStage:String)
