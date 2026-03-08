@@ -217,10 +217,10 @@ class Stage extends FlxGroup
 				frente = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/legacy/gabofundotarde0009"));
 				frente.setGraphicSize(Std.int(frente.width * 2));
 				frente.scrollFactor.set(0.1,0.1);
+				frente.cameras = [PlayState.instance.camHUD];
 				frente.alpha = 0.25;
 				frente.blend = BlendMode.SCREEN; 
 				add(frente);
-				frente.cameras = [PlayState.instance.camHUD];
 				
 			case "nightlegacy":
 				camZoom = 0.767;
@@ -276,9 +276,9 @@ class Stage extends FlxGroup
 				frente.setGraphicSize(Std.int(frente.width * 2));
 				frente.scrollFactor.set(0.1,0.1);
 				frente.alpha = 0.25;
+				frente.cameras = [PlayState.instance.camHUD];
 				frente.blend = BlendMode.MULTIPLY;
 				add(frente);
-				frente.cameras = [PlayState.instance.camHUD];
 		}
 	}
 
