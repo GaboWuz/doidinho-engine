@@ -225,8 +225,8 @@ class Stage extends FlxGroup
 				chao.scrollFactor.set(0.9,0.9);
 				add(chao);
 				
-				frente = new FlxSprite(-200, -200).loadGraphic(Paths.image("stages/legacy/gabofundotarde0009"));
-				frente.setGraphicSize(Std.int(frente.width * 2));
+				frente = new FlxSprite(-200, 0).loadGraphic(Paths.image("stages/legacy/gabofundotarde0009"));
+				frente.setGraphicSize(Std.int(frente.width * 2.9));
 				frente.scrollFactor.set(0.1,0.1);
 				frente.alpha = 0.25;
 				frente.blend = BlendMode.SCREEN; 
@@ -296,39 +296,39 @@ class Stage extends FlxGroup
 	    switch(curStep)
 	    {
 	        case 128: tweenCamZoom(1, 5.50);
-	        case 256: tweenCamZoom(0.675);
-	        case 320: tweenCamZoom(0.715);
-	        case 352: tweenCamZoom(0.915);
-	        case 356: tweenCamZoom(0.715);
-	        case 358: tweenCamZoom(0.815);
-	        case 362: tweenCamZoom(0.715);
-	        case 364: tweenCamZoom(0.615);
-	        case 380: tweenCamZoom(0.595);
-	        case 382: tweenCamZoom(0.615);
-	        case 384: tweenCamZoom(0.715);
-	        case 512: tweenCamZoom(1.0);
-	        case 539: tweenCamZoom(1.25);
-	        case 544: tweenCamZoom(1.0);
-	        case 576: tweenCamZoom(1.15);
-	        case 640: tweenCamZoom(1.0);
-	        case 667: tweenCamZoom(1.25);
-	        case 672: tweenCamZoom(1.0);
-	        case 704: tweenCamZoom(1.15);
-	        case 768: tweenCamZoom(1.0);
-	        case 910: tweenCamZoom(0.915);
-	        case 918: tweenCamZoom(0.815);
-	        case 960: tweenCamZoom(1.0);
-	        case 976: tweenCamZoom(0.915);
-	        case 1008: tweenCamZoom(0.615);
-	        case 1016: tweenCamZoom(0.595);
-	        case 1026: tweenCamZoom(0.615);
-	        case 1068: tweenCamZoom(0.915);
-	        case 1090: tweenCamZoom(0.815);
-	        case 1136: tweenCamZoom(0.595);
-	        case 1152: tweenCamZoom(0.815);
-	        case 1280: tweenCamZoom(1.15);
-	        case 1344: tweenCamZoom(1.25);
-	        case 1408: tweenCamZoom(0.615);
+	        case 256: tweenCamZoom(0.675, 0.75);
+	        case 320: tweenCamZoom(0.715, 0.75);
+	        case 352: tweenCamZoom(0.915, 0.75);
+	        case 356: tweenCamZoom(0.715, 0.75);
+	        case 358: tweenCamZoom(0.815, 0.75);
+	        case 362: tweenCamZoom(0.715, 0.75);
+	        case 364: tweenCamZoom(0.635, 0.75);
+	        case 380: tweenCamZoom(0.605, 0.75);
+	        case 382: tweenCamZoom(0.635, 0.75);
+	        case 384: tweenCamZoom(0.715, 0.75);
+	        case 512: tweenCamZoom(1.0, 0.75);
+	        case 539: tweenCamZoom(1.25, 0.75);
+	        case 544: tweenCamZoom(1.0, 0.75);
+	        case 576: tweenCamZoom(1.15, 0.75);
+	        case 640: tweenCamZoom(1.0, 0.75);
+	        case 667: tweenCamZoom(1.25, 0.75);
+	        case 672: tweenCamZoom(1.0, 0.75);
+	        case 704: tweenCamZoom(1.15, 0.75);
+	        case 768: tweenCamZoom(1.0, 0.75);
+	        case 910: tweenCamZoom(0.915, 0.75);
+	        case 918: tweenCamZoom(0.815, 0.75);
+	        case 960: tweenCamZoom(1.0, 0.75);
+	        case 976: tweenCamZoom(0.915, 0.75);
+	        case 1008: tweenCamZoom(0.635, 0.75);
+	        case 1016: tweenCamZoom(0.605, 0.75);
+	        case 1026: tweenCamZoom(0.635, 0.75);
+	        case 1068: tweenCamZoom(0.915, 0.75);
+	        case 1090: tweenCamZoom(0.815, 0.75);
+	        case 1136: tweenCamZoom(0.605, 0.75);
+	        case 1152: tweenCamZoom(0.815, 0.75);
+	        case 1280: tweenCamZoom(1.15, 0.75);
+	        case 1344: tweenCamZoom(1.25, 0.75);
+	        case 1408: tweenCamZoom(0.635, 0.75);
 	    }
 	}
 	
