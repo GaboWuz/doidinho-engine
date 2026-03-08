@@ -287,6 +287,47 @@ class Stage extends FlxGroup
 				foreground.add(frente);
 		}
 	}
+	
+	private function lapoluzStepHit(curStep:Int):Void
+	{
+		switch(curStep)
+		{
+			case 256:  camZoom = 0.675;
+			case 320:  camZoom = 0.715;
+			case 352:  camZoom = 0.915;
+			case 356:  camZoom = 0.715;
+			case 358:  camZoom = 0.815;
+			case 362:  camZoom = 0.715;
+			case 364:  camZoom = 0.615;
+			case 380:  camZoom = 0.515;
+			case 382:  camZoom = 0.615;
+			case 384:  camZoom = 0.715;
+			case 512:  camZoom = 1;
+			case 539:  camZoom = 1.25;
+			case 544:  camZoom = 1;
+			case 576:  camZoom = 1.15;
+			case 640:  camZoom = 1;
+			case 667:  camZoom = 1.25;
+			case 672:  camZoom = 1;
+			case 704:  camZoom = 1.15;
+			case 768:  camZoom = 1;
+			case 910:  camZoom = 0.915;
+			case 918:  camZoom = 0.815;
+			case 960:  camZoom = 1;
+			case 976:  camZoom = 0.915;
+			case 1008: camZoom = 0.615;
+			case 1016: camZoom = 0.515;
+			case 1026: camZoom = 0.615;
+			case 1068: camZoom = 0.915;
+			case 1090: camZoom = 0.815;
+			case 1136: camZoom = 0.515;
+			case 1152: camZoom = 0.815;
+			case 1280: camZoom = 1.15;
+			case 1344: camZoom = 1.25;
+			case 1408: camZoom = 0.615;
+		}
+		PlayState.defaultCamZoom = camZoom;
+	}
 
 	public function getGfVersion(curStage:String)
 	{
@@ -312,143 +353,16 @@ class Stage extends FlxGroup
 		// beat hit
 		// if(curStep % 4 == 0)
 		
-		switch(PlayState.SONG.song)
+		if (PlayState.SONG == null) return;
+
+		var songName:String = PlayState.SONG.song.toLowerCase();
+	
+		switch(songName)
 		{
-		case "lapoluz": // legacy
-			if (curStep == 256)
-			{
-			camZoom = 0.675;
-			}
-			if (curStep == 320)
-			{
-			camZoom = 0.715;
-			}
-			if (curStep == 352)
-			{
-			camZoom = 0.915;
-			}
-			if (curStep == 356)
-			{
-			camZoom = 0.715;
-			}
-			if (curStep == 358)
-			{
-			camZoom = 0.815;
-			}
-			if (curStep == 362)
-			{
-			camZoom = 0.715;
-			}
-			if (curStep == 364)
-			{
-			camZoom = 0.615;
-			}
-			if (curStep == 380)
-			{
-			camZoom = 0.515;
-			}
-			if (curStep == 382)
-			{
-			camZoom = 0.615;
-			}
-			if (curStep == 384)
-			{
-			camZoom = 0.715;
-			}
-			if (curStep == 512)
-			{
-			camZoom = 1;
-			}
-			if (curStep == 539)
-			{
-			camZoom = 1.25;
-			}
-			if (curStep == 544)
-			{
-			camZoom = 1;
-			}
-			if (curStep == 576)
-			{
-			camZoom = 1.15;
-			}
-			if (curStep == 640)
-			{
-			camZoom = 1;
-			}
-			if (curStep == 667)
-			{
-			camZoom = 1.25;
-			}
-			if (curStep == 672)
-			{
-			camZoom = 1;
-			}
-			if (curStep == 704)
-			{
-			camZoom = 1.15;
-			}
-			if (curStep == 768)
-			{
-			camZoom = 1;
-			}
-			if (curStep == 910)
-			{
-			camZoom = 0.915;
-			}
-			if (curStep == 918)
-			{
-			camZoom = 0.815;
-			}
-			if (curStep == 960)
-			{
-			camZoom = 1;
-			}
-			if (curStep == 976)
-			{
-			camZoom = 0.915;
-			}
-			if (curStep == 1008)
-			{
-			camZoom = 0.615;
-			}
-			if (curStep == 1016)
-			{
-			camZoom = 0.515;
-			}
-			if (curStep == 1026)
-			{
-			camZoom = 0.615;
-			}
-			if (curStep == 1068)
-			{
-			camZoom = 0.915;
-			}
-			if (curStep == 1090)
-			{
-			camZoom = 0.815;
-			}
-			if (curStep == 1136)
-			{
-			camZoom = 0.515;
-			}
-			if (curStep == 1152)
-			{
-			camZoom = 0.815;
-			}
-			if (curStep == 1280)
-			{
-			camZoom = 1.15;
-			}
-			if (curStep == 1344)
-			{
-			camZoom = 1.25;
-			}
-			if (curStep == 1408)
-			{
-			camZoom = 0.615;
-			}
-		case "faker-identity":
-			// nunca teve events
+			case "lapoluz":
+				lapoluzStepHit(curStep);
+			case "faker-identity":
+				// nunca teve events
 		}
 
 		callScript("stepHit", [curStep]);
