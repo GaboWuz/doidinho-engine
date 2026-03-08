@@ -164,10 +164,12 @@ class Stage extends FlxGroup
 				
 				bfPos.x = 1470;
 				dadPos.x = 800;
-				gfPos.x = 1150;
-				bfPos.y += 800;
-				dadPos.y += 850;
-				gfPos.y += 780;
+				gfPos.x = 1170;
+				bfPos.y += 850;
+				dadPos.y += 900;
+				gfPos.y += 790;
+				
+				bfCam.x -= 70;
 				
 				fundo = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/legacy/gabofundotarde0009"));
 				fundo.setGraphicSize(Std.int(fundo.width * 2));
@@ -226,12 +228,12 @@ class Stage extends FlxGroup
 				
 				bfPos.x = 1470;
 				dadPos.x = 800;
-				gfPos.x = 1150;
-				bfPos.y += 800;
-				dadPos.y += 850;
-				gfPos.y += 780;
+				gfPos.x = 1170;
+				bfPos.y += 850;
+				dadPos.y += 900;
+				gfPos.y += 790;
 				
-				fundo = new FlxSprite(0, -400).loadGraphic(Paths.image("stages/legacy/gabofundonoite0008"));
+				fundo = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/legacy/gabofundonoite0008"));
 				fundo.setGraphicSize(Std.int(fundo.width * 2));
 				fundo.scrollFactor.set(0.1,0.1);
 				add(fundo);
@@ -241,7 +243,7 @@ class Stage extends FlxGroup
 				nuvens.scrollFactor.set(0.85,0.87);
 				add(nuvens);
 				
-				sol = new FlxSprite(-50, 300).loadGraphic(Paths.image("stages/legacy/gabofundonoite0007"));
+				sol = new FlxSprite(-50, 650).loadGraphic(Paths.image("stages/legacy/gabofundonoite0007"));
 				sol.setGraphicSize(Std.int(sol.width * 1.9));
 				sol.scrollFactor.set(0.75,0.8);
 				add(sol);
@@ -271,10 +273,10 @@ class Stage extends FlxGroup
 				chao.scrollFactor.set(0.9,0.9);
 				add(chao);
 				
-				frente = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/legacy/gabofundotarde0009"));
-				frente.setGraphicSize(Std.int(frente.width * 2));
+				frente = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/legacy/gabofundonoite0008"));
+				frente.setGraphicSize(Std.int(frente.width * 2.9));
 				frente.scrollFactor.set(0.1,0.1);
-				frente.alpha = 0.25;
+				frente.alpha = 0.35;
 				frente.blend = BlendMode.MULTIPLY;
 				foreground.add(frente);
 		}
