@@ -337,7 +337,7 @@ class Stage extends FlxGroup
 	{
 	    FlxTween.cancelTweensOf(PlayState, ["defaultCamZoom"]);
 	    
-	    if (ease == null) ease = FlxEase.quadInOut;   // ← este é o que mais parece a câmera natural do engine
+	    if (ease == null) ease = FlxEase.quadInOut;
 	    
 	    FlxTween.tween(PlayState, {defaultCamZoom: zoomAlvo}, duracao, {
 	        ease: ease
