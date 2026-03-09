@@ -179,6 +179,7 @@ class Stage extends FlxGroup
 				gfPos.y += 790;
 				
 				bfCam.x -= 85;
+				dadCam.x += 75;
 				
 				fundo = new FlxSprite(-200, -200).loadGraphic(Paths.image("stages/legacy/gabofundotarde0009"));
 				fundo.setGraphicSize(Std.int(fundo.width * 2));
@@ -295,7 +296,7 @@ class Stage extends FlxGroup
 	{
 	    switch(curStep)
 	    {
-	        case 128: tweenCamZoom(1, 5.50);
+	        case 128: tweenCamZoom(1, 5.50, FlxEase.sineInOut);
 	        case 256: tweenCamZoom(0.675, 0.6);
 	        case 320: tweenCamZoom(0.715, 0.6);
 	        case 352: tweenCamZoom(0.915, 0.6);
@@ -332,10 +333,14 @@ class Stage extends FlxGroup
 	    }
 	}
 	
-	private function tweenCamZoom(zoomAlvo:Float, duracao:Float = 0.95):Void
+	private function tweenCamZoom(zoomAlvo:Float, duracao:Float = 0.95, ?ease:Dynamic):Void
 	{
+	    FlxTween.cancelTweensOf(PlayState, ["defaultCamZoom"]);
+	    
+	    if (ease == null) ease = FlxEase.quadInOut;   // ← este é o que mais parece a câmera natural do engine
+	    
 	    FlxTween.tween(PlayState, {defaultCamZoom: zoomAlvo}, duracao, {
-	        ease: FlxEase.sineInOut
+	        ease: ease
 	    });
 	}
 
