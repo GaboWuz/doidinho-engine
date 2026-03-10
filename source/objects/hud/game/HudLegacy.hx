@@ -24,8 +24,8 @@ class HudLegacy extends HudClass
 	var badScoreTxt:FlxText;
 
 	// health bar
-	public var vidar:FlxSprite;
 	public var healthBar:DoidoBar;
+	public var vidar:FlxSprite;
 	public var iconP1:HealthIcon;
 	public var iconP2:HealthIcon;
 
@@ -33,20 +33,20 @@ class HudLegacy extends HudClass
 	{
 		super("doido");
 		add(ratingGrp);
-		vidar = new FlxSprite(335, 100 - 70);
+	
+		healthBar = new DoidoBar("hud/base/bar_mas_sem_preto", "hud/base/healthBarBorder");
+		add(healthBar);
+		healthBar.border.visible = false;
+	    healthBar.scale.set(0.65, 5.60);
+	    healthBar.updateHitbox();
+	
+    	vidar = new FlxSprite(335, 100 - 70);
 	    vidar.frames = Paths.getSparrowAtlas('hud/base/health_do_grau');
 	    vidar.animation.addByPrefix('health', 'bah', 12, true);
 	    vidar.animation.play('health');
 	    vidar.scale.set(1.25, 1.25);
 	    vidar.updateHitbox();
 	    add(vidar);
-	
-		healthBar = new DoidoBar("hud/base/bar_mas_sem_preto", "hud/base/healthBarBorder");
-		add(healthBar);
-		healthBar.y = 141 - 70;
-		healthBar.border.visible = false;
-	    healthBar.scale.set(0.65, 5.60);
-	    healthBar.updateHitbox();
 		
 		final SONG = PlayState.SONG;
 		iconP1 = new HealthIcon();
@@ -154,7 +154,7 @@ class HudLegacy extends HudClass
 	{
 		super.updatePositions();
 		healthBar.x = (FlxG.width / 2) - (healthBar.border.width / 2) - 200;
-		healthBar.y = (downscroll ? 70 - 70 : FlxG.height - healthBar.border.height - 50);
+		healthBar.y = (downscroll ? 70 - 60 : FlxG.height - healthBar.border.height - 50);
 		
 		updateInfoTxt();
 		infoTxt.y = healthBar.y + healthBar.border.height + 4;
