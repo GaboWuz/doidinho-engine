@@ -148,11 +148,11 @@ class HudLegacy extends HudClass
 	{
 		super.updatePositions();
 		healthBar.x = (FlxG.width / 2) - (healthBar.border.width / 2) - 200;
-		healthBar.y = (downscroll ? 70 - 60 : FlxG.height - healthBar.border.height - 50 - 120);
+		healthBar.y = (downscroll ? 70 - 59 : FlxG.height - healthBar.border.height - 50 - 119);
 		vidar.y = (downscroll ? 100 - 70 : 100 + 450);
 		
 		updateInfoTxt();
-		infoTxt.y = (downscroll ? healthBar.y + healthBar.border.height - 15 : healthBar.y + healthBar.border.height + 50);
+		infoTxt.y = (downscroll ? healthBar.y + healthBar.border.height - 15 : healthBar.y + healthBar.border.height + 100);
 		
 		badScoreTxt.y = healthBar.y - badScoreTxt.height - 4;
 		
