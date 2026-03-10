@@ -43,7 +43,7 @@ class HudLegacy extends HudClass
 	
 		healthBar = new DoidoBar("hud/base/bar_mas_sem_preto", "hud/base/healthBarBorder");
 		add(healthBar);
-		healthBar.x -= 120;
+		healthBar.x += 130;
 		healthBar.y = 141 - 70;
 		healthBar.border.visible = false;
 	    healthBar.scale.set(0.65, 5.60);
@@ -154,7 +154,7 @@ class HudLegacy extends HudClass
 	{
 		super.updatePositions();
 		healthBar.x = (FlxG.width / 2) - (healthBar.border.width / 2);
-		healthBar.y = (downscroll ? 70 + 550 : FlxG.height - healthBar.border.height - 50);
+		healthBar.y = (downscroll ? 70 : FlxG.height - healthBar.border.height - 50);
 		
 		updateInfoTxt();
 		infoTxt.y = healthBar.y + healthBar.border.height + 4;
