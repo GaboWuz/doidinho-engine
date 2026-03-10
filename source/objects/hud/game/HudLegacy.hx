@@ -60,7 +60,6 @@ class HudLegacy extends HudClass
 		infoTxt = new FlxText(0, 0, 0, "hi there! i am using whatsapp");
 		infoTxt.setFormat(Main.gFont, 20, 0xFFFFFFFF, CENTER);
 		infoTxt.setBorderStyle(OUTLINE, FlxColor.BLACK, 1.5);
-		infoTxt.visible = false;
 		add(infoTxt);
 		
 		timeTxt = new FlxText(0, 0, 0, "nuts / balls even");
@@ -102,8 +101,8 @@ class HudLegacy extends HudClass
 		infoTxt.text = "";
 		
 		infoTxt.text += 			'Score: '		+ FlxStringUtil.formatMoney(Timings.score, false, true);
-		infoTxt.text += separator + 'Accuracy: '	+ Timings.accuracy + "%" + ' [${Timings.getRank()}]';
 		infoTxt.text += separator + 'Misses: '		+ Timings.misses;
+		infoTxt.text += separator + 'Accuracy: '	+ Timings.accuracy + "%" + ' [${Timings.getRank()}]';
 
 		infoTxt.screenCenter(X);
 	}
@@ -143,11 +142,11 @@ class HudLegacy extends HudClass
 			healthBar.y - (healthBar.border.height / 2)
 		);
 
-		iconP1.y = healthBarPos.y - (iconP1.height / 2);
-		iconP2.y = healthBarPos.y - (iconP2.height / 2);
+		iconP1.y = 100 - 70;
+		iconP2.y = 100 - 70;
 
-		iconP1.x = healthBarPos.x - 20;
-		iconP2.x = healthBarPos.x - iconP2.width + 32;
+		iconP1.x = 345 + 445;
+		iconP2.x = 345;
 	}
 
 	override function updatePositions()
