@@ -40,7 +40,7 @@ class HudLegacy extends HudClass
 	    healthBar.scale.set(0.65, 5.60);
 	    healthBar.updateHitbox();
 	
-    	vidar = new FlxSprite(335, 100 - 70);
+    	vidar = new FlxSprite(335, 0);
 	    vidar.frames = Paths.getSparrowAtlas('hud/base/health_do_grau');
 	    vidar.animation.addByPrefix('health', 'bah', 12, true);
 	    vidar.animation.play('health');
@@ -142,8 +142,8 @@ class HudLegacy extends HudClass
 			healthBar.y - (healthBar.border.height / 2)
 		);
 
-		iconP1.y = 100 - 70;
-		iconP2.y = 100 - 70;
+		iconP1.y = downscroll ? 100 - 70 : 100;
+		iconP2.y = downscroll ? 100 - 70 : 100;
 
 		iconP1.x = 345 + 445;
 		iconP2.x = 345;
@@ -153,7 +153,8 @@ class HudLegacy extends HudClass
 	{
 		super.updatePositions();
 		healthBar.x = (FlxG.width / 2) - (healthBar.border.width / 2) - 200;
-		healthBar.y = (downscroll ? 70 - 60 : FlxG.height - healthBar.border.height - 50);
+		healthBar.y = (downscroll ? 70 - 60 : FlxG.height - healthBar.border.height - 50 - 60);
+		vidar.y = downscroll ? 100 - 70 : 100;
 		
 		updateInfoTxt();
 		infoTxt.y = healthBar.y + healthBar.border.height + 4;
