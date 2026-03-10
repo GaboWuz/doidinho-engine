@@ -24,6 +24,7 @@ class HudLegacy extends HudClass
 	var badScoreTxt:FlxText;
 
 	// health bar
+	public var vidar:FlxSprite;
 	public var healthBar:DoidoBar;
 	public var iconP1:HealthIcon;
 	public var iconP2:HealthIcon;
@@ -32,7 +33,7 @@ class HudLegacy extends HudClass
 	{
 		super("doido");
 		add(ratingGrp);
-		var vidar:FlxSprite = new FlxSprite(335, 100 - 70);
+		vidar = new FlxSprite(335, 100 - 70);
 	    vidar.frames = Paths.getSparrowAtlas('hud/base/health_do_grau');
 	    vidar.animation.addByPrefix('health', 'bah', 12, true);
 	    vidar.animation.play('health');
@@ -40,8 +41,9 @@ class HudLegacy extends HudClass
 	    vidar.updateHitbox();
 	    add(vidar);
 	
-		healthBar = new DoidoBar("hud/base/healthBar", "hud/base/healthBarBorder");
+		healthBar = new DoidoBar("hud/base/bar_mas_sem_preto", "hud/base/healthBarBorder");
 		add(healthBar);
+		healthBar.x -= 120;
 		healthBar.y = 141 - 70;
 		healthBar.border.visible = false;
 	    healthBar.scale.set(0.65, 5.60);
@@ -59,6 +61,7 @@ class HudLegacy extends HudClass
 		infoTxt = new FlxText(0, 0, 0, "hi there! i am using whatsapp");
 		infoTxt.setFormat(Main.gFont, 20, 0xFFFFFFFF, CENTER);
 		infoTxt.setBorderStyle(OUTLINE, FlxColor.BLACK, 1.5);
+		infoTxt.visible = false;
 		add(infoTxt);
 		
 		timeTxt = new FlxText(0, 0, 0, "nuts / balls even");
@@ -151,7 +154,7 @@ class HudLegacy extends HudClass
 	{
 		super.updatePositions();
 		healthBar.x = (FlxG.width / 2) - (healthBar.border.width / 2);
-		healthBar.y = (downscroll ? 70 : FlxG.height - healthBar.border.height - 50);
+		healthBar.y = (downscroll ? 70 + 550 : FlxG.height - healthBar.border.height - 50);
 		
 		updateInfoTxt();
 		infoTxt.y = healthBar.y + healthBar.border.height + 4;
