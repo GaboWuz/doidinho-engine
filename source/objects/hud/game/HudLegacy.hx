@@ -153,8 +153,8 @@ class HudLegacy extends HudClass
 	override function updatePositions()
 	{
 		super.updatePositions();
-		healthBar.x = (FlxG.width / 2) - (healthBar.border.width / 2) - 230;
-		healthBar.y = (downscroll ? 70 - 95 : FlxG.height - healthBar.border.height - 50);
+		healthBar.x = (FlxG.width / 2) - (healthBar.border.width / 2) - 200;
+		healthBar.y = (downscroll ? 70 - 70 : FlxG.height - healthBar.border.height - 50);
 		
 		updateInfoTxt();
 		infoTxt.y = healthBar.y + healthBar.border.height + 4;
