@@ -45,9 +45,9 @@ class Main extends Sprite
 
 		#if android
 		FlxG.android.preventDefaultKeys = [BACK];
-		#elseif desktop
-		addChild(fpsCounter = new FPSCounter(5, 3));
 		#end
+		
+		addChild(fpsCounter = new FPSCounter(5, 3));
 
 		#if ENABLE_PRINTING
 		Logs.init();

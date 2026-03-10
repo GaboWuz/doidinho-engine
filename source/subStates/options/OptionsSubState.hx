@@ -33,8 +33,8 @@ class OptionsSubState extends MusicBeatSubState
             #end
             "Flashing Lights",
             "Cutscenes",
-            #if desktop
             "FPS Counter",
+            #if desktop
             "Unfocus Pause",
             #end
             #if desktop
@@ -50,9 +50,7 @@ class OptionsSubState extends MusicBeatSubState
 			"Can Ghost Tap",
 			"Downscroll",
 			"Middlescroll",
-            #if desktop
             "Framerate Cap",
-            #end
             "Hitsounds",
             "Hitsound Volume",
 		],
