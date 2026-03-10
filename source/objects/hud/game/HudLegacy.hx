@@ -152,7 +152,7 @@ class HudLegacy extends HudClass
 		vidar.y = (downscroll ? 100 - 70 : 100 + 450);
 		
 		updateInfoTxt();
-		infoTxt.y = healthBar.y + vidar.y + 10;
+		infoTxt.y = (downscroll ? healthBar.y + healthBar.border.height - 15 : healthBar.y + healthBar.border.height + 30);
 		
 		badScoreTxt.y = healthBar.y - badScoreTxt.height - 4;
 		
