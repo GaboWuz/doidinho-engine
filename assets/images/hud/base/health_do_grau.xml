@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="health_do_grau.png">
+  <SubTexture name="bah0008" x="0" y="0"  width="484" height="122" frameX="-1" frameY="-1" frameWidth="486" frameHeight="125"/>
+  <SubTexture name="bah0000" x="0" y="122"  width="481" height="113" frameX="-2" frameY="-6" frameWidth="486" frameHeight="125"/>
+  <SubTexture name="bah0001" x="0" y="122"  width="481" height="113" frameX="-2" frameY="-6" frameWidth="486" frameHeight="125"/>
+  <SubTexture name="bah0002" x="0" y="122"  width="481" height="113" frameX="-2" frameY="-6" frameWidth="486" frameHeight="125"/>
+  <SubTexture name="bah0003" x="0" y="122"  width="481" height="113" frameX="-2" frameY="-6" frameWidth="486" frameHeight="125"/>
+  <SubTexture name="bah0004" x="0" y="122"  width="481" height="113" frameX="-2" frameY="-6" frameWidth="486" frameHeight="125"/>
+  <SubTexture name="bah0005" x="0" y="122"  width="481" height="113" frameX="-2" frameY="-6" frameWidth="486" frameHeight="125"/>
+  <SubTexture name="bah0006" x="0" y="122"  width="481" height="113" frameX="-2" frameY="-6" frameWidth="486" frameHeight="125"/>
+  <SubTexture name="bah0007" x="0" y="122"  width="481" height="113" frameX="-2" frameY="-6" frameWidth="486" frameHeight="125"/>
+  <SubTexture name="bah0009" x="0" y="0"  width="484" height="122" frameX="-1" frameY="-1" frameWidth="486" frameHeight="125"/>
+  <SubTexture name="bah0010" x="0" y="0"  width="484" height="122" frameX="-1" frameY="-1" frameWidth="486" frameHeight="125"/>
+  <SubTexture name="bah0011" x="0" y="0"  width="484" height="122" frameX="-1" frameY="-1" frameWidth="486" frameHeight="125"/>
+  <SubTexture name="bah0012" x="0" y="0"  width="484" height="122" frameX="-1" frameY="-1" frameWidth="486" frameHeight="125"/>
+  <SubTexture name="bah0013" x="0" y="0"  width="484" height="122" frameX="-1" frameY="-1" frameWidth="486" frameHeight="125"/>
+  <SubTexture name="bah0014" x="0" y="0"  width="484" height="122" frameX="-1" frameY="-1" frameWidth="486" frameHeight="125"/>
+  <SubTexture name="bah0015" x="0" y="0"  width="484" height="122" frameX="-1" frameY="-1" frameWidth="486" frameHeight="125"/>
+</TextureAtlas>
