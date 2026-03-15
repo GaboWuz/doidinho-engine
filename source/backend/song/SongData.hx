@@ -47,9 +47,9 @@ class SongData
 	public static var weeks:Array<FunkyWeek> = [
 		{
 			songs: [
-				['sixxey', 	'gabos'],
-				['redkid', 		'dad'],
-				['faker-self', 	'faker'],
+				['sixxey', 'gabos'],
+				['redkid', 'dad'],
+				['faker-self', 'faker'],
 			],
 			/*weekFile: 'week1',
 			weekName: 'gabo jumpscare hell yeah',
