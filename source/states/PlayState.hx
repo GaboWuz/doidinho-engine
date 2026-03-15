@@ -338,12 +338,14 @@ class PlayState extends MusicBeatState
 	    titleText.setFormat(Paths.font('vcr.ttf'), 50, FlxColor.WHITE, "left", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 	    titleText.borderSize = 2;
 	    titleText.cameras = [camOther];
+	    titleText.screenCenter(X);
     	titleText.alpha = 0; 
 	    add(titleText);
 	    
 	    theLine = new FlxSprite(344, 368);
 	    theLine.makeGraphic(575, 3, FlxColor.WHITE);
 	    theLine.cameras = [camOther];
+	    theLine.screenCenter(X);
 	    theLine.alpha = 0; 
 	    add(theLine);
 	
@@ -351,6 +353,7 @@ class PlayState extends MusicBeatState
 	    authorText.setFormat(Paths.font('vcr.ttf'), 35, FlxColor.WHITE, "left", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 	    authorText.borderSize = 2;
 	    authorText.cameras = [camOther];
+    	authorText.screenCenter(X);
 	    authorText.alpha = 0; 
 	    add(authorText);
 		
@@ -727,12 +730,12 @@ class PlayState extends MusicBeatState
 		
 		for (i in [titleText, theLine, authorText]) {
 	
-	        FlxTween.tween(i, {alpha: 1}, 0.1 / 1, {
+	        FlxTween.tween(i, {alpha: 1}, 0.3 / 1, {
 	            ease: FlxEase.linear,
 	            onComplete: function(twn:FlxTween) {
 	                    new FlxTimer().start(3.0 / 1, function(tmr:FlxTimer) {
 	                        
-                        FlxTween.tween(i, {alpha: 0}, 0.1 / 1, {ease: FlxEase.linear});
+                        FlxTween.tween(i, {alpha: 0}, 0.3 / 1, {ease: FlxEase.linear});
 	               });
 	            }
 	        });
