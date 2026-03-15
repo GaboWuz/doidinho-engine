@@ -335,7 +335,7 @@ class PlayState extends MusicBeatState
 		
 		// song title
 		titleText = new FlxText(0, 301, 1000, 'Song Name', 50);
-	    titleText.setFormat(Paths.font('vcr.ttf'), 50, FlxColor.WHITE, "left", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+	    titleText.setFormat(Paths.font('vcr.ttf'), 50, FlxColor.WHITE, "center", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 	    titleText.borderSize = 2;
 	    titleText.cameras = [camOther];
 	    titleText.screenCenter(X);
@@ -350,7 +350,7 @@ class PlayState extends MusicBeatState
 	    add(theLine);
 	
 	    authorText = new FlxText(0, 374, 1000, 'Your mother', 35);
-	    authorText.setFormat(Paths.font('vcr.ttf'), 35, FlxColor.WHITE, "left", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+	    authorText.setFormat(Paths.font('vcr.ttf'), 35, FlxColor.WHITE, "center", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 	    authorText.borderSize = 2;
 	    authorText.cameras = [camOther];
     	authorText.screenCenter(X);
