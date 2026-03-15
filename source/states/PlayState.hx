@@ -23,6 +23,7 @@ import flixel.text.FlxText;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.util.FlxTimer;
+import flixel.util.FlxColor;
 import flixel.addons.display.FlxRuntimeShader;
 import openfl.filters.BitmapFilter;
 import openfl.filters.ShaderFilter;
@@ -726,12 +727,12 @@ class PlayState extends MusicBeatState
 		
 		for (i in [titleText, theLine, authorText]) {
 	
-	        FlxTween.tween(i, {alpha: 1}, 0.1 / playbackRate, {
+	        FlxTween.tween(i, {alpha: 1}, 0.1 / 1, {
 	            ease: FlxEase.linear,
 	            onComplete: function(twn:FlxTween) {
-	                    new FlxTimer().start(3.0 / playbackRate, function(tmr:FlxTimer) {
+	                    new FlxTimer().start(3.0 / 1, function(tmr:FlxTimer) {
 	                        
-                        FlxTween.tween(i, {alpha: 0}, 0.1 / playbackRate, {ease: FlxEase.linear});
+                        FlxTween.tween(i, {alpha: 0}, 0.1 / 1, {ease: FlxEase.linear});
 	               });
 	            }
 	        });
