@@ -215,14 +215,11 @@ class HudLegacy extends HudClass
 	override function beatHit(curBeat:Int = 0)
 	{
 		super.beatHit(curBeat);
-		if(curBeat % 2 == 0)
+		for(icon in [iconP1, iconP2])
 		{
-			for(icon in [iconP1, iconP2])
-			{
-				icon.scale.set(1.3,1.3);
-				icon.updateHitbox();
-				updateIconPos();
-			}
+			icon.scale.set(1.2, 1.2);
+			icon.updateHitbox();
+			updateIconPos();
 		}
 	}
 }

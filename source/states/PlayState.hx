@@ -109,6 +109,11 @@ class PlayState extends MusicBeatState
 	// hud
 	public var hudBuild:HudClass;
 	
+	// song title
+	public var titleText:FlxText;
+	public var theLine:FlxSprite;
+	public var authorText:FlxText;
+	
 	// cameras!!
 	public var camGame:FlxCamera;
 	public var camHUD:FlxCamera;
@@ -326,6 +331,27 @@ class PlayState extends MusicBeatState
 		
 		hudBuild.cameras = [camHUD];
 		add(hudBuild);
+		
+		// song title
+		titleText = new FlxText(132, 301, 1000, 'Song Name', 50);
+	    titleText.setFormat(Paths.font('vcr.ttf'), 50, FlxColor.WHITE, "left", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+	    titleText.borderSize = 2;
+	    titleText.cameras = [camOther];
+    	titleText.alpha = 0; 
+	    add(titleText);
+	    
+	    theLine = new FlxSprite(344, 368);
+	    theLine.makeGraphic(575, 3, FlxColor.WHITE);
+	    theLine.cameras = [camOther];
+	    theLine.alpha = 0; 
+	    add(theLine);
+	
+	    authorText = new FlxText(132, 374, 1000, 'Your mother', 35);
+	    authorText.setFormat(Paths.font('vcr.ttf'), 35, FlxColor.WHITE, "left", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+	    authorText.borderSize = 2;
+	    authorText.cameras = [camOther];
+	    authorText.alpha = 0; 
+	    add(authorText);
 		
 		// strumlines
 		strumlines = new FlxTypedGroup();
@@ -697,6 +723,19 @@ class PlayState extends MusicBeatState
 				music.pause();
 			}
 		}
+		
+		for (i in [titleText, theLine, authorText]) {
+	
+	        FlxTween.tween(i, {alpha: 1}, 0.1 / playbackRate, {
+	            ease: FlxEase.linear,
+	            onComplete: function(twn:FlxTween) {
+	                    new FlxTimer().start(3.0 / playbackRate, function(tmr:FlxTimer) {
+	                        
+                        FlxTween.tween(i, {alpha: 0}, 0.1 / playbackRate, {ease: FlxEase.linear});
+	               });
+	            }
+	        });
+	    }
 	}
 
 	override function openSubState(state:FlxSubState)
