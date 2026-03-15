@@ -194,4 +194,4 @@ jobs:
         uses: actions/upload-artifact@v4.4.0
         with:
           name: DoidoEngine-android-${{ steps.ver.outputs.content }}-${{ github.run_id}}
-          path: 'export/release/android/bin/app/build/outputs/apk/debug'
+          path: 'export/release/android/bin/app/build/outputs/apk/*'
