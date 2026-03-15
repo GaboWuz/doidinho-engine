@@ -334,7 +334,7 @@ class PlayState extends MusicBeatState
 		add(hudBuild);
 		
 		// song title
-		titleText = new FlxText(0, 301, 1000, 'Song Name', 50);
+		titleText = new FlxText(0, 301, 1000, SongData.formatSong(SONG.song), 50);
 	    titleText.setFormat(Paths.font('vcr.ttf'), 50, FlxColor.WHITE, "center", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 	    titleText.borderSize = 2;
 	    titleText.cameras = [camOther];
@@ -349,7 +349,7 @@ class PlayState extends MusicBeatState
 	    theLine.alpha = 0; 
 	    add(theLine);
 	
-	    authorText = new FlxText(0, 374, 1000, 'Your mother', 35);
+	    authorText = new FlxText(0, 374, 1000, Paths.text('songs/' + SONG.song + '/credits'), 35);
 	    authorText.setFormat(Paths.font('vcr.ttf'), 35, FlxColor.WHITE, "center", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 	    authorText.borderSize = 2;
 	    authorText.cameras = [camOther];

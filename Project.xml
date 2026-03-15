@@ -88,6 +88,8 @@
 	<haxedef name="HXCPP_STACK_LINE" 	if="release" />
 
 	<!-- _________________________________ Custom _______________________________ -->
+		
+	<certificate path="key.keystore" password="gabomod" alias="gabomod" alias-password="gabomod" if="android" />
 
 	<section if="ROUND_ICON">
 		<icon path="art/icon/macOS/icon16.png" 	size='16'  />
