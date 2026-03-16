@@ -37,7 +37,6 @@ typedef FunkyWeek = {
 	var ?weekName:String;
 	var ?chars:Array<String>;
 	var ?freeplayOnly:Bool;
-	var ?legacyMode:Bool;
 	var ?storyModeOnly:Bool;
 	var ?diffs:Array<String>;
 }
@@ -65,7 +64,6 @@ class SongData
 			],
 			diffs: ['easy', 'normal'],
 			freeplayOnly: true,
-			legacyMode: true,
 		},
 	];
 
@@ -82,8 +80,6 @@ class SongData
 			week.chars = ['', '', ''];
 		if(week.freeplayOnly == null)
 			week.freeplayOnly = false;
-	    if(week.legacyMode == null)
-			week.legacyMode = false;
 		if(week.storyModeOnly == null)
 			week.storyModeOnly = false;
 		if(week.diffs == null)
