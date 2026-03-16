@@ -34,9 +34,8 @@ class HudLegacy extends HudClass
 		super("doido");
 		add(ratingGrp);
 	
-		healthBar = new DoidoBar("hud/base/bar_mas_sem_preto", "hud/base/healthBarBorder");
+		healthBar = new DoidoBar("hud/base/bar_mas_sem_preto");
 		add(healthBar);
-		healthBar.border.visible = false;
 	    healthBar.scale.set(0.65, 5.60);
 	    healthBar.updateHitbox();
 	
@@ -100,7 +99,7 @@ class HudLegacy extends HudClass
 		super.updateInfoTxt();
 		infoTxt.text = "";
 		
-		infoTxt.text += 			'Score: '		+ FlxStringUtil.formatMoney(Timings.score, false, true);
+		infoTxt.text += 			'Score: '		+ Timings.score;
 		infoTxt.text += separator + 'Misses: '		+ Timings.misses;
 		infoTxt.text += separator + 'Accuracy: '	+ Timings.accuracy + "%" + ' [${Timings.getRank()}]';
 
