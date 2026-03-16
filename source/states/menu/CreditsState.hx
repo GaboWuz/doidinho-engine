@@ -69,7 +69,8 @@ class CreditsState extends MusicBeatState
 		addCredit('GaboXey', 			'gaboxey', 	 0xFFC385FF, "Ele é o Gabo", 				'https://youtube.com/@gaboxey');
 		addCredit('StarNova', 				'starnova', 	 0xFFFF95AC, "Estou fudidas",					'https://youtube.com/@starnovaoficial');
 		addCredit('JulianoBeta', 		'juyko', 	 0xFF0BA5FF, "Ele é o Jazzghost",			'https://www.youtube.com/@prodjuyko');
-		addCredit('Quik',			'quik', 	 0xFFFFE100, "Ele é um arquivo .mp3 (binário)",		'https://youtu.be/dQw4w9WgXcQ?si=5O6JYJu5te67epp5');
+		addCredit('Quik',			'quik', 	 0xFFFFE100, "Ele é um arquivo .mp3 (binário)",		'https://youtu.be/dQw4w9WgXcQ');
+		addCredit('Idklook',			'idklool', 	 0xFFFFE100, "Sla Gabo mandou deixar de enfeite",		'https://youtube.com/@idklool122');
 		// just credit doido engine as a whole and we're good
 		addCategory("Doido Engine's Crew");
 		addCredit('DiogoTV', 			'diogotv', 	 0xFFC385FF, "Doido Engine's Owner and Main Coder", 				'https://bsky.app/profile/diogotv.bsky.social');

@@ -279,9 +279,6 @@ class PlayState extends MusicBeatState
 		camGame.zoom = defaultCamZoom;
 		switch(SONG.song)
 		{
-			case "useless"|"beep-power":
-				hudBuild = new HudOG();
-				hudBuild.alpha = 0.0;
 			case "lapoluz" | "faker-identity":
 				hudBuild = new HudLegacy();
 				hudBuild.alpha = 0.0;
@@ -342,7 +339,7 @@ class PlayState extends MusicBeatState
     	titleText.alpha = 0; 
 	    add(titleText);
 	    
-	    theLine = new FlxSprite(344, 368);
+	    theLine = new FlxSprite(0, 368);
 	    theLine.makeGraphic(575, 3, FlxColor.WHITE);
 	    theLine.cameras = [camOther];
 	    theLine.screenCenter(X);
