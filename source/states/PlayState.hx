@@ -331,7 +331,7 @@ class PlayState extends MusicBeatState
 		add(hudBuild);
 		
 		// song title
-		titleText = new FlxText(0, 301, 1000, SONG.song, 50);
+		titleText = new FlxText(0, 301, 1000, Paths.text('songs/' + SONG.song + '/songname'), 50);
 	    titleText.setFormat(Paths.font('vcr.ttf'), 50, FlxColor.WHITE, "center", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 	    titleText.borderSize = 2;
 	    titleText.cameras = [camOther];
