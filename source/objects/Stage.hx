@@ -212,10 +212,25 @@ class Stage extends FlxGroup
 				gri.scrollFactor.set(0.6, 0.6);
 				add(gri);
 				
-				var gro = new FlxSprite(-500, -180).loadGraphic(Paths.image("stages/purble/cao"));
+				var gro = new FlxSprite(-500, -180).loadGraphic(Paths.image("stages/purble/cao3"));
 		    	gro.setGraphicSize(Std.int(gro.width * 1.75));
 				gro.scrollFactor.set(0.7, 0.7);
 				add(gro);
+				
+				var ground = new FlxSprite(-480, 590).loadGraphic(Paths.image("stages/purble/caofront"));
+		    	ground.setGraphicSize(Std.int(ground.width * 1.75));
+				ground.scrollFactor.set(1, 1);
+				add(ground);
+				
+				var pano = new FlxSprite(110, 645).loadGraphic(Paths.image("stages/purble/pano"));
+		    	pano.setGraphicSize(Std.int(pano.width * 1.10));
+				pano.scrollFactor.set(1, 1);
+				add(pano);
+				
+				var paps = new FlxSprite(-500, 500).loadGraphic(Paths.image("stages/purble/superfront"));
+		    	paps.setGraphicSize(Std.int(ground.width * 1));
+				paps.scrollFactor.set(0.9, 0.9);
+				foreground.add(paps);
 				
 			case "daylegacy":
 				camZoom = 0.675;
@@ -275,7 +290,7 @@ class Stage extends FlxGroup
 				chao.scrollFactor.set(0.9,0.9);
 				add(chao);
 				
-				frente = new FlxSprite(-200, 0).loadGraphic(Paths.image("stages/legacy/gabofundotarde0009"));
+				frente = new FlxSprite(-230, 0).loadGraphic(Paths.image("stages/legacy/gabofundotarde0009"));
 				frente.setGraphicSize(Std.int(frente.width * 2.9));
 				frente.scrollFactor.set(0.1,0.1);
 				frente.alpha = 0.25;

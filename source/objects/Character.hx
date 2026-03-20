@@ -70,7 +70,7 @@ class Character extends FlxAnimate
 					['singUP', 		'up', 24, false],
 					['singLEFT',	'left', 24, false],
 				];
-			scale.set(1.3, 1.3);
+			scale.set(1, 1);
 			
 			case "gabos":
 				doidoChar.spritesheet += 'gabolegacy/gagbis_assets';
