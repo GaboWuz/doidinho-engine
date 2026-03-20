@@ -11,8 +11,7 @@
 	<SubTexture name="note right hold0000" x="0" y="319" width="55" height="48" frameX="2" frameY="2" frameWidth="51" frameHeight="44"/>
 	<SubTexture name="note left hold0000" x="110" y="319" width="55" height="48" frameX="2" frameY="2" frameWidth="51" frameHeight="44"/>
 	<SubTexture name="note up hold0000" x="320" y="260" width="55" height="48" frameX="2" frameY="2" frameWidth="51" frameHeight="44"/>
-	<SubTexture name="note red hold end0000" x="320" y="130" width="55" height="65" frameX="2" frameY="2" frameWidth="51" frameHeight="64"/>
-	<SubTexture name="note right hold end0000" x="270" y="160" width="55" height="65" frameX="2" frameY="2" frameWidth="51" frameHeight="64"/>
+	<SubTexture name="note right hold end0000" x="320" y="130" width="55" height="65" frameX="2" frameY="2" frameWidth="51" frameHeight="64"/>
 	<SubTexture name="note left hold end0000" x="320" y="65" width="55" height="65" frameX="2" frameY="2" frameWidth="51" frameHeight="64"/>
 	<SubTexture name="note up hold end0000" x="320" y="195" width="55" height="65" frameX="2" frameY="2" frameWidth="51" frameHeight="64"/>
 </TextureAtlas>

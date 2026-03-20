@@ -207,6 +207,16 @@ class Stage extends FlxGroup
 				gru.scrollFactor.set(0.5, 0.5);
 				add(gru);
 				
+				var gri = new FlxSprite(400, 100).loadGraphic(Paths.image("stages/purble/cao2"));
+		    	gri.setGraphicSize(Std.int(gri.width * 1.75));
+				gri.scrollFactor.set(0.6, 0.6);
+				add(gri);
+				
+				var gro = new FlxSprite(-500, -180).loadGraphic(Paths.image("stages/purble/cao"));
+		    	gro.setGraphicSize(Std.int(gro.width * 1.75));
+				gro.scrollFactor.set(0.7, 0.7);
+				add(gro);
+				
 			case "daylegacy":
 				camZoom = 0.675;
 				
