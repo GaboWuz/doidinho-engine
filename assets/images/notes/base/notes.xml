@@ -1,17 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="notes.png">
-	<!-- Created with Adobe Animate version 18.0.2.126 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="note down0000" x="3" y="3" width="157" height="154"/>
-	<SubTexture name="note down hold0000" x="163" y="3" width="50" height="44"/>
-	<SubTexture name="note down hold end0000" x="216" y="3" width="50" height="64"/>
-	<SubTexture name="note left0000" x="3" y="160" width="154" height="157"/>
-	<SubTexture name="note left hold0000" x="160" y="160" width="50" height="44"/>
-	<SubTexture name="note left hold end0000" x="213" y="160" width="50" height="64"/>
-	<SubTexture name="note right0000" x="3" y="320" width="154" height="157"/>
-	<SubTexture name="note right hold0000" x="160" y="320" width="50" height="44"/>
-	<SubTexture name="note right hold end0000" x="213" y="320" width="50" height="64"/>
-	<SubTexture name="note up0000" x="3" y="480" width="157" height="154"/>
-	<SubTexture name="note up hold0000" x="163" y="480" width="50" height="44"/>
-	<SubTexture name="note up hold end0000" x="216" y="480" width="50" height="64"/>
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="note left0000" x="0" y="159" width="159" height="160" frameX="-1" frameY="-1" frameWidth="160" frameHeight="162"/>
+	<SubTexture name="note down0000" x="0" y="0" width="160" height="159" frameX="0" frameY="-1" frameWidth="160" frameHeight="162"/>
+	<SubTexture name="note up0000" x="160" y="0" width="160" height="159" frameX="0" frameY="-1" frameWidth="160" frameHeight="162"/>
+	<SubTexture name="note right0000" x="160" y="159" width="159" height="160" frameX="0" frameY="-1" frameWidth="160" frameHeight="162"/>
+	<SubTexture name="note down hold end0000" x="320" y="0" width="55" height="65" frameX="2" frameY="2" frameWidth="51" frameHeight="64"/>
+	<SubTexture name="note down hold0000" x="55" y="319" width="55" height="48" frameX="2" frameY="2" frameWidth="51" frameHeight="44"/>
+	<SubTexture name="note right hold0000" x="0" y="319" width="55" height="48" frameX="2" frameY="2" frameWidth="51" frameHeight="44"/>
+	<SubTexture name="note left hold0000" x="110" y="319" width="55" height="48" frameX="2" frameY="2" frameWidth="51" frameHeight="44"/>
+	<SubTexture name="note up hold0000" x="320" y="260" width="55" height="48" frameX="2" frameY="2" frameWidth="51" frameHeight="44"/>
+	<SubTexture name="note red hold end0000" x="320" y="130" width="55" height="65" frameX="2" frameY="2" frameWidth="51" frameHeight="64"/>
+	<SubTexture name="note left hold end0000" x="320" y="65" width="55" height="65" frameX="2" frameY="2" frameWidth="51" frameHeight="64"/>
+	<SubTexture name="note up hold end0000" x="320" y="195" width="55" height="65" frameX="2" frameY="2" frameWidth="51" frameHeight="64"/>
 </TextureAtlas>
