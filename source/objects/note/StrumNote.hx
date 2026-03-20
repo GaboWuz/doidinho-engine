@@ -48,7 +48,6 @@ class StrumNote extends FlxSprite
 				strumSize = 0.7;
 				frames = Paths.getSparrowAtlas("notes/new/strums");
 				
-
 				animation.addByPrefix("static",  'strum $direction static',  24, false);
 				animation.addByPrefix("pressed", 'strum $direction pressed', 12, false);
 				animation.addByPrefix("confirm", 'strum $direction confirm', 24, false);

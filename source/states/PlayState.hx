@@ -72,7 +72,7 @@ class PlayState extends MusicBeatState
 	// extra stuff
 	public static var health:Float = 1;
 	public static var blueballed:Int = 0;
-	public static var assetModifier:String = "base";
+	public static var assetModifier:String = "new";
 	
 	public static var countdownModifier:String = "base";
 	// score, misses, accuracy and other stuff
@@ -201,7 +201,7 @@ class PlayState extends MusicBeatState
 		if (legacySongs.contains(SONG.song))
 	        assetModifier = "base"; 
        else
-	        assetModifier = "new";
+	        assetModifier = "base";
 	
 		countdownModifier = "base";
 		startedCountdown = false;
