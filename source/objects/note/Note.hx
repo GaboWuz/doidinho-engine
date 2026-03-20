@@ -55,17 +55,6 @@ class Note extends FlxSprite
 				antialiasing = false;
 				isPixelSprite = true;
 				animation.play(direction);
-				
-		    case "new":
-				noteSize = 0.7;
-				frames = Paths.getSparrowAtlas("notes/new/notes");
-
-				var typeName:String = (isHold ? (isHoldEnd ? " hold end" : " hold") : "");
-
-				// oxi
-				animation.addByPrefix('${direction}${typeName}', 'note ${direction}${typeName}0', 24, true);
-
-				animation.play('${direction}${typeName}');
 
 			default:
 				switch(noteType)
@@ -76,6 +65,9 @@ class Note extends FlxSprite
 							case "doido":
 								frames = Paths.getSparrowAtlas("notes/doido/notes");
 								noteSize = 0.95;
+							case "new":
+								noteSize = 0.7;
+								frames = Paths.getSparrowAtlas("notes/new/notes");
 							default:
 								noteSize = 0.7;
 								frames = Paths.getSparrowAtlas("notes/base/notes");
