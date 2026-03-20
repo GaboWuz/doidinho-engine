@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="notes.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="note left0000" x="0" y="159" width="159" height="160" frameX="-1" frameY="-1" frameWidth="160" frameHeight="162"/>
+	<SubTexture name="note down0000" x="0" y="0" width="160" height="159" frameX="0" frameY="-1" frameWidth="160" frameHeight="162"/>
+	<SubTexture name="note up0000" x="160" y="0" width="160" height="159" frameX="0" frameY="-1" frameWidth="160" frameHeight="162"/>
+	<SubTexture name="note right0000" x="160" y="159" width="159" height="160" frameX="0" frameY="-1" frameWidth="160" frameHeight="162"/>
+	<SubTexture name="note down hold end0000" x="320" y="0" width="55" height="65" frameX="2" frameY="2" frameWidth="51" frameHeight="64"/>
+	<SubTexture name="note down hold0000" x="55" y="319" width="55" height="48" frameX="2" frameY="2" frameWidth="51" frameHeight="44"/>
+	<SubTexture name="note right hold0000" x="0" y="319" width="55" height="48" frameX="2" frameY="2" frameWidth="51" frameHeight="44"/>
+	<SubTexture name="note left hold0000" x="110" y="319" width="55" height="48" frameX="2" frameY="2" frameWidth="51" frameHeight="44"/>
+	<SubTexture name="note up hold0000" x="320" y="260" width="55" height="48" frameX="2" frameY="2" frameWidth="51" frameHeight="44"/>
+	<SubTexture name="note red hold end0000" x="320" y="130" width="55" height="65" frameX="2" frameY="2" frameWidth="51" frameHeight="64"/>
+	<SubTexture name="note left hold end0000" x="320" y="65" width="55" height="65" frameX="2" frameY="2" frameWidth="51" frameHeight="64"/>
+	<SubTexture name="note up hold end0000" x="320" y="195" width="55" height="65" frameX="2" frameY="2" frameWidth="51" frameHeight="64"/>
+</TextureAtlas>

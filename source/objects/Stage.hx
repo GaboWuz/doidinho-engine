@@ -285,7 +285,7 @@ class Stage extends FlxGroup
 				
 				frente = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/legacy/gabofundonoite0008"));
 				frente.setGraphicSize(Std.int(frente.width * 2.9));
-				frente.scrollFactor.set(0.1,0.1);
+				//frente.scrollFactor.set(0.1,0.1);
 				frente.alpha = 0.35;
 				frente.blend = BlendMode.MULTIPLY;
 				foreground.add(frente);
