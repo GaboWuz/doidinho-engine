@@ -62,17 +62,9 @@ class SplashNote extends FlxSprite
 					animation.add('splash$i', frameArr, 18, false, (i == 1));
 				scale.set(6,6);
 				isPixelSprite = true;
-			
-			case "new":
-			    frames = Paths.getSparrowAtlas("notes/new/splashes");
-				
-				animation.addByPrefix("splash1", '$direction splash 1', 24, false);
-				animation.addByPrefix("splash2", '$direction splash 2', 24, false);
-				
-				scale.set(0.7,0.7);
 				
 			default:
-				frames = Paths.getSparrowAtlas("notes/base/splashes");
+				frames = Paths.getSparrowAtlas("notes/new/splashes");
 				
 				animation.addByPrefix("splash1", '$direction splash 1', 24, false);
 				animation.addByPrefix("splash2", '$direction splash 2', 24, false);
@@ -118,11 +110,8 @@ class SplashNote extends FlxSprite
 					case "doido":
 						frames = Paths.getSparrowAtlas('notes/doido/holdSplashes');
 						scale.set(0.95,0.95);
-					case "new":
-						frames = Paths.getSparrowAtlas('notes/new/holdSplashes');
-						scale.set(0.7,0.7);
 					default:
-						frames = Paths.getSparrowAtlas('notes/base/holdSplashes');
+						frames = Paths.getSparrowAtlas('notes/new/holdSplashes');
 						scale.set(0.7,0.7);
 				}
 				direction = direction.toUpperCase();

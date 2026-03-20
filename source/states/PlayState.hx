@@ -193,16 +193,7 @@ class PlayState extends MusicBeatState
 			'thorns',
 		];
 		
-		var legacySongs:Array<String> = [
-			'lapoluz',
-			'faker-identity',
-		];
-		
-		if (legacySongs.contains(SONG.song))
-	        assetModifier = "base"; 
-       else
-	        assetModifier = "new";
-	
+	    assetModifier = "base";
 		countdownModifier = "base";
 		startedCountdown = false;
 		startedSong = false;

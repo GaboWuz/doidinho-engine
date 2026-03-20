@@ -46,15 +46,12 @@ class StrumNote extends FlxSprite
 
 			default:
 				strumSize = 0.7;
-				frames = Paths.getSparrowAtlas("notes/base/strums");
+				frames = Paths.getSparrowAtlas("notes/new/strums");
 				
 				switch(assetModifier)
 				{
 					case "doido":
 						frames = Paths.getSparrowAtlas("notes/doido/strums");
-						strumSize = 0.95;
-					case "new":
-						frames = Paths.getSparrowAtlas("notes/new/strums");
 						strumSize = 0.95;
 				}
 
