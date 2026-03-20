@@ -290,7 +290,7 @@ class Stage extends FlxGroup
 				chao.scrollFactor.set(0.9,0.9);
 				add(chao);
 				
-				frente = new FlxSprite(-230, 0).loadGraphic(Paths.image("stages/legacy/gabofundotarde0009"));
+				frente = new FlxSprite(-260, 0).loadGraphic(Paths.image("stages/legacy/gabofundotarde0009"));
 				frente.setGraphicSize(Std.int(frente.width * 2.9));
 				frente.scrollFactor.set(0.1,0.1);
 				frente.alpha = 0.25;
