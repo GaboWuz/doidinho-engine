@@ -193,7 +193,7 @@ class PlayState extends MusicBeatState
 			'thorns',
 		];
 		
-		assetModifier = "base";
+		assetModifier = "gabo";
 		countdownModifier = "base";
 		startedCountdown = false;
 		startedSong = false;
