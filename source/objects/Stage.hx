@@ -7,6 +7,7 @@ import backend.song.SongData.SwagSection;
 
 import crowplexus.iris.Iris;
 import flixel.FlxSprite;
+import flixel.addons.display.FlxBackdrop;
 import flixel.group.FlxGroup;
 import flixel.math.FlxPoint;
 import states.PlayState;
@@ -171,11 +172,21 @@ class Stage extends FlxGroup
 				}
 				
 			case "picnic":
+			    this.curStage = "picnic";
+			
 			    var back = new FlxSprite(0, -1650).loadGraphic(Paths.image("stages/purble/back"));
 		    	back.setGraphicSize(Std.int(back.width * 2.67));
-				back.scrollFactor.set(0.1,0.1);
+				back.scrollFactor.set(0.1, 0.1);
 				back.screenCenter(X);
 				add(back);
+				
+				var clou2ds = new FlxBackdrop(Paths.image("stages/purble/nuvemback"), X);
+				clou2ds.x = -490;
+				clou2ds.y = -670;
+		    	clou2ds.setGraphicSize(Std.int(clou2ds.width * 1.75));
+				clou2ds.scrollFactor.set(0.18, 0.18);
+				clou2ds.velocity.x = 0;
+				add(clou2ds);
 				
 			case "daylegacy":
 				camZoom = 0.675;
