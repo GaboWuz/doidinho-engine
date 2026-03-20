@@ -65,6 +65,9 @@ class Note extends FlxSprite
 							case "doido":
 								frames = Paths.getSparrowAtlas("notes/doido/notes");
 								noteSize = 0.95;
+							case "gabo":
+								noteSize = 0.7;
+								frames = Paths.getSparrowAtlas("notes/gabo/notes");
 							default:
 								noteSize = 0.7;
 								frames = Paths.getSparrowAtlas("notes/base/notes");

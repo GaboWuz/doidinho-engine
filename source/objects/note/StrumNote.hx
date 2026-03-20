@@ -53,6 +53,9 @@ class StrumNote extends FlxSprite
 					case "doido":
 						frames = Paths.getSparrowAtlas("notes/doido/strums");
 						strumSize = 0.95;
+					case "gabo":
+						frames = Paths.getSparrowAtlas("notes/gabo/strums");
+						strumSize = 0.7;
 				}
 
 				animation.addByPrefix("static",  'strum $direction static',  24, false);
