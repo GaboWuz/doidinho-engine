@@ -201,7 +201,7 @@ class PlayState extends MusicBeatState
 		if (legacySongs.contains(SONG.song))
 	        assetModifier = "base"; 
        else
-	        assetModifier = "base";
+	        assetModifier = "new";
 	
 		countdownModifier = "base";
 		startedCountdown = false;
