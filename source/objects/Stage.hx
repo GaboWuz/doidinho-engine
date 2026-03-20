@@ -67,6 +67,8 @@ class Stage extends FlxGroup
 		{
 			default: ["stage"];
 			
+			case "sixxey": ["picnic"];
+			
 			case "lapoluz": ["daylegacy"];
 			case "faker-identity": ["nightlegacy"];
 			
@@ -167,6 +169,9 @@ class Stage extends FlxGroup
 					curtains.scrollFactor.set(1.4,1.4);
 					foreground.add(curtains);
 				}
+				
+			case "picnic":
+			    // nada kkkkkk
 				
 			case "daylegacy":
 				camZoom = 0.675;
@@ -283,7 +288,7 @@ class Stage extends FlxGroup
 				chao.scrollFactor.set(0.9,0.9);
 				add(chao);
 				
-				frente = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/legacy/gabofundonoite0008"));
+				frente = new FlxSprite(0, 120).loadGraphic(Paths.image("stages/legacy/gabofundonoite0008"));
 				frente.setGraphicSize(Std.int(frente.width * 2.9));
 				//frente.scrollFactor.set(0.1,0.1);
 				frente.alpha = 0.35;

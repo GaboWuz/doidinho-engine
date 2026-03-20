@@ -60,6 +60,18 @@ class Character extends FlxAnimate
 		var doidoChar = CharacterUtil.defaultChar();
 		switch(curChar)
 		{
+		    case "gabo":
+				doidoChar.spritesheet += 'gabolegacy/gagbis_assets';
+				
+				doidoChar.anims = [
+					['idle',		'idle', 24, false],
+					['singRIGHT',	'right', 24, false],
+					['singDOWN', 	'down', 24, false],
+					['singUP', 		'up', 24, false],
+					['singLEFT',	'left', 24, false],
+				];
+			scale.set(1.3,1.3);
+			
 			case "gabos":
 				doidoChar.spritesheet += 'gabolegacy/gagbis_assets';
 				
@@ -83,6 +95,24 @@ class Character extends FlxAnimate
 					['singLEFT',	'left', 24, false]
 				];
 			scale.set(1.3,1.3);
+			
+			case "boof":
+				doidoChar.spritesheet += 'bf/BOYFRIEND';
+				doidoChar.anims = [
+					['idle', 			'BF idle dance', 		24, false],
+					['singUP', 			'BF NOTE UP0', 			24, false],
+					['singLEFT', 		'BF NOTE LEFT0', 		24, false],
+					['singRIGHT', 		'BF NOTE RIGHT0', 		24, false],
+					['singDOWN', 		'BF NOTE DOWN0', 		24, false],
+					['singUPmiss', 		'BF NOTE UP MISS', 		24, false],
+					['singLEFTmiss', 	'BF NOTE LEFT MISS', 	24, false],
+					['singRIGHTmiss', 	'BF NOTE RIGHT MISS', 	24, false],
+					['singDOWNmiss', 	'BF NOTE DOWN MISS', 	24, false],
+					['hey', 			'BF HEY', 				24, false],
+					['scared', 			'BF idle shaking', 		24, true],
+				];
+				
+				flipX = true;
 				
 			case "gf":
 				spriteType = ATLAS;
