@@ -43,6 +43,15 @@ class StrumNote extends FlxSprite
 
 				antialiasing = false;
 				isPixelSprite = true;
+				
+			case "new":
+				strumSize = 0.7;
+				frames = Paths.getSparrowAtlas("notes/new/strums");
+				
+
+				animation.addByPrefix("static",  'strum $direction static',  24, false);
+				animation.addByPrefix("pressed", 'strum $direction pressed', 12, false);
+				animation.addByPrefix("confirm", 'strum $direction confirm', 24, false);
 
 			default:
 				strumSize = 0.7;
@@ -53,9 +62,6 @@ class StrumNote extends FlxSprite
 					case "doido":
 						frames = Paths.getSparrowAtlas("notes/doido/strums");
 						strumSize = 0.95;
-					case "new":
-						frames = Paths.getSparrowAtlas("notes/new/strums");
-						strumSize = 0.7;
 				}
 
 				animation.addByPrefix("static",  'strum $direction static',  24, false);

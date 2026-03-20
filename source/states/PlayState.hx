@@ -193,7 +193,11 @@ class PlayState extends MusicBeatState
 			'thorns',
 		];
 		
-		assetModifier = "base";
+		if (SONG.song == ['lapoluz', 'faker-identity'])
+	        assetModifier = "base"; 
+       else
+	        assetModifier = "new";
+	
 		countdownModifier = "base";
 		startedCountdown = false;
 		startedSong = false;
