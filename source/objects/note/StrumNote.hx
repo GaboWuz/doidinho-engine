@@ -53,8 +53,8 @@ class StrumNote extends FlxSprite
 					case "doido":
 						frames = Paths.getSparrowAtlas("notes/doido/strums");
 						strumSize = 0.95;
-					case "gabo":
-						frames = Paths.getSparrowAtlas("notes/gabo/strums");
+					case "new":
+						frames = Paths.getSparrowAtlas("notes/new/strums");
 						strumSize = 0.7;
 				}
 

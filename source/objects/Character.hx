@@ -61,16 +61,16 @@ class Character extends FlxAnimate
 		switch(curChar)
 		{
 		    case "gabo":
-				doidoChar.spritesheet += 'gabolegacy/gagbis_assets';
+				doidoChar.spritesheet += 'gabo/gagbis_assets';
 				
 				doidoChar.anims = [
-					['idle',		'idle', 24, false],
+					['idle',		'gagbis', 24, false],
 					['singRIGHT',	'right', 24, false],
 					['singDOWN', 	'down', 24, false],
 					['singUP', 		'up', 24, false],
 					['singLEFT',	'left', 24, false],
 				];
-			scale.set(1.3,1.3);
+			scale.set(1.3, 1.3);
 			
 			case "gabos":
 				doidoChar.spritesheet += 'gabolegacy/gagbis_assets';
@@ -82,7 +82,7 @@ class Character extends FlxAnimate
 					['singUP', 		'up', 24, false],
 					['singLEFT',	'left', 24, false],
 				];
-			scale.set(1.3,1.3);
+			scale.set(1.3, 1.3);
 				
 			case "faker":
 				doidoChar.spritesheet += 'fakerlegacy/fakerer_assets';
@@ -94,22 +94,22 @@ class Character extends FlxAnimate
 					['singUP', 		'up', 24, false],
 					['singLEFT',	'left', 24, false]
 				];
-			scale.set(1.3,1.3);
+			scale.set(1.3, 1.3);
 			
 			case "boof":
-				doidoChar.spritesheet += 'bf/BOYFRIEND';
+				doidoChar.spritesheet += 'boof/bf_furset';
 				doidoChar.anims = [
-					['idle', 			'BF idle dance', 		24, false],
-					['singUP', 			'BF NOTE UP0', 			24, false],
-					['singLEFT', 		'BF NOTE LEFT0', 		24, false],
-					['singRIGHT', 		'BF NOTE RIGHT0', 		24, false],
-					['singDOWN', 		'BF NOTE DOWN0', 		24, false],
-					['singUPmiss', 		'BF NOTE UP MISS', 		24, false],
+					['idle', 			'idle dance', 		24, false],
+					['singUP', 			'uo', 			24, false],
+					['singLEFT', 		'left', 		24, false],
+					['singRIGHT', 		'right', 		24, false],
+					['singDOWN', 		'down', 		24, false],
+					/*['singUPmiss', 		'BF NOTE UP MISS', 		24, false],
 					['singLEFTmiss', 	'BF NOTE LEFT MISS', 	24, false],
 					['singRIGHTmiss', 	'BF NOTE RIGHT MISS', 	24, false],
 					['singDOWNmiss', 	'BF NOTE DOWN MISS', 	24, false],
 					['hey', 			'BF HEY', 				24, false],
-					['scared', 			'BF idle shaking', 		24, true],
+					['scared', 			'BF idle shaking', 		24, true],*/
 				];
 				
 				flipX = true;

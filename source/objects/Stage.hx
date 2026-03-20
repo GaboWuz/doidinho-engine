@@ -171,7 +171,11 @@ class Stage extends FlxGroup
 				}
 				
 			case "picnic":
-			    // nada kkkkkk
+			    var back = new FlxSprite(0, -1650).loadGraphic(Paths.image("stages/purble/back"));
+		    	back.setGraphicSize(Std.int(back.width * 2.67));
+				back.scrollFactor.set(0.1,0.1);
+				back.screenCenter(X);
+				add(back);
 				
 			case "daylegacy":
 				camZoom = 0.675;
