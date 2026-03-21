@@ -175,17 +175,21 @@ class Stage extends FlxGroup
 			    this.curStage = "picnic";
 			    camZoom = 0.4;
 			
+				gfPos.set(660, 580);
+				dadPos.set(300, 640);
+				bfPos.set(1250, 700);
+			
 				bfCam.x = -300;
 				dadCam.x = 100;
 			
-			    var back = new FlxSprite(0, -1600).loadGraphic(Paths.image("stages/purble/back"));
+			    var back = new FlxSprite(0, -1570).loadGraphic(Paths.image("stages/purble/back"));
 		    	back.setGraphicSize(Std.int(back.width * 2.67));
 				back.scrollFactor.set(0.1, 0.1);
 				back.screenCenter(X);
 				add(back);
 				
 				var clou2ds = new FlxBackdrop(Paths.image("stages/purble/nuvemback"), X);
-				clou2ds.x = -490;
+				clou2ds.x = -380;
 				clou2ds.y = -670;
 		    	clou2ds.setGraphicSize(Std.int(clou2ds.width * 1.75));
 				clou2ds.scrollFactor.set(0.18, 0.18);
@@ -193,7 +197,7 @@ class Stage extends FlxGroup
 				add(clou2ds);
 				
 				var clouds = new FlxBackdrop(Paths.image("stages/purble/nuvemfront"), X);
-				clouds.x = -400;
+				clouds.x = -370;
 				clouds.y = -650;
 		    	clouds.setGraphicSize(Std.int(clouds.width * 1.75));
 				clouds.scrollFactor.set(0.2, 0.2);
@@ -225,7 +229,7 @@ class Stage extends FlxGroup
 				ground.scrollFactor.set(1, 1);
 				add(ground);
 				
-				var pano = new FlxSprite(110, 645).loadGraphic(Paths.image("stages/purble/pano"));
+				var pano = new FlxSprite(-110, 645).loadGraphic(Paths.image("stages/purble/pano"));
 		    	pano.setGraphicSize(Std.int(pano.width * 1.10));
 				pano.scrollFactor.set(1, 1);
 				add(pano);
