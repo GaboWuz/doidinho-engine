@@ -182,8 +182,9 @@ class Stage extends FlxGroup
 				bfCam.x = -300;
 				dadCam.x = 100;
 			
-			    var back = new FlxSprite(0, -1570).loadGraphic(Paths.image("stages/purble/back"));
+			    var back = new FlxSprite(0, -1650).loadGraphic(Paths.image("stages/purble/back"));
 		    	back.setGraphicSize(Std.int(back.width * 2.67));
+		        back.updateHitbox();
 				back.scrollFactor.set(0.1, 0.1);
 				back.screenCenter(X);
 				add(back);
@@ -192,6 +193,7 @@ class Stage extends FlxGroup
 				clou2ds.x = -380;
 				clou2ds.y = -670;
 		    	clou2ds.setGraphicSize(Std.int(clou2ds.width * 1.75));
+		        clou2ds.updateHitbox();
 				clou2ds.scrollFactor.set(0.18, 0.18);
 				clou2ds.velocity.x = 0;
 				add(clou2ds);
@@ -200,42 +202,50 @@ class Stage extends FlxGroup
 				clouds.x = -370;
 				clouds.y = -650;
 		    	clouds.setGraphicSize(Std.int(clouds.width * 1.75));
+		        clouds.updateHitbox();
 				clouds.scrollFactor.set(0.2, 0.2);
 				clouds.velocity.x = 0;
 				add(clouds);
 				
 				var sol = new FlxSprite(1000, -600).loadGraphic(Paths.image("stages/purble/sol"));
 		    	sol.setGraphicSize(Std.int(sol.width * 1.75));
+		        sol.updateHitbox();
 				sol.scrollFactor.set(0.14, 0.14);
 				add(sol);
 				
 				var gru = new FlxSprite(-400, 100).loadGraphic(Paths.image("stages/purble/cao"));
 		    	gru.setGraphicSize(Std.int(gru.width * 1.75));
+		        gru.updateHitbox();
 				gru.scrollFactor.set(0.5, 0.5);
 				add(gru);
 				
 				var gri = new FlxSprite(400, 100).loadGraphic(Paths.image("stages/purble/cao2"));
 		    	gri.setGraphicSize(Std.int(gri.width * 1.75));
+		        gri.updateHitbox();
 				gri.scrollFactor.set(0.6, 0.6);
 				add(gri);
 				
 				var gro = new FlxSprite(-500, -180).loadGraphic(Paths.image("stages/purble/cao3"));
 		    	gro.setGraphicSize(Std.int(gro.width * 1.75));
+		        gro.updateHitbox();
 				gro.scrollFactor.set(0.7, 0.7);
 				add(gro);
 				
 				var ground = new FlxSprite(-480, 590).loadGraphic(Paths.image("stages/purble/caofront"));
 		    	ground.setGraphicSize(Std.int(ground.width * 1.75));
+		        ground.updateHitbox();
 				ground.scrollFactor.set(1, 1);
 				add(ground);
 				
 				var pano = new FlxSprite(-110, 645).loadGraphic(Paths.image("stages/purble/pano"));
 		    	pano.setGraphicSize(Std.int(pano.width * 1.10));
+		        pano.updateHitbox();
 				pano.scrollFactor.set(1, 1);
 				add(pano);
 				
 				var paps = new FlxSprite(-500, 500).loadGraphic(Paths.image("stages/purble/superfront"));
 		    	paps.setGraphicSize(Std.int(ground.width * 1));
+		        paps.updateHitbox();
 				paps.scrollFactor.set(0.9, 0.9);
 				foreground.add(paps);
 				
