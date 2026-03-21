@@ -173,11 +173,11 @@ class Stage extends FlxGroup
 				
 			case "picnic":
 			    this.curStage = "picnic";
-			    camZoom = 0.4;
+			    camZoom = 0.657;
 			
-				gfPos.set(660, 580);
-				dadPos.set(300, 640);
-				bfPos.set(1250, 700);
+				gfPos.set(650, 100);
+				dadPos.set(300, 65);
+				bfPos.set(1250, 100);
 			
 				bfCam.x = -300;
 				dadCam.x = 100;
