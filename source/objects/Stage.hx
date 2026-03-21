@@ -176,8 +176,8 @@ class Stage extends FlxGroup
 			    camZoom = 0.657;
 			
 				gfPos.set(650, 600);
-				dadPos.set(300, 65);
-				bfPos.set(1250, 720);
+				dadPos.set(330, 740);
+				bfPos.set(1250, 760);
 			
 				bfCam.x = -300;
 				dadCam.x = 100;
