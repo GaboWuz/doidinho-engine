@@ -175,9 +175,9 @@ class Stage extends FlxGroup
 			    this.curStage = "picnic";
 			    camZoom = 0.657;
 			
-				gfPos.set(650, 100);
+				gfPos.set(650, 600);
 				dadPos.set(300, 65);
-				bfPos.set(1250, 100);
+				bfPos.set(1250, 720);
 			
 				bfCam.x = -300;
 				dadCam.x = 100;
