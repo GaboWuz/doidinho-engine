@@ -173,9 +173,12 @@ class Stage extends FlxGroup
 				
 			case "picnic":
 			    this.curStage = "picnic";
-			    camZoom = 0.657;
+			    camZoom = 2;
 			
-			    var back = new FlxSprite(0, -1650).loadGraphic(Paths.image("stages/purble/back"));
+				bfCam.x = -300;
+				dadCam.x = 100;
+			
+			    var back = new FlxSprite(0, -1600).loadGraphic(Paths.image("stages/purble/back"));
 		    	back.setGraphicSize(Std.int(back.width * 2.67));
 				back.scrollFactor.set(0.1, 0.1);
 				back.screenCenter(X);
