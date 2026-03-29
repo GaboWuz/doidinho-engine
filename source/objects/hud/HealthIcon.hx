@@ -75,9 +75,12 @@ class HealthIcon extends FlxSprite
 			"bf-cool"	=> 0xFF5FB6F1,
 			"gf"		=> 0xFFA5004D,
 			"dad"		=> 0xFFAF66CE,
-			// do mod
+			// do mod legacy
 			"gabos"		=> 0xFF8249FA,
 			"faker"		=> 0xFFB9B1EF,
+			// do mod
+			"gabo"		=> 0xFF8668FF,
+			"boof"		=> 0xFF78ACE1,
 		];
 
 		function loopMap()
