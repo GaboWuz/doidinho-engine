@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="flocus_bg.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="bendy0000" x="0" y="572" width="352" height="574" frameX="-218" frameY="-94" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0001" x="0" y="572" width="352" height="574" frameX="-218" frameY="-94" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0002" x="0" y="0" width="375" height="572" frameX="-196" frameY="-95" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0003" x="0" y="0" width="375" height="572" frameX="-196" frameY="-95" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0004" x="375" y="0" width="372" height="569" frameX="-199" frameY="-98" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0005" x="375" y="0" width="372" height="569" frameX="-199" frameY="-98" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0006" x="747" y="0" width="355" height="572" frameX="-215" frameY="-96" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0007" x="747" y="0" width="355" height="572" frameX="-215" frameY="-96" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0008" x="0" y="572" width="352" height="574" frameX="-218" frameY="-94" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0009" x="0" y="572" width="352" height="574" frameX="-218" frameY="-94" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0010" x="0" y="572" width="352" height="574" frameX="-218" frameY="-94" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0011" x="0" y="572" width="352" height="574" frameX="-218" frameY="-94" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0012" x="0" y="572" width="352" height="574" frameX="-218" frameY="-94" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0013" x="0" y="572" width="352" height="574" frameX="-218" frameY="-94" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0014" x="0" y="572" width="352" height="574" frameX="-218" frameY="-94" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0015" x="0" y="572" width="352" height="574" frameX="-218" frameY="-94" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0016" x="0" y="572" width="352" height="574" frameX="-218" frameY="-94" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0017" x="0" y="572" width="352" height="574" frameX="-218" frameY="-94" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0018" x="0" y="572" width="352" height="574" frameX="-218" frameY="-94" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="bendy0019" x="0" y="572" width="352" height="574" frameX="-218" frameY="-94" frameWidth="690" frameHeight="690"/>
+</TextureAtlas>

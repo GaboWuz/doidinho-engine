@@ -69,6 +69,7 @@ class Stage extends FlxGroup
 			default: ["stage"];
 			
 			case "sixxey": ["picnic"];
+			case "redkid": ["stageg"];
 			
 			case "lapoluz": ["daylegacy"];
 			case "faker-identity": ["nightlegacy"];
@@ -248,6 +249,10 @@ class Stage extends FlxGroup
 		        paps.updateHitbox();
 				paps.scrollFactor.set(0.9, 0.9);
 				foreground.add(paps);
+				
+			case "stageg":
+			    this.curStage = "stageg";
+			    camZoom = 0.9;
 				
 			case "daylegacy":
 				camZoom = 0.675;

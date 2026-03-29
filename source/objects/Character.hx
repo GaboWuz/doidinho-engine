@@ -72,6 +72,19 @@ class Character extends FlxAnimate
 				];
 			scale.set(1, 1);
 			
+			case "luka":
+				doidoChar.spritesheet += 'luka/luka_gassets';
+				
+				doidoChar.anims = [
+					['danceLeft',	'danceleft',	24, false],
+					['danceRight',	'danceright',	24, false],
+					['singRIGHT',	'right', 24, false],
+					['singDOWN', 	'down', 24, false],
+					['singUP', 		'up', 24, false],
+					['singLEFT',	'left', 24, false],
+				];
+			scale.set(1.1, 1.1);
+			
 			case "gabos":
 				doidoChar.spritesheet += 'gabolegacy/gagbis_assets';
 				
