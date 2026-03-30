@@ -80,6 +80,7 @@ class HealthIcon extends FlxSprite
 			"faker"		=> 0xFFB9B1EF,
 			// do mod
 			"gabo"		=> 0xFF8668FF,
+			"luka"		=> 0xFFE45D9E,
 			"boof"		=> 0xFF78ACE1,
 		];
 

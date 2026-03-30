@@ -252,7 +252,83 @@ class Stage extends FlxGroup
 				
 			case "stageg":
 			    this.curStage = "stageg";
-			    camZoom = 0.9;
+			    camZoom = 0.7;
+			
+			    var back = new FlxSprite(0, -700).loadGraphic(Paths.image('stages/luke/back'));
+				back.setGraphicSize(Std.int(back.width * 2.67));
+				back.updateHitbox();
+				back.scrollFactor.set(0.1, 0.1);
+				back.screenCenter(X);
+				add(back);
+				
+				var grand = new FlxSprite(-110, -100).loadGraphic(Paths.image('stages/luke/pqtemumamontanhanostage'));
+				grand.setGraphicSize(Std.int(grand.width * 1.5));
+				grand.updateHitbox();
+				grand.scrollFactor.set(0.25, 0.25);
+				add(grand);
+				
+				var lu = new FlxSprite(-500, -300).loadGraphic(Paths.image('stages/luke/light'));
+				lu.setGraphicSize(Std.int(lu.width * 1.5));
+				lu.updateHitbox();
+				lu.flipX = true;
+				lu.scrollFactor.set(0.3, 0.3);
+				foreground.add(lu);
+				
+				var cur = new FlxSprite(-300, -190).loadGraphic(Paths.image('stages/luke/cur1'));
+				cur.setGraphicSize(Std.int(cur.width * 1.57));
+				cur.updateHitbox();
+				cur.scrollFactor.set(0.35, 0.35);
+				add(cur);
+				
+				var cur2 = new FlxSprite(-300, -200).loadGraphic(Paths.image('stages/luke/cur2'));
+				cur2.setGraphicSize(Std.int(cur2.width * 1.60));
+				cur2.updateHitbox();
+				cur2.scrollFactor.set(0.48, 0.48);
+				add(cur2);
+				
+				var cur3 = new FlxSprite(-300, -210).loadGraphic(Paths.image('stages/luke/cur3'));
+				cur3.setGraphicSize(Std.int(cur3.width * 1.65));
+				cur3.updateHitbox();
+				cur3.scrollFactor.set(0.63, 0.63);
+				add(cur3);
+				
+				var ll = new FlxSprite(-300, -150).loadGraphic(Paths.image('stages/luke/lightfront'));
+				ll.setGraphicSize(Std.int(ll.width * 1.5));
+				ll.updateHitbox();
+				ll.scrollFactor.set(0.7, 0.7);
+				add(ll);
+				
+				var stag = new FlxSprite(-300, 520).loadGraphic(Paths.image('stages/luke/stagefront'));
+				stag.setGraphicSize(Std.int(stag.width * 1.67));
+				stag.updateHitbox();
+				stag.scrollFactor.set(0.9, 0.9);
+				add(stag);
+				
+				var bola = new FlxSprite(150, 500).loadGraphic(Paths.image('stages/luke/vaziodogabo'));
+				bola.setGraphicSize(Std.int(bola.width * 1.4));
+				bola.updateHitbox();
+				bola.scrollFactor.set(0.9, 0.9);
+				add(bola);
+				
+				var staticSpr = new FlxSprite(1195, 70);
+				staticSpr.frames = Paths.getSparrowAtlas('stages/luke/flocus_bg');
+				staticSpr.animation.addByPrefix('idle', 'bendy', 24, false);
+				staticSpr.setGraphicSize(Std.int(staticSpr.width * 1.1));
+				staticSpr.updateHitbox();
+				staticSpr.scrollFactor.set(0.9, 0.9);
+				add(staticSpr);
+				
+				var tang = new FlxSprite(1200, 730).loadGraphic(Paths.image('stages/luke/umestante'));
+				tang.setGraphicSize(Std.int(tang.width * 1.4));
+				tang.updateHitbox();
+				tang.scrollFactor.set(0.95, 0.95);
+				foreground.add(tang);
+				
+				var eh = new FlxSprite(-165, -100).loadGraphic(Paths.image('stages/luke/eh'));
+				eh.setGraphicSize(Std.int(eh.width * 1.4));
+				eh.updateHitbox();
+				eh.scrollFactor.set(1, 1);
+				foreground.add(eh);
 				
 			case "daylegacy":
 				camZoom = 0.675;
