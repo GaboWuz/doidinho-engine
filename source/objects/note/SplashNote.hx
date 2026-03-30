@@ -63,6 +63,14 @@ class SplashNote extends FlxSprite
 				scale.set(6,6);
 				isPixelSprite = true;
 				
+			case 'new':
+				frames = Paths.getSparrowAtlas("notes/new/splashes");
+				
+				animation.addByPrefix("splash1", '$direction splash 1', 24, false);
+				animation.addByPrefix("splash2", '$direction splash 2', 24, false);
+				
+				scale.set(0.7,0.7);
+				
 			default:
 				frames = Paths.getSparrowAtlas("notes/new/splashes");
 				

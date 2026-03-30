@@ -13,9 +13,9 @@ class Hitbox extends FlxSpriteGroup
 	var hbxWidth:Float = 320;
 	var hbxMap:Map<String, HitboxButton> = [];
 
-	var assetModifier:String = "base";
+	var assetModifier:String = "new";
 	
-	public function new(assetModifier:String = "base")
+	public function new(assetModifier:String = "new")
 	{
 		super();
 		this.assetModifier = assetModifier;
