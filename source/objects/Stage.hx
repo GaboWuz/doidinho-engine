@@ -53,6 +53,9 @@ class Stage extends FlxGroup
 	var rua:FlxSprite;
 	var chao:FlxSprite;
 	var frente:FlxSprite;
+	
+	// coisas públicas
+	var staticSpr:FlxSprite;
 
 	public function new() {
 		super();
@@ -315,7 +318,7 @@ class Stage extends FlxGroup
 				bola.scrollFactor.set(0.9, 0.9);
 				add(bola);
 				
-				var staticSpr = new FlxSprite(1195, 70);
+				staticSpr = new FlxSprite(1195, 70);
 				staticSpr.frames = Paths.getSparrowAtlas('stages/luke/flocus_bg');
 				staticSpr.animation.addByPrefix('idle', 'bendy', 24, false);
 				staticSpr.setGraphicSize(Std.int(staticSpr.width * 1.1));
