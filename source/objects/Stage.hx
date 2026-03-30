@@ -254,6 +254,11 @@ class Stage extends FlxGroup
 			    this.curStage = "stageg";
 			    camZoom = 0.7;
 			
+			    bfPos.x += 950;
+				dadPos.x += 300;
+				bfPos.y += 100;
+				dadPos.y += 102;
+			
 			    var back = new FlxSprite(0, -700).loadGraphic(Paths.image('stages/luke/back'));
 				back.setGraphicSize(Std.int(back.width * 2.67));
 				back.updateHitbox();
@@ -543,6 +548,16 @@ class Stage extends FlxGroup
 		}
 
 		callScript("stepHit", [curStep]);
+	}
+	
+	public function beatHit(curBeat:Int = -1)
+	{
+		switch(curStage)
+        {
+			case "stageg":
+			   if (curBeat % 2 == 0)
+				 staticSpr.animation.play('idle', true);
+		}
 	}
 
 	public function callScript(fun:String, ?args:Array<Dynamic>)

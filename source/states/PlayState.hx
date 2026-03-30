@@ -1630,6 +1630,7 @@ class PlayState extends MusicBeatState
 			if(curStep >= change.stepTime && Conductor.bpm != change.bpm)
 				Conductor.setBPM(change.bpm);
 
+        stageBuild.beatHit(curBeat);
 		hudBuild.beatHit(curBeat);
 		
 		if(curBeat % 4 == 0)
