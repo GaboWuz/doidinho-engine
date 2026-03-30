@@ -49,7 +49,7 @@ class SongData
 			songs: [
 				['sixxey', 'gabo'],
 				['faker-self', 'faker'],
-				['redkid', 'dad'],
+				['redkid', 'luka'],
 			],
 			/*weekFile: 'week1',
 			weekName: 'gabo jumpscare hell yeah',

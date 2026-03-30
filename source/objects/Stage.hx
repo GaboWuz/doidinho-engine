@@ -180,8 +180,8 @@ class Stage extends FlxGroup
 			    camZoom = 0.657;
 			
 				gfPos.set(650, 600);
-				dadPos.set(430, 760);
-				bfPos.set(1340, 830);
+				dadPos.set(440, 760);
+				bfPos.set(1350, 830);
 			
 				bfCam.x = -300;
 				dadCam.x = 100;
@@ -199,7 +199,7 @@ class Stage extends FlxGroup
 		    	clou2ds.setGraphicSize(Std.int(clou2ds.width * 1.75));
 		        clou2ds.updateHitbox();
 				clou2ds.scrollFactor.set(0.18, 0.18);
-				clou2ds.velocity.x = 0;
+				clou2ds.velocity.x = 20;
 				add(clou2ds);
 				
 				var clouds = new FlxBackdrop(Paths.image("stages/purble/nuvemfront"), X);
@@ -208,7 +208,7 @@ class Stage extends FlxGroup
 		    	clouds.setGraphicSize(Std.int(clouds.width * 1.75));
 		        clouds.updateHitbox();
 				clouds.scrollFactor.set(0.2, 0.2);
-				clouds.velocity.x = 0;
+				clouds.velocity.x = 10;
 				add(clouds);
 				
 				var sol = new FlxSprite(1000, -600).loadGraphic(Paths.image("stages/purble/sol"));
@@ -258,9 +258,9 @@ class Stage extends FlxGroup
 			    camZoom = 0.7;
 			
 			    bfPos.x += 200;
-				dadPos.x += 300;
+				dadPos.x += 320;
 				bfPos.y += 100;
-				dadPos.y += 102;
+				dadPos.y += 110;
 			
 			    var back = new FlxSprite(0, -700).loadGraphic(Paths.image('stages/luke/back'));
 				back.setGraphicSize(Std.int(back.width * 2.67));

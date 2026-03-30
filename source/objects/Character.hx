@@ -83,6 +83,8 @@ class Character extends FlxAnimate
 					['singUP', 		'up', 24, false],
 					['singLEFT',	'left', 24, false],
 				];
+			idleAnims = ["danceLeft", "danceRight"];
+			quickDancer = true;
 			scale.set(1.1, 1.1);
 			
 			case "gabos":
