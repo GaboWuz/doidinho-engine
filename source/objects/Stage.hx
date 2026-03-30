@@ -199,7 +199,7 @@ class Stage extends FlxGroup
 		    	clou2ds.setGraphicSize(Std.int(clou2ds.width * 1.75));
 		        clou2ds.updateHitbox();
 				clou2ds.scrollFactor.set(0.18, 0.18);
-				clou2ds.velocity.x = 20;
+				clou2ds.velocity.x = 10;
 				add(clou2ds);
 				
 				var clouds = new FlxBackdrop(Paths.image("stages/purble/nuvemfront"), X);
@@ -208,7 +208,7 @@ class Stage extends FlxGroup
 		    	clouds.setGraphicSize(Std.int(clouds.width * 1.75));
 		        clouds.updateHitbox();
 				clouds.scrollFactor.set(0.2, 0.2);
-				clouds.velocity.x = 10;
+				clouds.velocity.x = 20;
 				add(clouds);
 				
 				var sol = new FlxSprite(1000, -600).loadGraphic(Paths.image("stages/purble/sol"));
@@ -261,10 +261,7 @@ class Stage extends FlxGroup
 				dadPos.x += 350;
 				bfPos.y += 100;
 				dadPos.y += 130;
-				
-				dadCam.set(100, 50);
-	        	bfCam.set(-200, 90);
-			
+
 			    var back = new FlxSprite(0, -700).loadGraphic(Paths.image('stages/luke/back'));
 				back.setGraphicSize(Std.int(back.width * 2.67));
 				back.updateHitbox();
