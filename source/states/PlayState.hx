@@ -333,6 +333,10 @@ class PlayState extends MusicBeatState
 		}
 		addList.push(stageBuild.foreground);
 		
+		if (stageBuild.curStage == "stageg") {
+		    gf.visible = false;
+		}
+		
 		for(item in addList)
 			add(item);
 		
