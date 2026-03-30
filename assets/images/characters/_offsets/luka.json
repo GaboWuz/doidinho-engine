@@ -7,12 +7,12 @@
 		[
 			"singDOWN",
 			8,
-			-8
+		   -8
 		],
 		[
 			"singUP",
 			-5,
-			0
+			 0
 		],
 		[
 			"singLEFT",
@@ -22,7 +22,7 @@
 		[
 			"singRIGHT",
 			5,
-			-12
+		 -12
 		],
 		[
 			"danceLeft",
@@ -31,8 +31,8 @@
 		],
 		[
 			"danceRight",
-			-20,
-	     	20
+			0,
+	        0
 		]
 	],
 	"ratingsOffset": [
