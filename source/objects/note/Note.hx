@@ -70,7 +70,7 @@ class Note extends FlxSprite
 								frames = Paths.getSparrowAtlas("notes/new/notes");
 							default:
 								noteSize = 0.7;
-								frames = Paths.getSparrowAtlas("notes/new/notes");
+								frames = Paths.getSparrowAtlas("notes/base/notes");
 						}
 
 						var typeName:String = (isHold ? (isHoldEnd ? " hold end" : " hold") : "");
