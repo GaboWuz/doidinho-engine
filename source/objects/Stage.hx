@@ -257,7 +257,7 @@ class Stage extends FlxGroup
 			    this.curStage = "stageg";
 			    camZoom = 0.7;
 			
-			    bfPos.x += 950;
+			    bfPos.x += 200;
 				dadPos.x += 300;
 				bfPos.y += 100;
 				dadPos.y += 102;
