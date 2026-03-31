@@ -215,9 +215,7 @@ class HudMoogus extends HudClass
 		
 		timeTxt.visible = false;
 		
-		var songPercent:Float = Conductor.songPos / PlayState.songLength - 0.2;
-		/*if (songPercent < 0) songPercent = 0;
-		if (songPercent > 1) songPercent = 1;*/
+		var songPercent:Float = Conductor.songPos / PlayState.songLength - 0.001;
 		
 		timer3.scale.set(1.168 * songPercent, 0.035);
 		timer3.updateHitbox();
