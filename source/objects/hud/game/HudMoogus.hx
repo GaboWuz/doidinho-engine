@@ -219,7 +219,7 @@ class HudMoogus extends HudClass
 		if (songPercent < 0) songPercent = 0;
 		if (songPercent > 1) songPercent = 1;*/
 		
-		timer3.scale.set(1.168 * PlayState.songLength, 0.035);
+		timer3.scale.set(1.168 * songTime, 0.035);
 		timer3.updateHitbox();
 	}
 
