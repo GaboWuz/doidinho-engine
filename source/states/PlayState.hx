@@ -303,7 +303,7 @@ class PlayState extends MusicBeatState
 				hudBuild.alpha = 0.0;
 		}
 		
-		if (SONG.song == "moogusxey") {
+		if (SONG.song != "moogusxey") {
 			dedbg = new FlxSprite(0, 0);
 			dedbg.frames = Paths.getSparrowAtlas('ded/deadfool');
 			dedbg.animation.addByPrefix('eh', 'eh', 24, false);
@@ -770,7 +770,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 		
-		if (!SONG.song == "moogusxey") {
+		if (SONG.song != "moogusxey") {
 			for (i in [titleText, theLine, authorText]) {
 		
 		        FlxTween.tween(i, {alpha: 1}, 0.3 / 1, {
