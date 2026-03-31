@@ -14,7 +14,7 @@ import objects.hud.HudClass.IconChange;
 import states.PlayState;
 import flixel.util.FlxStringUtil;
 
-class HudDoido extends HudClass
+class HudMoogus extends HudClass
 {
 	public var infoTxt:FlxText;
 	public var timeTxt:FlxText;
