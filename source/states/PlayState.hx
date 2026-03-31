@@ -106,6 +106,9 @@ class PlayState extends MusicBeatState
 	public var isIdling:Bool = true;
 
 	public var oldIconEasterEgg:Bool = true;
+	
+	//coisa para eventos
+	var flash:FlxSprite;
 
 	// hud
 	public var hudBuild:HudClass;
@@ -376,6 +379,11 @@ class PlayState extends MusicBeatState
 		hudBuild.cameras = [camHUD];
 		add(hudBuild);
 		
+		flash = new FlxSprite(0, 0).makeGraphic(1286, 730, 0xFF9383FF);
+		flash.alpha = 0;
+		flash.cameras = [camHUD];
+		add(flash);
+		
 		// song title
 		if (SONG.song != "moogusxey") {
 			titleText = new FlxText(0, 301, 1000, Paths.text('songs/' + SONG.song + '/songname'), 50);
@@ -403,10 +411,10 @@ class PlayState extends MusicBeatState
 	    }
 	
 	    if (SONG.song == "moogusxey") {
-			songnameText = new FlxText(0, 190 + 15, 0, PlayState.SONG.song, 30);
+			songnameText = new FlxText(0, 190 + 15, 0, Paths.text('songs/' + SONG.song + '/songname'), 30);
 			songnameText.alignment = LEFT;
 			
-			composerTxt = new FlxText(0, 190 + 50, 0, 'Composer: GaboWuz, GabkXey', 30);
+			composerTxt = new FlxText(0, 190 + 50, 0, Paths.text('songs/' + SONG.song + '/credits'), 30);
 			composerTxt.alignment = LEFT;
 			
 			var textWidth:Float = songnameText.width;
@@ -2211,6 +2219,10 @@ class PlayState extends MusicBeatState
 					Conductor.stepCrochet / 1000 * CoolUtil.stringToFloat(daEvent.value1, 2),
 					CoolUtil.stringToColor(daEvent.value2)
 				);
+				
+			case 'purple':
+		        flash.alpha = 0.35;
+		        FlxTween.tween(flash, {alpha: 0}, 0.50);
 
 			case 'Fade Screen':
 				camGame.fade(
