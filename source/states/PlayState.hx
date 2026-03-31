@@ -403,20 +403,30 @@ class PlayState extends MusicBeatState
 	    }
 	
 	    if (SONG.song == "moogusxey") {
-		    box = new FlxSprite(-740, 190).makeGraphic(540, 140, FlxColor.WHITE);
+			songnameText = new FlxText(0, 190 + 15, 0, PlayState.SONG.song, 30);
+			songnameText.alignment = LEFT;
+			
+			composerTxt = new FlxText(0, 190 + 50, 0, 'Composer: GaboWuz, GabkXey', 30);
+			composerTxt.alignment = LEFT;
+			
+			var textWidth:Float = songnameText.width;
+			if (composerTxt.width > textWidth) {
+			    textWidth = composerTxt.width;
+			}
+			
+			var padding:Int = 100;
+			box = new FlxSprite(-740, 190).makeGraphic(Std.int(textWidth + padding), 140, FlxColor.WHITE);
 			box.alpha = 0.5;
 			box.cameras = [camOther];
 			add(box);
-			 
-			songnameText = new FlxText(box.x + 70, box.y + 15, 1000, PlayState.SONG.song, 30);
+			
+			songnameText.x = box.x + 70;
 			songnameText.font = Paths.font("vcr.ttf");
-			songnameText.alignment = LEFT;
 			songnameText.cameras = [camOther];
 			add(songnameText);
 			
-			composerTxt = new FlxText(box.x + 70, box.y + 50, 1000, 'Composer: GaboWuz Ft. GabkXey', 30);
+			composerTxt.x = box.x + 70;
 			composerTxt.font = Paths.font("vcr.ttf");
-			composerTxt.alignment = LEFT;
 			composerTxt.cameras = [camOther];
 			add(composerTxt);
 		}
