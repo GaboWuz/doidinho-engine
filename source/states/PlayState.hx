@@ -296,6 +296,25 @@ class PlayState extends MusicBeatState
 				hudBuild.alpha = 0.0;
 		}
 		
+		dedbg = new FlxSprite(0, 0);
+		dedbg.frames = Paths.getSparrowAtlas('ded/deadfool');
+		dedbg.animation.addByPrefix('eh', 'eh', 24, false);
+		dedbg.animation.addByPrefix('idle', 'ded', 24, false);
+		dedbg.cameras = [camHUD];
+		dedbg.scale.set(1, 0.62);
+		dedbg.updateHitbox();
+		dedbg.screenCenter(XY);
+		add(dedbg);
+		
+		staticSpr = new FlxSprite(-30, 0);
+		staticSpr.frames = Paths.getSparrowAtlas('ded/gaboisded');
+		staticSpr.animation.addByPrefix('eh', 'eh', 24, false);
+		staticSpr.animation.addByPrefix('idle', 'ded', 24, false);
+		staticSpr.cameras = [camHUD];
+		staticSpr.screenCenter(Y);
+		staticSpr.alpha = 0;
+		add(staticSpr);
+		
 		/*
 		*	if you want to change characters
 		*	use changeChar(charVar, "new char");
@@ -1689,6 +1708,22 @@ class PlayState extends MusicBeatState
 		stageBuild.stepHit(curStep);
 		hudBuild.stepHit(curStep);
 		syncSong();
+		
+		if (SONG.song == "moogusxey") {
+		    if (curStep == 1) {
+			    dedbg.animation.play('idle', true);
+			    staticSpr.animation.play('idle', true);
+			}
+			
+			if (curStep == 8) {
+			    FlxTween.tween(staticSpr, {alpha: 1}, 0.3, {ease: FlxEase.expoOut});
+			}
+			
+			if (curStep == 25) {
+			    changeChar("dad", "susbo");
+			    FlxTween.tween(staticSpr, {alpha: 0}, 0.27, {ease: FlxEase.expoIn});
+			}
+		}
 		
 		callScript("stepHit", [curStep]);
 	}
