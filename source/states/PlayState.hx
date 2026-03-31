@@ -1724,7 +1724,7 @@ class PlayState extends MusicBeatState
 			}
 			
 			if (curStep == 25) {
-			    changeChar("dad", "susbo");
+			    changeChar(dad, "susbo");
 			    FlxTween.tween(staticSpr, {alpha: 0}, 0.27, {ease: FlxEase.expoIn});
 			}
 		}
