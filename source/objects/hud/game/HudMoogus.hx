@@ -68,8 +68,8 @@ class HudMoogus extends HudClass
 		timer3 = new FlxSprite(122, 0).loadGraphic(Paths.image('hud/gagbo/timer/3'));
 		timer4 = new FlxSprite(122, 0).loadGraphic(Paths.image('hud/gagbo/timer/4'));
 		
-		songNameTxt = new FlxText(124, 19.3 + yOffset, 0, PlayState.SONG.song, 15);
-		songNameTxt.font = Paths.font("vcr.ttf")
+		songNameTxt = new FlxText(124, 0, 0, PlayState.SONG.song, 15);
+		songNameTxt.font = Paths.font("vcr.ttf");
 		songNameTxt.alignment = LEFT;
 		
 		timer1.scale.set(1.185, 0.045);
@@ -111,6 +111,11 @@ class HudMoogus extends HudClass
 			healthBar,
 			iconP1,
 			iconP2,
+			timer1,
+			timer2,
+			timer3,
+			timer4,
+			songNameTxt,
 		])
 			alphaList.push(i);
 	}
@@ -186,6 +191,8 @@ class HudMoogus extends HudClass
 		timer2.y = 20 + (downscroll ? 670 : 0);
 		timer3.y = 24.25 + (downscroll ? 670 : 0);
 		timer4.y = 24.25 + (downscroll ? 670 : 0);
+		
+		songNameTxt.y = 19.3 + (downscroll ? 670 : 0);
 	}
 
 	override function update(elapsed:Float)

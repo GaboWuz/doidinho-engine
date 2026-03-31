@@ -409,11 +409,13 @@ class PlayState extends MusicBeatState
 			add(box);
 			 
 			songnameText = new FlxText(box.x + 70, box.y + 15, 1000, PlayState.SONG.song, 30);
+			songnameText.font = Paths.font("vcr.ttf");
 			songnameText.alignment = LEFT;
 			songnameText.cameras = [camOther];
 			add(songnameText);
 			
 			composerTxt = new FlxText(box.x + 70, box.y + 50, 1000, 'Composer: GaboWuz Ft. GabkXey', 30);
+			composerTxt.font = Paths.font("vcr.ttf");
 			composerTxt.alignment = LEFT;
 			composerTxt.cameras = [camOther];
 			add(composerTxt);
