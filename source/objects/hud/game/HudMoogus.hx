@@ -63,14 +63,13 @@ class HudMoogus extends HudClass
 		enableTimeTxt(SaveData.data.get('Song Timer'));
 		add(timeTxt);
 		
-		var yOffset:Float = downscroll ? 670 : 0; 
-		
-		timer1 = new FlxSprite(118.5, 22.5 + yOffset).loadGraphic(Paths.image('hud/gagbo/timer/1'));
-		timer2 = new FlxSprite(115, 20 + yOffset).loadGraphic(Paths.image('hud/gagbo/timer/2'));
-		timer3 = new FlxSprite(122, 24.25 + yOffset).loadGraphic(Paths.image('hud/gagbo/timer/3'));
-		timer4 = new FlxSprite(122, 24.25 + yOffset).loadGraphic(Paths.image('hud/gagbo/timer/4'));
+		timer1 = new FlxSprite(118.5, 0).loadGraphic(Paths.image('hud/gagbo/timer/1'));
+		timer2 = new FlxSprite(115, 0).loadGraphic(Paths.image('hud/gagbo/timer/2'));
+		timer3 = new FlxSprite(122, 0).loadGraphic(Paths.image('hud/gagbo/timer/3'));
+		timer4 = new FlxSprite(122, 0).loadGraphic(Paths.image('hud/gagbo/timer/4'));
 		
 		songNameTxt = new FlxText(124, 19.3 + yOffset, 0, PlayState.SONG.song, 15);
+		songNameTxt.font = Paths.font("vcr.ttf")
 		songNameTxt.alignment = LEFT;
 		
 		timer1.scale.set(1.185, 0.045);
@@ -182,7 +181,11 @@ class HudMoogus extends HudClass
 		badScoreTxt.y = healthBar.y - badScoreTxt.height - 4;
 		
 		updateTimeTxt();
-		timeTxt.y = downscroll ? (FlxG.height - timeTxt.height - 8) : (8);
+		
+		timer1.y = 22.5 + (downscroll ? 670 : 0);
+		timer2.y = 20 + (downscroll ? 670 : 0);
+		timer3.y = 24.25 + (downscroll ? 670 : 0);
+		timer4.y = 24.25 + (downscroll ? 670 : 0);
 	}
 
 	override function update(elapsed:Float)
