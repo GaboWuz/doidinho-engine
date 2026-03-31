@@ -64,10 +64,10 @@ class HudMoogus extends HudClass
 		
 		var yOffset:Float = downscroll ? 670 : 0; 
 		
-		timer1 = new FlxSprite(118.5, 22.5 + yOffset).loadGraphic(Paths.image('timer/1'));
-		timer2 = new FlxSprite(115, 20 + yOffset).loadGraphic(Paths.image('timer/2'));
-		timer3 = new FlxSprite(122, 24.25 + yOffset).loadGraphic(Paths.image('timer/3'));
-		timer4 = new FlxSprite(122, 24.25 + yOffset).loadGraphic(Paths.image('timer/4'));
+		timer1 = new FlxSprite(118.5, 22.5 + yOffset).loadGraphic(Paths.image('hud/gagbo/timer/1'));
+		timer2 = new FlxSprite(115, 20 + yOffset).loadGraphic(Paths.image('hud/gagbo/timer/2'));
+		timer3 = new FlxSprite(122, 24.25 + yOffset).loadGraphic(Paths.image('hud/gagbo/timer/3'));
+		timer4 = new FlxSprite(122, 24.25 + yOffset).loadGraphic(Paths.image('hud/gagbo/timer/4'));
 		
 		songNameTxt = new FlxText(124, 19.3 + yOffset, 0, PlayState.SONG.song, 15);
 		songNameTxt.alignment = LEFT;
