@@ -467,14 +467,14 @@ class Stage extends FlxGroup
 			    camZoom = 0.6;
 			
 				// uh
-			    bfPos.x += 10;
+			    bfPos.x += 450;
 				bfPos.y += 10;
 				
-				dadPos.x += 100;
-				dadPos.y -= 10;
+				dadPos.x += 450;
+				dadPos.y += 35;
 				
 				gfPos.y -= 30;
-				gfPos.x -= 20;
+				gfPos.x += 420;
 				
 				var a = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/moogus/back'));
 				a.setGraphicSize(Std.int(a.width * 2.95));
@@ -508,7 +508,7 @@ class Stage extends FlxGroup
 				add(ground);
 				
 				var ped = new FlxSprite(1670, -220).loadGraphic(Paths.image('stages/moogus/pedio'));
-				ped.setGraphicSize(Std.int(amo.width * 2.5));
+				ped.setGraphicSize(Std.int(ped.width * 2.5));
 				ped.updateHitbox();
 				ped.scrollFactor.set(0.9, 0.9);
 				add(ped);
