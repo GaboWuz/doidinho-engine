@@ -15,7 +15,7 @@ class WarningState extends MusicBeatState
 			+ "This mod features flashing lights that may\n"
 			+ "be harmful to those with photosensitivity.\n"
 			+ "You can disable them in the Options menu.\n\n"
-			+ "Press ACCEPT to continue";
+			+ "Press ACCEPT to continue, oh hi gabo.";
 		var popUpTxt = new FlxText(0,0,0,tex);
 		popUpTxt.setFormat(Main.gFont, 36, 0xFFFFFFFF, CENTER);
 		popUpTxt.screenCenter();

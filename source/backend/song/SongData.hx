@@ -51,11 +51,11 @@ class SongData
 				['faker-self', 'faker'],
 				['redkid', 'luka'],
 			],
-			/*weekFile: 'week1',
+			weekFile: 'week1',
 			weekName: 'gabo jumpscare hell yeah',
-			chars: ['', 'bf', 'gf'],*/
+			chars: ['', 'bf', 'gf'],
 			diffs: ['easy', 'normal'],
-			freeplayOnly: true,
+			freeplayOnly: false,
 		},
 		{
 			songs: [
@@ -63,6 +63,13 @@ class SongData
 				["faker-identity", "faker"],
 			],
 			diffs: ['easy', 'normal'],
+			freeplayOnly: true,
+		},
+		{
+			songs: [
+				["moogusxey", "susbo"],
+			],
+			diffs: ['normal'],
 			freeplayOnly: true,
 		},
 	];

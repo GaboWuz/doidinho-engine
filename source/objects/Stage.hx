@@ -77,6 +77,8 @@ class Stage extends FlxGroup
 			case "lapoluz": ["daylegacy"];
 			case "faker-identity": ["nightlegacy"];
 			
+			case "moogusxey": ["legacymoogus"];
+			
 			//case "template": ["preload1", "preload2", "starting-stage"];
 		};
 
@@ -454,11 +456,62 @@ class Stage extends FlxGroup
 				add(chao);
 				
 				frente = new FlxSprite(0, 120).loadGraphic(Paths.image("stages/legacy/gabofundonoite0008"));
-				frente.setGraphicSize(Std.int(frente.width * 2.9));
+				frente.setGraphicSize(Std.int(frente.width * 3.5));
 				//frente.scrollFactor.set(0.1,0.1);
 				frente.alpha = 0.35;
 				frente.blend = BlendMode.MULTIPLY;
 				foreground.add(frente);
+				
+			case "legacymoogus": //piadas fools
+				this.curStage = "legacymoogus";
+			    camZoom = 0.6;
+			
+				// uh
+			    bfPos.x += 10;
+				bfPos.y += 10;
+				
+				dadPos.x += 100;
+				dadPos.y -= 10;
+				
+				gfPos.y -= 30;
+				gfPos.x -= 20;
+				
+				var a = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/moogus/back'));
+				a.setGraphicSize(Std.int(a.width * 2.95));
+				a.updateHitbox();
+				a.scrollFactor.set(0.1, 0.1);
+				a.screenCenter(XY);
+				add(a);
+				
+				var b = new FlxSprite(-475, -450).loadGraphic(Paths.image('stages/moogus/clound'));
+				b.setGraphicSize(Std.int(b.width * 2.75));
+				b.updateHitbox();
+				b.scrollFactor.set(0.32, 0.32);
+				add(b);
+				
+				var mo = new FlxSprite(350, 200).loadGraphic(Paths.image('stages/moogus/mo'));
+				mo.setGraphicSize(Std.int(mo.width * 2.25));
+				mo.updateHitbox();
+				mo.scrollFactor.set(0.65, 0.65);
+				add(mo);
+				
+				var amo = new FlxSprite(-400, 100).loadGraphic(Paths.image('stages/moogus/mofront'));
+				amo.setGraphicSize(Std.int(amo.width * 2.55));
+				amo.updateHitbox();
+				amo.scrollFactor.set(0.72, 0.72);
+				add(amo);
+				
+				var ground = new FlxSprite(-500, 470).loadGraphic(Paths.image('stages/moogus/ground'));
+				ground.setGraphicSize(Std.int(ground.width * 2.35));
+				ground.updateHitbox();
+				ground.scrollFactor.set(0.9, 0.9);
+				add(ground);
+				
+				var ped = new FlxSprite(1670, -220).loadGraphic(Paths.image('stages/moogus/pedio'));
+				ped.setGraphicSize(Std.int(amo.width * 2.5));
+				ped.updateHitbox();
+				ped.scrollFactor.set(0.9, 0.9);
+				add(ped);
 		}
 	}
 	

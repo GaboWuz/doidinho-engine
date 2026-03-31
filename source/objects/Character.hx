@@ -72,6 +72,42 @@ class Character extends FlxAnimate
 				];
 			scale.set(1, 1);
 			
+			case "gagbis":
+				doidoChar.spritesheet += 'gagbis/gagbis_ded';
+				
+				doidoChar.anims = [
+					['idle',		'idles', 12, false],
+					['singRIGHT',	'right', 24, false],
+					['singDOWN', 	'down', 24, false],
+					['singUP', 		'up', 24, false],
+					['singLEFT',	'left', 24, false],
+					['ded',	'ded', 24, false],
+				];
+			scale.set(1.1, 1.1);
+			
+			case "mortonaofala":
+				doidoChar.spritesheet += 'gagbis/gagbis_ded';
+				
+				doidoChar.anims = [
+					['idle',		'uff', 24, false],
+				];
+			scale.set(1.1, 1.1);
+			
+			case "susbo":
+				doidoChar.spritesheet += 'susbo/ops_susset';
+				
+				doidoChar.anims = [
+					['danceLeft',	'ddle',	24, false],
+					['danceRight',	'ddrg',	24, false],
+					['singRIGHT',	'right', 24, false],
+					['singDOWN', 	'down', 24, false],
+					['singUP', 		'up', 24, false],
+					['singLEFT',	'left', 24, false],
+				];
+			idleAnims = ["danceLeft", "danceRight"];
+			quickDancer = true;
+			scale.set(1.1, 1.1);
+			
 			case "luka":
 				doidoChar.spritesheet += 'luka/luka_gassets';
 				
@@ -122,9 +158,23 @@ class Character extends FlxAnimate
 					/*['singUPmiss', 		'BF NOTE UP MISS', 		24, false],
 					['singLEFTmiss', 	'BF NOTE LEFT MISS', 	24, false],
 					['singRIGHTmiss', 	'BF NOTE RIGHT MISS', 	24, false],
-					['singDOWNmiss', 	'BF NOTE DOWN MISS', 	24, false],
-					['hey', 			'BF HEY', 				24, false],
-					['scared', 			'BF idle shaking', 		24, true],*/
+					['singDOWNmiss', 	'BF NOTE DOWN MISS', 	24, false],*/
+				];
+				
+				flipX = true;
+			
+			case "kyzu":
+				doidoChar.spritesheet += 'kyzu/kyzu_friend';
+				doidoChar.anims = [
+					['idle', 			'boykisser', 		12, false],
+					['singUP', 			'up', 			24, false],
+					['singLEFT', 		'left', 		24, false],
+					['singRIGHT', 		'right', 		24, false],
+					['singDOWN', 		'down', 		24, false],
+					/*['singUPmiss', 		'BF NOTE UP MISS', 		24, false],
+					['singLEFTmiss', 	'BF NOTE LEFT MISS', 	24, false],
+					['singRIGHTmiss', 	'BF NOTE RIGHT MISS', 	24, false],
+					['singDOWNmiss', 	'BF NOTE DOWN MISS', 	24, false],*/
 				];
 				
 				flipX = true;

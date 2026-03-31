@@ -71,6 +71,7 @@ class ChartingState extends MusicBeatState
 		// notes
 		['Freeze Notes',		'Value 1: Freeze? (true/false)\nValue 2: Strumline? (dad/bf/both)'],
 		['Change Note Speed', 	'Value 1: New Speed\nValue 2: Duration (in steps)\nValue 3: $easeDesc'],
+		['Purple', 	'hummmmm.'],
 	];
 	public var eventsLabels:Array<String> = [];
 
