@@ -68,7 +68,7 @@ class HudMoogus extends HudClass
 		timer3 = new FlxSprite(122, 0).loadGraphic(Paths.image('hud/gagbo/timer/3'));
 		timer4 = new FlxSprite(122, 0).loadGraphic(Paths.image('hud/gagbo/timer/4'));
 		
-		songNameTxt = new FlxText(124, 0, 0, PlayState.SONG.song, 15);
+		songNameTxt = new FlxText(124, 0, 0, Paths.text('songs/' + PlayState.SONG.song + '/songname'), 15);
 		songNameTxt.font = Paths.font("vcr.ttf");
 		songNameTxt.alignment = LEFT;
 		
