@@ -3,7 +3,7 @@
 		"speed": 2.7,
 		"stage": "legacymoogus",
 		"player1": "kyzu",
-		"player2": "gagbis",
+		"player2": "susbo",
 		"events": [],
 		"notes": [
 			{
@@ -4952,7 +4952,7 @@
 		],
 		"splashSkin": "noteSplashes",
 		"validScore": false,
-		"gfVersion": "gf",
+		"gfVersion": "gagbis",
 		"bpm": 185,
 		"arrowSkin": "",
 		"needsVoices": true,
