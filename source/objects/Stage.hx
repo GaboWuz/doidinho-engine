@@ -468,13 +468,12 @@ class Stage extends FlxGroup
 			
 				// uh
 			    bfPos.x += 450;
-				bfPos.y += 10;
+				bfPos.y += 40;
 				
 				dadPos.x += 450;
-				dadPos.y += 35;
+				dadPos.y += 70;
 				
-				gfPos.y -= 30;
-				gfPos.x += 420;
+				gfPos.x += 467;
 				
 				var a = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/moogus/back'));
 				a.setGraphicSize(Std.int(a.width * 2.95));
