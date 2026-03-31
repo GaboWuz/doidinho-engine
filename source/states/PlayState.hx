@@ -1713,10 +1713,13 @@ class PlayState extends MusicBeatState
 		hudBuild.stepHit(curStep);
 		syncSong();
 		
-		if (SONG.song == "moogusxey") {			
-			if (curStep == 8) {
-			    dedbg.animation.play('idle', true);
+		if (SONG.song == "moogusxey") {		
+            if (curStep == 1) {
+                dedbg.animation.play('idle', true);
 			    staticSpr.animation.play('idle', true);
+			}
+			
+			if (curStep == 8) {
 			    FlxTween.tween(staticSpr, {alpha: 1}, 0.3, {ease: FlxEase.expoOut});
 			}
 			
