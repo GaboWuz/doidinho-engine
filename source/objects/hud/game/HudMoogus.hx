@@ -72,12 +72,6 @@ class HudDoido extends HudClass
 		songNameTxt = new FlxText(124, 19.3 + yOffset, 0, PlayState.SONG.song, 15);
 		songNameTxt.alignment = LEFT;
 		
-		timer1.cameras = [camHUD];
-		timer2.cameras = [camHUD];
-		timer3.cameras = [camHUD];
-		timer4.cameras = [camHUD];
-		songNameTxt.cameras = [camHUD];
-		
 		timer1.scale.set(1.185, 0.045);
 		timer1.updateHitbox();
 		
