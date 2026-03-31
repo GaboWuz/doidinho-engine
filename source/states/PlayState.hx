@@ -110,6 +110,10 @@ class PlayState extends MusicBeatState
 	// hud
 	public var hudBuild:HudClass;
 	
+	//mais coisas públicas
+	var dedbg:FlxSprite;
+	var staticSpr:FlxSprite;
+	
 	// song title
 	public var titleText:FlxText;
 	public var theLine:FlxSprite;
