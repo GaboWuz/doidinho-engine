@@ -56,6 +56,9 @@ class StrumNote extends FlxSprite
 					case "new":
 			        	frames = Paths.getSparrowAtlas("notes/new/strums");
 			            strumSize = 0.7;
+			        case "moogus":
+			        	frames = Paths.getSparrowAtlas("notes/new/opponentNotes/AMOOGUS_assets");
+			            strumSize = 0.7;
 				}
 
 				animation.addByPrefix("static",  'strum $direction static',  24, false);

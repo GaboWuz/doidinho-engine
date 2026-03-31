@@ -68,6 +68,9 @@ class Note extends FlxSprite
 							case "new":
 								noteSize = 0.7;
 								frames = Paths.getSparrowAtlas("notes/new/notes");
+							case "moogus":
+								frames = Paths.getSparrowAtlas("notes/new/opponentNotes/AMOOGUS_assets");
+								noteSize = 0.7;
 							default:
 								noteSize = 0.7;
 								frames = Paths.getSparrowAtlas("notes/base/notes");

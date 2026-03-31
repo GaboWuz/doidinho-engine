@@ -387,6 +387,8 @@ class PlayState extends MusicBeatState
 			switch(character) {
 				case 'bf-pixel':
 					noteskins.push("pixel");
+				case 'susbo':
+					noteskins.push("moogus");
 				default:
 					noteskins.push(assetModifier);
 			}
