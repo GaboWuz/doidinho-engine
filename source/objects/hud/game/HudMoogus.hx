@@ -11,6 +11,7 @@ import flixel.util.FlxColor;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import objects.hud.HudClass.IconChange;
+import objects.hud.HealthIcon;
 import states.PlayState;
 import flixel.util.FlxStringUtil;
 
@@ -52,7 +53,7 @@ class HudMoogus extends HudClass
 		add(iconP2);
 		
 		infoTxt = new FlxText(0, 0, 0, "hi there! i am using whatsapp");
-		infoTxt.setFormat(Main.gFont, 20, 0xFFFFFFFF, CENTER);
+		infoTxt.setFormat(Main.gFont, 20, HealthIcon.getColor("susbo"), CENTER);
 		infoTxt.setBorderStyle(OUTLINE, FlxColor.BLACK, 1.5);
 		add(infoTxt);
 		
@@ -214,11 +215,11 @@ class HudMoogus extends HudClass
 		
 		timeTxt.visible = false;
 		
-		var songPercent:Float = Conductor.songPos / FlxG.sound.music.length;
+		/*var songPercent:Float = Conductor.songPos / FlxG.sound.music.length;
 		if (songPercent < 0) songPercent = 0;
-		if (songPercent > 1) songPercent = 1;
+		if (songPercent > 1) songPercent = 1;*/
 		
-		timer3.scale.set(1.168 * songPercent, 0.035);
+		timer3.scale.set(1.168 * PlayState.songLength, 0.035);
 		timer3.updateHitbox();
 	}
 
