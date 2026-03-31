@@ -295,6 +295,9 @@ class PlayState extends MusicBeatState
 			case "lapoluz" | "faker-identity":
 				hudBuild = new HudLegacy();
 				hudBuild.alpha = 0.0;
+			case "moogusxey":
+				hudBuild = new HudMoogus();
+				hudBuild.alpha = 0.0;
 			default:
 				hudBuild = new HudDoido();
 				hudBuild.alpha = 0.0;
