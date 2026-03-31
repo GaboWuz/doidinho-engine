@@ -303,7 +303,7 @@ class PlayState extends MusicBeatState
 				hudBuild.alpha = 0.0;
 		}
 		
-		if (SONG.song != "moogusxey") {
+		if (SONG.song == "moogusxey") {
 			dedbg = new FlxSprite(0, 0);
 			dedbg.frames = Paths.getSparrowAtlas('ded/deadfool');
 			dedbg.animation.addByPrefix('eh', 'eh', 24, false);
@@ -372,7 +372,7 @@ class PlayState extends MusicBeatState
 		add(hudBuild);
 		
 		// song title
-		if (!SONG.song == "moogusxey") {
+		if (SONG.song != "moogusxey") {
 			titleText = new FlxText(0, 301, 1000, Paths.text('songs/' + SONG.song + '/songname'), 50);
 		    titleText.setFormat(Paths.font('vcr.ttf'), 50, FlxColor.WHITE, "center", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		    titleText.borderSize = 2;
