@@ -119,6 +119,11 @@ class PlayState extends MusicBeatState
 	public var theLine:FlxSprite;
 	public var authorText:FlxText;
 	
+	// song title mas Amogus
+	var box:FlxSprite;
+	var songnameText:FlxText;
+	var composerTxt:FlxText;
+	
 	// cameras!!
 	public var camGame:FlxCamera;
 	public var camHUD:FlxCamera;
@@ -396,6 +401,23 @@ class PlayState extends MusicBeatState
 		    authorText.alpha = 0; 
 		    add(authorText);
 	    }
+	
+	    if (SONG.song == "moogusxey") {
+		    box = new FlxSprite(-740, 190).makeGraphic(540, 140, FlxColor.WHITE);
+			box.alpha = 0.5;
+			box.cameras = [camOther];
+			add(box);
+			 
+			songnameText = new FlxText(box.x + 70, box.y + 15, 1000, PlayState.SONG.song, 30);
+			songnameText.alignment = LEFT;
+			songnameText.cameras = [camOther];
+			add(songnameText);
+			
+			composerTxt = new FlxText(box.x + 70, box.y + 50, 1000, 'Composer: GaboWuz Ft. GabkXey', 30);
+			composerTxt.alignment = LEFT;
+			composerTxt.cameras = [camOther];
+			add(composerTxt);
+		}
 		
 		// strumlines
 		strumlines = new FlxTypedGroup();
@@ -1128,6 +1150,12 @@ class PlayState extends MusicBeatState
 			}
 		}
 		
+		// ehhhh... que foi?
+		if (SONG.song == "moogusxey") {
+			songnameText.x = box.x + 70;
+			composerTxt.x = box.x + 70;
+		}
+		
 		// no turning back you gotta restart now sorry
 		if(botplay && startedSong)
 			validScore = false;
@@ -1734,6 +1762,27 @@ class PlayState extends MusicBeatState
 			
 			if (curStep == 25) {
 			    FlxTween.tween(staticSpr, {alpha: 0}, 0.27, {ease: FlxEase.expoIn});
+			}
+			
+			if (curStep == 32) {
+				FlxTween.tween(box, {x: -50}, 1.2, {
+				    ease: FlxEase.expoOut,
+				    onComplete: function(twn:FlxTween) {
+				        
+				        new FlxTimer().start(2.5, function(tmr:FlxTimer) {
+				            
+				            FlxTween.tween(box, {x: -740}, 0.8, {
+				                ease: FlxEase.expoIn,
+				                onComplete: function(twn2:FlxTween) {
+				                    
+				                    remove(composerTxt);
+				                    remove(songnameText);
+				                    remove(box);
+				                }
+				            });
+				        });
+				    }
+				});
 			}
 		}
 		
