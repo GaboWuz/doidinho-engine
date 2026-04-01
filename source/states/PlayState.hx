@@ -2220,7 +2220,7 @@ class PlayState extends MusicBeatState
 					CoolUtil.stringToColor(daEvent.value2)
 				);
 				
-			case 'purple':
+			case 'Purple':
 		        flash.alpha = 0.35;
 		        FlxTween.tween(flash, {alpha: 0}, 0.50);
 
