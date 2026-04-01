@@ -85,6 +85,8 @@ class HealthIcon extends FlxSprite
 			// primeiro de abril
 			"susbo"		=> 0xFF8F83E1,
 			"kyzu"		=> 0xFFEAE7FF,
+			"gagbis"		=> 0xFF8F83E1,
+			"mortonaofala"		=> 0xFFEAE7FF,
 		];
 
 		function loopMap()
