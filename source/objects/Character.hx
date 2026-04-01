@@ -89,7 +89,11 @@ class Character extends FlxAnimate
 				doidoChar.spritesheet += 'gagbis/gagbis_ded';
 				
 				doidoChar.anims = [
-					['idle',		'uff', 24, false],
+					['idle',		'uff', 12, false],
+					['singRIGHT',	'right', 24, false],
+					['singDOWN', 	'down', 24, false],
+					['singUP', 		'up', 24, false],
+					['singLEFT',	'left', 24, false],
 				];
 			scale.set(1.1, 1.1);
 			

@@ -472,8 +472,8 @@ class Stage extends FlxGroup
 				
 				dadPos.x += 450;
 				dadPos.y += 210;
-				dadCam.x += 132;
-				dadCam.y -= 50;
+				dadCam.x += 150;
+				dadCam.y -= 90;
 				
 				gfPos.x += 467;
 				gfPos.y += 200;
