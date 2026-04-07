@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="personaxey.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="gagbis0000" x="0" y="0" width="633" height="661" frameX="0" frameY="0" frameWidth="633" frameHeight="661"/>
+</TextureAtlas>

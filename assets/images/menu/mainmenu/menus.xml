@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="menus.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="cred0000" x="124" y="326" width="110" height="135" frameX="0" frameY="0" frameWidth="110" frameHeight="135"/>
+	<SubTexture name="freetoplay0000" x="0" y="0" width="307" height="326" frameX="0" frameY="0" frameWidth="307" frameHeight="326"/>
+	<SubTexture name="options0000" x="0" y="326" width="124" height="139" frameX="0" frameY="0" frameWidth="124" frameHeight="139"/>
+	<SubTexture name="story0000" x="307" y="0" width="293" height="309" frameX="0" frameY="0" frameWidth="293" frameHeight="309"/>
+</TextureAtlas>

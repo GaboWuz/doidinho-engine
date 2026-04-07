@@ -14,7 +14,7 @@ using StringTools;
 
 class MainMenuState extends MusicBeatState
 {
-	var optionShit:Array<String> = ["story mode", "freeplay", "donate", "credits", "options"];
+	var optionShit:Array<String> = ["story", "freetoplay", "cred", "options"];
 	static var curSelected:Int = 0;
 	
 	var grpOptions:FlxTypedGroup<FlxSprite>;
@@ -75,9 +75,9 @@ class MainMenuState extends MusicBeatState
 		for(i in 0...optionShit.length)
 		{
 			var item = new FlxSprite();
-			item.frames = Paths.getSparrowAtlas('menu/mainmenu/' + optionShit[i].replace(' ', '-'));
-			item.animation.addByPrefix('idle',  optionShit[i] + ' basic', 24, true);
-			item.animation.addByPrefix('hover', optionShit[i] + ' white', 24, true);
+			item.frames = Paths.getSparrowAtlas('menu/mainmenu/menus');
+			item.animation.addByPrefix('idle',  optionShit[i], 24, true);
+			item.animation.addByPrefix('hover', optionShit[i], 24, true);
 			item.animation.play('idle');
 			grpOptions.add(item);
 			
@@ -178,13 +178,13 @@ class MainMenuState extends MusicBeatState
 					{
 						switch(optionShit[curSelected])
 						{
-							case "story mode":
+							case "story":
 								Main.switchState(new StoryMenuState());
 						
-							case "freeplay":
+							case "freetoplay":
 								Main.switchState(new FreeplayState());
 							
-							case "credits":
+							case "cred":
 								Main.switchState(new CreditsState());
 
 							case "options":
