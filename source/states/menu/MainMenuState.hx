@@ -110,14 +110,16 @@ class MainMenuState extends MusicBeatState
 		grpOptions.members[0].y += 50;
 		grpOptions.members[1].x -= 150;
 		grpOptions.members[1].y += 80;
-		grpOptions.members[3].x -= 540;
+		grpOptions.members[3].x -= 560;
 		grpOptions.members[3].y += 30;
+		grpOptions.members[2].x = grpOptions.members[3].x + 100;
+		grpOptions.members[2].y = grpOptions.members[3].y;
 		
 		var doidoSplash:String = 'Doido Engine ${lime.app.Application.current.meta.get('version')}';
 		var funkySplash:String = 'Friday Night Funkin\' Rewritten';
 
 		var splashTxt = new FlxText(4, 0, 0, '$doidoSplash\n$funkySplash');
-		splashTxt.setFormat(Main.gFont, 18, 0xFFFFFFFF, LEFT);
+		splashTxt.setFormat(Main.gFont, 18, 0xFFFFFFFF, RIGHT);
 		splashTxt.setBorderStyle(OUTLINE, 0xFF000000, 1.5);
 		splashTxt.y = FlxG.height - splashTxt.height - 4;
 		add(splashTxt);
