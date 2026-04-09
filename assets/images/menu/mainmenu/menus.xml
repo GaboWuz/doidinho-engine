@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="menus.png">
+<TextureAtlas imagePath="menus_assets.png">
 	<!-- Created using the Spritesheet and XML generator -->
 	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
-	<SubTexture name="cred0000" x="124" y="326" width="110" height="135" frameX="0" frameY="0" frameWidth="110" frameHeight="135"/>
-	<SubTexture name="freetoplay0000" x="0" y="0" width="307" height="326" frameX="0" frameY="0" frameWidth="307" frameHeight="326"/>
-	<SubTexture name="options0000" x="0" y="326" width="124" height="139" frameX="0" frameY="0" frameWidth="124" frameHeight="139"/>
-	<SubTexture name="story0000" x="307" y="0" width="293" height="309" frameX="0" frameY="0" frameWidth="293" frameHeight="309"/>
+	<SubTexture name="creds_normal0000" x="385" y="658" width="110" height="135" frameX="-6" frameY="-11" frameWidth="120" frameHeight="150"/>
+	<SubTexture name="creds_normal0001" x="0" y="964" width="108" height="143" frameX="-7" frameY="-4" frameWidth="120" frameHeight="150"/>
+	<SubTexture name="creds_selected0000" x="239" y="814" width="116" height="141" frameX="-3" frameY="-8" frameWidth="120" frameHeight="150"/>
+	<SubTexture name="creds_selected0001" x="125" y="814" width="114" height="149" frameX="-4" frameY="-1" frameWidth="120" frameHeight="150"/>
+	<SubTexture name="freeplay_normal0000" x="625" y="0" width="307" height="326" frameX="-4" frameY="-9" frameWidth="320" frameHeight="340"/>
+	<SubTexture name="freeplay_normal0001" x="0" y="332" width="306" height="326" frameX="-3" frameY="-12" frameWidth="320" frameHeight="340"/>
+	<SubTexture name="freeplay_selected0000" x="0" y="0" width="313" height="332" frameX="-1" frameY="-6" frameWidth="320" frameHeight="340"/>
+	<SubTexture name="freeplay_selected0001" x="313" y="0" width="312" height="332" frameX="0" frameY="-9" frameWidth="320" frameHeight="340"/>
+	<SubTexture name="options_normal0000" x="261" y="658" width="124" height="139" frameX="-10" frameY="-16" frameWidth="140" frameHeight="160"/>
+	<SubTexture name="options_normal0001" x="0" y="814" width="125" height="150" frameX="-10" frameY="-5" frameWidth="140" frameHeight="160"/>
+	<SubTexture name="options_selected0000" x="131" y="658" width="130" height="145" frameX="-7" frameY="-13" frameWidth="140" frameHeight="160"/>
+	<SubTexture name="options_selected0001" x="0" y="658" width="131" height="156" frameX="-7" frameY="-2" frameWidth="140" frameHeight="160"/>
+	<SubTexture name="story_normal0000" x="932" y="309" width="293" height="309" frameX="-11" frameY="-7" frameWidth="310" frameHeight="320"/>
+	<SubTexture name="story_normal0001" x="932" y="0" width="293" height="309" frameX="-10" frameY="-6" frameWidth="310" frameHeight="320"/>
+	<SubTexture name="story_selected0000" x="605" y="332" width="299" height="315" frameX="-8" frameY="-4" frameWidth="310" frameHeight="320"/>
+	<SubTexture name="story_selected0001" x="306" y="332" width="299" height="315" frameX="-7" frameY="-3" frameWidth="310" frameHeight="320"/>
 </TextureAtlas>

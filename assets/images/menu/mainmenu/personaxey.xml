@@ -2,5 +2,24 @@
 <TextureAtlas imagePath="personaxey.png">
 	<!-- Created using the Spritesheet and XML generator -->
 	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
-	<SubTexture name="gagbis0000" x="0" y="0" width="633" height="661" frameX="0" frameY="0" frameWidth="633" frameHeight="661"/>
+	<SubTexture name="gagbis0000" x="637" y="666" width="633" height="661" frameX="-60" frameY="-61" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0001" x="637" y="666" width="633" height="661" frameX="-60" frameY="-61" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0002" x="637" y="666" width="633" height="661" frameX="-60" frameY="-61" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0003" x="676" y="0" width="680" height="661" frameX="-59" frameY="-61" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0004" x="676" y="0" width="680" height="661" frameX="-59" frameY="-61" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0005" x="0" y="0" width="676" height="666" frameX="-59" frameY="-56" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0006" x="0" y="0" width="676" height="666" frameX="-59" frameY="-56" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0007" x="0" y="666" width="637" height="664" frameX="-60" frameY="-58" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0008" x="0" y="666" width="637" height="664" frameX="-60" frameY="-58" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0009" x="637" y="666" width="633" height="661" frameX="-60" frameY="-61" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0010" x="637" y="666" width="633" height="661" frameX="-60" frameY="-61" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0011" x="637" y="666" width="633" height="661" frameX="-60" frameY="-61" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0012" x="637" y="666" width="633" height="661" frameX="-60" frameY="-61" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0013" x="637" y="666" width="633" height="661" frameX="-60" frameY="-61" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0014" x="637" y="666" width="633" height="661" frameX="-60" frameY="-61" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0015" x="637" y="666" width="633" height="661" frameX="-60" frameY="-61" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0016" x="637" y="666" width="633" height="661" frameX="-60" frameY="-61" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0017" x="637" y="666" width="633" height="661" frameX="-60" frameY="-61" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0018" x="637" y="666" width="633" height="661" frameX="-60" frameY="-61" frameWidth="800" frameHeight="720"/>
+	<SubTexture name="gagbis0019" x="637" y="666" width="633" height="661" frameX="-60" frameY="-61" frameWidth="800" frameHeight="720"/>
 </TextureAtlas>

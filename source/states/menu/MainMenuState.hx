@@ -14,7 +14,7 @@ using StringTools;
 
 class MainMenuState extends MusicBeatState
 {
-	var optionShit:Array<String> = ["story", "freetoplay", "cred", "options"];
+	var optionShit:Array<String> = ["story", "freeplay", "creds", "options"];
 	static var curSelected:Int = 0;
 	
 	var grpOptions:FlxTypedGroup<FlxSprite>;
@@ -76,8 +76,8 @@ class MainMenuState extends MusicBeatState
 		{
 			var item = new FlxSprite();
 			item.frames = Paths.getSparrowAtlas('menu/mainmenu/menus');
-			item.animation.addByPrefix('idle',  optionShit[i], 24, true);
-			item.animation.addByPrefix('hover', optionShit[i], 24, true);
+			item.animation.addByPrefix('idle',  optionShit[i] + "_normal", 24, true);
+			item.animation.addByPrefix('hover', optionShit[i] + "_selected", 24, true);
 			item.animation.play('idle');
 			grpOptions.add(item);
 			
@@ -106,7 +106,7 @@ class MainMenuState extends MusicBeatState
 			item.ID = i;
 		}
 		
-		grpOptions.members[0].x -= 100;
+		grpOptions.members[0].x -= 150;
 		
 		var doidoSplash:String = 'Doido Engine ${lime.app.Application.current.meta.get('version')}';
 		var funkySplash:String = 'Friday Night Funkin\' Rewritten';
