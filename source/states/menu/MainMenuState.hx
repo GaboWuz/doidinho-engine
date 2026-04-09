@@ -108,8 +108,8 @@ class MainMenuState extends MusicBeatState
 		
 		grpOptions.members[0].x -= 440;
 		grpOptions.members[0].y += 50;
-		grpOptions.members[1].x -= 180;
-		grpOptions.members[1].y += 40;
+		grpOptions.members[1].x -= 160;
+		grpOptions.members[1].y += 20;
 		
 		var doidoSplash:String = 'Doido Engine ${lime.app.Application.current.meta.get('version')}';
 		var funkySplash:String = 'Friday Night Funkin\' Rewritten';
@@ -186,10 +186,10 @@ class MainMenuState extends MusicBeatState
 							case "story":
 								Main.switchState(new StoryMenuState());
 						
-							case "freetoplay":
+							case "freeplay":
 								Main.switchState(new FreeplayState());
 							
-							case "cred":
+							case "creds":
 								Main.switchState(new CreditsState());
 
 							case "options":
