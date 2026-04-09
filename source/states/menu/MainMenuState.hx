@@ -106,7 +106,7 @@ class MainMenuState extends MusicBeatState
 			item.ID = i;
 		}
 		
-		grpOptions.members[0].x -= 420;
+		grpOptions.members[0].x -= 440;
 		grpOptions.members[0].y += 50;
 		
 		var doidoSplash:String = 'Doido Engine ${lime.app.Application.current.meta.get('version')}';
