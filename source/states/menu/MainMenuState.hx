@@ -106,7 +106,7 @@ class MainMenuState extends MusicBeatState
 			item.ID = i;
 		}
 		
-		grpOptions.members[0].x -= 290;
+		grpOptions.members[0].x -= 340;
 		
 		var doidoSplash:String = 'Doido Engine ${lime.app.Application.current.meta.get('version')}';
 		var funkySplash:String = 'Friday Night Funkin\' Rewritten';
