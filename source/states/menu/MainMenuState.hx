@@ -108,8 +108,8 @@ class MainMenuState extends MusicBeatState
 		
 		grpOptions.members[0].x -= 440;
 		grpOptions.members[0].y += 50;
-		grpOptions.members[1].x -= 280;
-		grpOptions.members[1].y += 50;
+		grpOptions.members[1].x -= 180;
+		grpOptions.members[1].y += 40;
 		
 		var doidoSplash:String = 'Doido Engine ${lime.app.Application.current.meta.get('version')}';
 		var funkySplash:String = 'Friday Night Funkin\' Rewritten';
@@ -227,7 +227,7 @@ class MainMenuState extends MusicBeatState
 			}
 		}
 		
-		bg.y = FlxMath.lerp(bg.y, bgPosY, elapsed * 6);
+		//bg.y = FlxMath.lerp(bg.y, bgPosY, elapsed * 6);
 		bgMag.setPosition(bg.x, bg.y);
 	}
 
@@ -238,7 +238,7 @@ class MainMenuState extends MusicBeatState
 		curSelected += change;
 		curSelected = FlxMath.wrap(curSelected, 0, optionShit.length - 1);
 		
-		bgPosY = FlxMath.lerp(0, -(bg.height - FlxG.height), curSelected / (optionShit.length - 1));
+		//bgPosY = FlxMath.lerp(0, -(bg.height - FlxG.height), curSelected / (optionShit.length - 1));
 		
 		for(item in grpOptions.members)
 		{
