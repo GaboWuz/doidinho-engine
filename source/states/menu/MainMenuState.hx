@@ -76,8 +76,8 @@ class MainMenuState extends MusicBeatState
 		{
 			var item = new FlxSprite();
 			item.frames = Paths.getSparrowAtlas('menu/mainmenu/menus');
-			item.animation.addByPrefix('idle',  optionShit[i] + "_normal", 12, true);
-			item.animation.addByPrefix('hover', optionShit[i] + "_selected", 12, true);
+			item.animation.addByPrefix('idle',  optionShit[i] + "_normal", 8, true);
+			item.animation.addByPrefix('hover', optionShit[i] + "_selected", 8, true);
 			item.animation.play('idle');
 			grpOptions.add(item);
 			
@@ -106,7 +106,7 @@ class MainMenuState extends MusicBeatState
 			item.ID = i;
 		}
 		
-		grpOptions.members[0].x -= 240;
+		grpOptions.members[0].x -= 290;
 		
 		var doidoSplash:String = 'Doido Engine ${lime.app.Application.current.meta.get('version')}';
 		var funkySplash:String = 'Friday Night Funkin\' Rewritten';
