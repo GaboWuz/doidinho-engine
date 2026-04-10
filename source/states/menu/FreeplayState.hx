@@ -53,6 +53,8 @@ class FreeplayState extends MusicBeatState
 	{
 		super.create();
 		CoolUtil.playMusic("mainmenu");
+		
+		FlxG.mouse.visible = false;
 
 		DiscordIO.changePresence("Freeplay - Choosin' a track");
 

@@ -31,6 +31,8 @@ class MainMenuState extends MusicBeatState
 		super.create();
 		CoolUtil.playMusic("mainmenu");
 		
+		FlxG.mouse.visible = true;
+		
 		DiscordIO.changePresence("In the Main Menu");
 
 		bg = new FlxSprite().loadGraphic(Paths.image('menu/backgrounds/menuBG'));

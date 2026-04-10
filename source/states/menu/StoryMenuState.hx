@@ -40,6 +40,8 @@ class StoryMenuState extends MusicBeatState
 		super.create();
 		preloadAssets();
 		CoolUtil.playMusic("mainmenu");
+		
+		FlxG.mouse.visible = false;
 
 		DiscordIO.changePresence("Story Mode - Choosin' a week");
 		

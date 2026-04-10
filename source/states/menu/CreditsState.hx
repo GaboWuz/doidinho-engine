@@ -90,6 +90,8 @@ class CreditsState extends MusicBeatState
 		*/
 		CoolUtil.playMusic("mainmenu");
 		DiscordIO.changePresence("Credits - Thanks!!");
+		
+		FlxG.mouse.visible = false;
 
 		bg = new FlxSprite().loadGraphic(Paths.image('menu/backgrounds/menuDesat'));
 		bg.scale.set(1.2,1.2); bg.updateHitbox();
