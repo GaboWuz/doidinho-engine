@@ -39,7 +39,7 @@ class StoryMenuState extends MusicBeatState
 	{
 		super.create();
 		preloadAssets();
-		CoolUtil.playMusic("freakyMenu");
+		CoolUtil.playMusic("mainmenu");
 
 		DiscordIO.changePresence("Story Mode - Choosin' a week");
 		
@@ -72,7 +72,7 @@ class StoryMenuState extends MusicBeatState
 		add(yellowMf);
 		
 		#if !TOUCH_CONTROLS
-		resetTxt = new FlxText(0,0,0,"PRESS RESET TO DELETE WEEK SCORE");
+		resetTxt = new FlxText(0, 0, 0, "PRESS RESET TO DELETE WEEK SCORE");
 		resetTxt.setFormat(Main.gFont, 18, 0xFFFFFFFF, LEFT);
 		resetTxt.x = FlxG.width - resetTxt.width - 8;
 		resetTxt.y = FlxG.height - resetTxt.height - 8;

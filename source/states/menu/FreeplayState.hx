@@ -52,7 +52,7 @@ class FreeplayState extends MusicBeatState
 	override function create()
 	{
 		super.create();
-		CoolUtil.playMusic("freakyMenu");
+		CoolUtil.playMusic("mainmenu");
 
 		DiscordIO.changePresence("Freeplay - Choosin' a track");
 

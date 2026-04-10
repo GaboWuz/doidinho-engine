@@ -49,7 +49,7 @@ class MainMenuState extends MusicBeatState
 		gabo.frames = Paths.getSparrowAtlas('menu/mainmenu/personaxey');
 		gabo.animation.addByPrefix('idle', "gagbis", 24, true);
 		gabo.animation.play('idle');
-		gabo.x = FlxG.width - gabo.width;
+		gabo.x = FlxG.width - gabo.width + 10;
 		add(gabo);
 		
 		grpOptions = new FlxTypedGroup<FlxSprite>();
@@ -108,9 +108,9 @@ class MainMenuState extends MusicBeatState
 		var doidoSplash:String = 'Doidinho Engine ${lime.app.Application.current.meta.get('version')}';
 		var funkySplash:String = 'Vs Gabin\' V2';
 
-		var splashTxt = new FlxText(4, 0, 0, '$doidoSplash\n$funkySplash');
+		var splashTxt = new FlxText(0, 0, FlxG.width, '$doidoSplash\n$funkySplash');
 		splashTxt.setFormat(Main.gFont, 18, 0xFFFFFFFF, RIGHT);
-		splashTxt.setBorderStyle(OUTLINE, 0xFF000000, 1.5);
+		splashTxt.setBorderStyle(OUTLINE, 0xFF000000, 1.5);	
 		splashTxt.y = FlxG.height - splashTxt.height - 4;
 		add(splashTxt);
 
