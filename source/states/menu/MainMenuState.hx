@@ -49,7 +49,7 @@ class MainMenuState extends MusicBeatState
 		gabo.frames = Paths.getSparrowAtlas('menu/mainmenu/personaxey');
 		gabo.animation.addByPrefix('idle', "gagbis", 24, true);
 		gabo.animation.play('idle');
-		gabo.x = FlxG.width - gabo.width + 50;
+		gabo.x = FlxG.width - gabo.width + 60;
 		add(gabo);
 		
 		grpOptions = new FlxTypedGroup<FlxSprite>();
@@ -126,103 +126,139 @@ class MainMenuState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		super.update(elapsed);
-
-		#if debug
-		// Crash the game. For CrashHandler test purposes
-		if(FlxG.keys.justPressed.R)
-			null.draw();
-		#end
-
-		if(FlxG.keys.justPressed.V)
-		{
-			persistentUpdate = false;
-			openSubState(new subStates.video.VideoPlayerSubState("test"));
-		}
-
-		if(FlxG.keys.justPressed.EIGHT)
-		{
-			FlxG.sound.play(Paths.sound("menu/cancelMenu"));
-			Main.switchState(new states.editors.CharacterEditorState("bf", false));
-		}
-		
-		if(!selectedSum)
-		{
-			if(Controls.justPressed(UI_UP))
-				changeSelection(-1);
-			if(Controls.justPressed(UI_DOWN))
-				changeSelection(1);
-			
-			if(Controls.justPressed(BACK))
-				Main.switchState(new TitleState());
-			
-			if(Controls.justPressed(ACCEPT))
-			{
-				if(["donate"].contains(optionShit[curSelected]))
-				{
-					CoolUtil.openURL("https://ninja-muffin24.itch.io/funkin");
-				}
-				else
-				{
-					selectedSum = true;
-					FlxG.sound.play(Paths.sound('menu/confirmMenu'));
-					
-					for(item in grpOptions.members)
-					{
-						if(item.ID != curSelected)
-							FlxTween.tween(item, {alpha: 0}, 0.4, {ease: FlxEase.cubeOut});
-					}
-					
-					new FlxTimer().start(1.5, function(tmr:FlxTimer)
-					{
-						switch(optionShit[curSelected])
-						{
-							case "story":
-								Main.switchState(new StoryMenuState());
-						
-							case "freeplay":
-								Main.switchState(new FreeplayState());
-							
-							case "creds":
-								Main.switchState(new CreditsState());
-
-							case "options":
-								Main.switchState(new OptionsState());
-
-							default: // avoids freezing
-								Main.resetState();
-						}
-					});
-				}
-			}
-		}
-		else
-		{
-			if(SaveData.data.get('Flashing Lights') != "OFF")
-			{
-				if(SaveData.data.get('Flashing Lights') != "REDUCED")
-				{
-					flickMag += elapsed;
-					if(flickMag >= 0.15)
-					{
-						flickMag = 0;
-						bgMag.visible = !bgMag.visible;
-					}
-				}
-				
-				flickBtn += elapsed;
-				if(flickBtn >= 0.15 / 2)
-				{
-					flickBtn = 0;
-					for(item in grpOptions.members)
-						if(item.ID == curSelected)
-							item.visible = !item.visible;
-				}
-			}
-		}
-		
-		//bg.y = FlxMath.lerp(bg.y, bgPosY, elapsed * 6);
-		bgMag.setPosition(bg.x, bg.y);
+	    super.update(elapsed);
+	
+	    #if debug
+	    // Crash the game. For CrashHandler test purposes
+	    if(FlxG.keys.justPressed.R)
+	        null.draw();
+	    #end
+	
+	    if(FlxG.keys.justPressed.V)
+	    {
+	        persistentUpdate = false;
+	        openSubState(new subStates.video.VideoPlayerSubState("test"));
+	    }
+	
+	    if(FlxG.keys.justPressed.EIGHT)
+	    {
+	        FlxG.sound.play(Paths.sound("menu/cancelMenu"));
+	        Main.switchState(new states.editors.CharacterEditorState("bf", false));
+	    }
+	    
+	    if(!selectedSum)
+	    {
+	        if(Controls.justPressed(BACK)) Main.switchState(new TitleState());
+	        
+	        var accepted:Bool = Controls.justPressed(ACCEPT);
+	        var isHoveringSomething:Bool = false;
+	
+	        for (item in grpOptions.members)
+	        {
+	            if (FlxG.mouse.overlaps(item))
+	            {
+	                isHoveringSomething = true;
+	
+	                #if mobile
+	                if (FlxG.mouse.justPressed)
+	                {
+	                    if (curSelected != item.ID) {
+	                        changeSelection(item.ID - curSelected);
+	                    } else {
+	                        accepted = true;
+	                    }
+	                }
+	                #else
+	                if (curSelected != item.ID) {
+	                    changeSelection(item.ID - curSelected);
+	                }
+	                
+	                if (FlxG.mouse.justPressed) {
+	                    accepted = true;
+	                }
+	                #end
+	            }
+	        }
+	
+	        #if !mobile
+	        if (isHoveringSomething) {
+	            openfl.ui.Mouse.cursor = openfl.ui.MouseCursor.BUTTON;
+	        } else {
+	            openfl.ui.Mouse.cursor = openfl.ui.MouseCursor.ARROW;
+	        }
+	        #end
+	
+	        if(accepted)
+	        {
+	            if(["donate"].contains(optionShit[curSelected]))
+	            {
+	                CoolUtil.openURL("https://ninja-muffin24.itch.io/funkin");
+	            }
+	            else
+	            {
+	                selectedSum = true;
+	                FlxG.sound.play(Paths.sound('menu/confirmMenu'));
+	                
+	                #if !mobile
+	                openfl.ui.Mouse.cursor = openfl.ui.MouseCursor.ARROW;
+	                #end
+	                
+	                for(item in grpOptions.members)
+	                {
+	                    if(item.ID != curSelected)
+	                        FlxTween.tween(item, {alpha: 0}, 0.4, {ease: FlxEase.cubeOut});
+	                }
+	                
+	                new FlxTimer().start(1.5, function(tmr:FlxTimer)
+	                {
+	                    switch(optionShit[curSelected])
+	                    {
+	                        case "story":
+	                            Main.switchState(new StoryMenuState());
+	                    
+	                        case "freeplay":
+	                            Main.switchState(new FreeplayState());
+	                        
+	                        case "creds":
+	                            Main.switchState(new CreditsState());
+	
+	                        case "options":
+	                            Main.switchState(new OptionsState());
+	
+	                        default: // avoids freezing
+	                            Main.resetState();
+	                    }
+	                });
+	            }
+	        }
+	    }
+	    else
+	    {
+	        if(SaveData.data.get('Flashing Lights') != "OFF")
+	        {
+	            if(SaveData.data.get('Flashing Lights') != "REDUCED")
+	            {
+	                flickMag += elapsed;
+	                if(flickMag >= 0.15)
+	                {
+	                    flickMag = 0;
+	                    bgMag.visible = !bgMag.visible;
+	                }
+	            }
+	            
+	            flickBtn += elapsed;
+	            if(flickBtn >= 0.15 / 2)
+	            {
+	                flickBtn = 0;
+	                for(item in grpOptions.members)
+	                    if(item.ID == curSelected)
+	                        item.visible = !item.visible;
+	            }
+	        }
+	    }
+	    
+	    //bg.y = FlxMath.lerp(bg.y, bgPosY, elapsed * 6);
+	    bgMag.setPosition(bg.x, bg.y);
 	}
 
 	public function changeSelection(change:Int = 0)
