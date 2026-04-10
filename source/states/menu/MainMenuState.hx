@@ -97,22 +97,23 @@ class MainMenuState extends MusicBeatState
 			
 			item.ID = i;
 			
-		if (grpOptions.members.length > 0) {
-		    grpOptions.members[0].x -= 460;
-		    grpOptions.members[0].y += 50;
-		}
-		if (grpOptions.members.length > 1) {
-		    grpOptions.members[1].x -= 170;
-		    grpOptions.members[1].y += 90;
-		}
-		if (grpOptions.members.length > 3) {
-		    grpOptions.members[3].x -= 560;
-		    grpOptions.members[3].y += 30;
-		    
-		    if (grpOptions.members.length > 2) {
-		        grpOptions.members[2].x = grpOptions.members[3].x + 110;
-		        grpOptions.members[2].y = grpOptions.members[3].y;
-		    }
+			if (grpOptions.members.length > 0) {
+			    grpOptions.members[0].x -= 460;
+			    grpOptions.members[0].y += 50;
+			}
+			if (grpOptions.members.length > 1) {
+			    grpOptions.members[1].x -= 170;
+			    grpOptions.members[1].y += 90;
+			}
+			if (grpOptions.members.length > 3) {
+			    grpOptions.members[3].x -= 560;
+			    grpOptions.members[3].y += 30;
+			    
+			    if (grpOptions.members.length > 2) {
+			        grpOptions.members[2].x = grpOptions.members[3].x + 110;
+			        grpOptions.members[2].y = grpOptions.members[3].y;
+			    }
+			}
 		}
 		
 		var doidoSplash:String = 'Doidinho Engine ${lime.app.Application.current.meta.get('version')}';
