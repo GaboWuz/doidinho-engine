@@ -60,48 +60,43 @@ class MainMenuState extends MusicBeatState
 		var optionSize:Float = 0.9;
 		if(optionShit.length > 4)
 		{
-		    for(i in 0...(optionShit.length - 4))
-		        optionSize -= 0.04;
+			for(i in 0...(optionShit.length - 4))
+				optionSize -= 0.04;
 		}
 		
 		for(i in 0...optionShit.length)
 		{
-		    var item = new FlxSprite();
-		    item.frames = Paths.getSparrowAtlas('menu/mainmenu/menus');
-		    item.animation.addByPrefix('idle',  optionShit[i] + "_normal", 2, true);
-		    item.animation.addByPrefix('hover', optionShit[i] + "_selected", 2, true);
-		    item.animation.play('idle');
-		    
-		    item.scrollFactor.set(0, 0); 
-		    
-		    item.scale.set(optionSize, optionSize);
-		    item.updateHitbox();
-		
-		    var itemSize:Float = (90 * optionSize);
-		    var minY:Float = 40 + itemSize;
-		    var maxY:Float = FlxG.height - itemSize - 40;
-		    
-		    if(optionShit.length < 4)
-		    {
-		        for(j in 0...(4 - optionShit.length))
-		        {
-		            minY += itemSize;
-		            maxY -= itemSize;
-		        }
-		    }
-		    
-		    item.screenCenter(X); 
-		    
-		    item.y = FlxMath.lerp(
-		        minY, 
-		        maxY, 
-		        (optionShit.length > 1) ? (i / (optionShit.length - 1)) : 0.5
-		    );
-		    
-		    item.ID = i;
-		    grpOptions.add(item);
-		}
-		
+			var item = new FlxSprite();
+			item.frames = Paths.getSparrowAtlas('menu/mainmenu/menus');
+			item.animation.addByPrefix('idle',  optionShit[i] + "_normal", 2, true);
+			item.animation.addByPrefix('hover', optionShit[i] + "_selected", 2, true);
+			item.animation.play('idle');
+			grpOptions.add(item);
+			
+			item.scale.set(optionSize, optionSize);
+			item.updateHitbox();
+			
+			var itemSize:Float = (90 * optionSize);
+			
+			var minY:Float = 40 + itemSize;
+			var maxY:Float = FlxG.height - itemSize - 40;
+			
+			if(optionShit.length < 4)
+			for(i in 0...(4 - optionShit.length))
+			{
+				minY += itemSize;
+				maxY -= itemSize;
+			}
+			
+			item.x = FlxG.width / 2;
+			item.y = FlxMath.lerp(
+				minY, // gets min Y
+				maxY, // gets max Y
+				i / (optionShit.length - 1) // sorts it according to its ID
+			);
+			
+			item.ID = i;
+			
 		if (grpOptions.members.length > 0) {
 		    grpOptions.members[0].x -= 460;
 		    grpOptions.members[0].y += 50;
@@ -278,23 +273,26 @@ class MainMenuState extends MusicBeatState
 
 	public function changeSelection(change:Int = 0)
 	{
-		if(change != 0) FlxG.sound.play(Paths.sound('menu/scrollMenu'));
-		
-		curSelected += change;
-		curSelected = FlxMath.wrap(curSelected, 0, optionShit.length - 1);
-		
-		//bgPosY = FlxMath.lerp(0, -(bg.height - FlxG.height), curSelected / (optionShit.length - 1));
-		
-		for(item in grpOptions.members)
-		{
-			item.animation.play('idle');
-			if(curSelected == item.ID)
-				item.animation.play('hover');
-			
-			item.updateHitbox();
-			// makes it offset to its middle point
-			item.offset.x += (item.frameWidth * item.scale.x) / 2;
-			item.offset.y += (item.frameHeight* item.scale.y) / 2;
-		}
+	    if(change != 0) FlxG.sound.play(Paths.sound('menu/scrollMenu'));
+	    
+	    curSelected += change;
+	    curSelected = FlxMath.wrap(curSelected, 0, optionShit.length - 1);
+	    
+	    for(item in grpOptions.members)
+	    {
+	        item.animation.play('idle');
+	        //item.alpha = 0.6;
+	
+	        if(curSelected == item.ID)
+	        {
+	            item.animation.play('hover');
+	            //item.alpha = 1;
+	        }
+	        
+	        item.updateHitbox();
+	
+	        item.centerOffsets(); 
+	        item.centerOrigin();
+	    }
 	}
 }
