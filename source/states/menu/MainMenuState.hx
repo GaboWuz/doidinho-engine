@@ -60,52 +60,65 @@ class MainMenuState extends MusicBeatState
 		var optionSize:Float = 0.9;
 		if(optionShit.length > 4)
 		{
-			for(i in 0...(optionShit.length - 4))
-				optionSize -= 0.04;
+		    for(i in 0...(optionShit.length - 4))
+		        optionSize -= 0.04;
 		}
 		
 		for(i in 0...optionShit.length)
 		{
-			var item = new FlxSprite();
-			item.frames = Paths.getSparrowAtlas('menu/mainmenu/menus');
-			item.animation.addByPrefix('idle',  optionShit[i] + "_normal", 2, true);
-			item.animation.addByPrefix('hover', optionShit[i] + "_selected", 2, true);
-			item.animation.play('idle');
-			grpOptions.add(item);
-			
-			item.scale.set(optionSize, optionSize);
-			item.updateHitbox();
-			
-			var itemSize:Float = (90 * optionSize);
-			
-			var minY:Float = 40 + itemSize;
-			var maxY:Float = FlxG.height - itemSize - 40;
-			
-			if(optionShit.length < 4)
-			for(i in 0...(4 - optionShit.length))
-			{
-				minY += itemSize;
-				maxY -= itemSize;
-			}
-			
-			item.x = FlxG.width / 2;
-			item.y = FlxMath.lerp(
-				minY, // gets min Y
-				maxY, // gets max Y
-				i / (optionShit.length - 1) // sorts it according to its ID
-			);
-			
-			item.ID = i;
+		    var item = new FlxSprite();
+		    item.frames = Paths.getSparrowAtlas('menu/mainmenu/menus');
+		    item.animation.addByPrefix('idle',  optionShit[i] + "_normal", 2, true);
+		    item.animation.addByPrefix('hover', optionShit[i] + "_selected", 2, true);
+		    item.animation.play('idle');
+		    
+		    item.scrollFactor.set(0, 0); 
+		    
+		    item.scale.set(optionSize, optionSize);
+		    item.updateHitbox();
+		
+		    var itemSize:Float = (90 * optionSize);
+		    var minY:Float = 40 + itemSize;
+		    var maxY:Float = FlxG.height - itemSize - 40;
+		    
+		    if(optionShit.length < 4)
+		    {
+		        for(j in 0...(4 - optionShit.length))
+		        {
+		            minY += itemSize;
+		            maxY -= itemSize;
+		        }
+		    }
+		    
+		    item.screenCenter(X); 
+		    
+		    item.y = FlxMath.lerp(
+		        minY, 
+		        maxY, 
+		        (optionShit.length > 1) ? (i / (optionShit.length - 1)) : 0.5
+		    );
+		    
+		    item.ID = i;
+		    grpOptions.add(item);
 		}
 		
-		grpOptions.members[0].x -= 460;
-		grpOptions.members[0].y += 50;
-		grpOptions.members[1].x -= 170;
-		grpOptions.members[1].y += 90;
-		grpOptions.members[3].x -= 560;
-		grpOptions.members[3].y += 30;
-		grpOptions.members[2].x = grpOptions.members[3].x + 110;
-		grpOptions.members[2].y = grpOptions.members[3].y;
+		if (grpOptions.members.length > 0) {
+		    grpOptions.members[0].x -= 460;
+		    grpOptions.members[0].y += 50;
+		}
+		if (grpOptions.members.length > 1) {
+		    grpOptions.members[1].x -= 170;
+		    grpOptions.members[1].y += 90;
+		}
+		if (grpOptions.members.length > 3) {
+		    grpOptions.members[3].x -= 560;
+		    grpOptions.members[3].y += 30;
+		    
+		    if (grpOptions.members.length > 2) {
+		        grpOptions.members[2].x = grpOptions.members[3].x + 110;
+		        grpOptions.members[2].y = grpOptions.members[3].y;
+		    }
+		}
 		
 		var doidoSplash:String = 'Doidinho Engine ${lime.app.Application.current.meta.get('version')}';
 		var funkySplash:String = 'Vs Gabin\' V2';
