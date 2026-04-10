@@ -97,13 +97,13 @@ class MainMenuState extends MusicBeatState
 		
 		if (grpOptions.members.length > 3) {
 		    grpOptions.members[0].x -= 460;
-		    grpOptions.members[0].y -= 20;
+		    grpOptions.members[0].y += 50;
 		    
 		    grpOptions.members[1].x -= 170;
-		    grpOptions.members[1].y += 20;
+		    grpOptions.members[1].y += 90;
 		    
 		    grpOptions.members[3].x -= 560;
-		    grpOptions.members[3].y -= 40;
+		    grpOptions.members[3].y += 30;
 		    
 		    grpOptions.members[2].x = grpOptions.members[3].x + 110;
 		    grpOptions.members[2].y = grpOptions.members[3].y;
