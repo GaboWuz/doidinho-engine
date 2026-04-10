@@ -49,7 +49,7 @@ class MainMenuState extends MusicBeatState
 		gabo.frames = Paths.getSparrowAtlas('menu/mainmenu/personaxey');
 		gabo.animation.addByPrefix('idle', "gagbis", 24, true);
 		gabo.animation.play('idle');
-		gabo.x = FlxG.width - gabo.width + 10;
+		gabo.x = FlxG.width - gabo.width + 30;
 		add(gabo);
 		
 		grpOptions = new FlxTypedGroup<FlxSprite>();
@@ -96,9 +96,9 @@ class MainMenuState extends MusicBeatState
 			item.ID = i;
 		}
 		
-		grpOptions.members[0].x -= 440;
+		grpOptions.members[0].x -= 450;
 		grpOptions.members[0].y += 50;
-		grpOptions.members[1].x -= 150;
+		grpOptions.members[1].x -= 160;
 		grpOptions.members[1].y += 90;
 		grpOptions.members[3].x -= 560;
 		grpOptions.members[3].y += 30;
