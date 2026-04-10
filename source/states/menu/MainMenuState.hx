@@ -29,7 +29,7 @@ class MainMenuState extends MusicBeatState
 	override function create()
 	{
 		super.create();
-		CoolUtil.playMusic("freakyMenu");
+		CoolUtil.playMusic("mainmenu");
 		
 		DiscordIO.changePresence("In the Main Menu");
 
@@ -45,22 +45,12 @@ class MainMenuState extends MusicBeatState
 		bgMag.visible = false;
 		add(bgMag);
 		
-		if(FlxG.random.bool(0.001))
-		{
-			if(Paths.fileExists('images/herobrine.png'))
-			{
-				var herobrine = new FlxSprite(-300).loadGraphic(Paths.image('herobrine'));
-				herobrine.scale.set(4,4);
-				herobrine.updateHitbox();
-				herobrine.screenCenter(Y);
-				add(herobrine);
-
-				new FlxTimer().start(2, function(tmr) {
-					if(herobrine != null)
-						remove(herobrine);
-				});
-			}
-		}
+		var gabo = new FlxSprite(0, 0);
+		gabo.frames = Paths.getSparrowAtlas('menu/mainmenu/personaxey');
+		gabo.animation.addByPrefix('idle', "gagbis", 24, true);
+		gabo.animation.play('idle');
+		gabo.x = FlxG.width - gabo.width;
+		add(gabo);
 		
 		grpOptions = new FlxTypedGroup<FlxSprite>();
 		add(grpOptions);
