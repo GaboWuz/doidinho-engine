@@ -27,6 +27,7 @@ class MainMenuState extends MusicBeatState
 	var flickBtn:Float = 1;
 	
 	var bg:FlxSprite;
+	var oxe:FlxSprite;
 
 	var moth:FlxSprite;
 	var mothy:FlxSprite;
@@ -50,9 +51,9 @@ class MainMenuState extends MusicBeatState
 		DiscordIO.changePresence("In the Main Menu");
 		
 		if (FlxG.random.bool(50)){
-		bg = new FlxSprite(0, -500).loadGraphic(Paths.image(fuck + 'que'));
-		bg.screenCenter(X);
-		add(bg);
+		oxe = new FlxSprite(0, -500).loadGraphic(Paths.image(fuck + 'que'));
+		oxe.screenCenter(X);
+		add(oxe);
 		
 		issoai = 'manha';
 		}
