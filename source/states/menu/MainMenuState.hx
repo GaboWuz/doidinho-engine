@@ -2,6 +2,7 @@ package states.menu;
 
 import backend.song.SongData;
 import flixel.addons.display.FlxBackdrop;
+import flixel.util.FlxAxes;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.group.FlxGroup;
@@ -20,7 +21,6 @@ class MainMenuState extends MusicBeatState
 	
 	var grpOptions:FlxTypedGroup<FlxSprite>;
 	
-	var bg:FlxSprite;
 	var bgPosY:Float = 0;
 	
 	var flickMag:Float = 1;
@@ -75,7 +75,7 @@ class MainMenuState extends MusicBeatState
 		issoai = 'tadi';
 		}
 		
-		cao = new FlxBackdrop(Paths.image(fuck + 'chao'), 0x01, -5, 0);
+		cao = new FlxBackdrop(Paths.image(fuck + 'chao'), FlxAxes.X, -5, 0);
 		cao.velocity.set(-10, 0);
 		cao.y = coloy;
 		add(cao);
