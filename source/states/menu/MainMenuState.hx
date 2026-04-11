@@ -1,6 +1,7 @@
 package states.menu;
 
 import backend.song.SongData;
+import flixel.addons.display.FlxBackdrop;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.group.FlxGroup;
@@ -20,11 +21,24 @@ class MainMenuState extends MusicBeatState
 	var grpOptions:FlxTypedGroup<FlxSprite>;
 	
 	var bg:FlxSprite;
-	var bgMag:FlxSprite;
 	var bgPosY:Float = 0;
 	
 	var flickMag:Float = 1;
 	var flickBtn:Float = 1;
+	
+	var bg:FlxSprite;
+
+	var moth:FlxSprite;
+	var mothy:FlxSprite;
+	var mothz:FlxSprite;
+	
+	var cao:FlxBackdrop;
+	var shad:FlxSprite;
+	
+	var coloy:Int = 400;
+	
+	var issoai:String = '';
+	var fuck:String = 'menu/mainmenu/';
 	
 	override function create()
 	{
@@ -34,21 +48,40 @@ class MainMenuState extends MusicBeatState
 		FlxG.mouse.visible = true;
 		
 		DiscordIO.changePresence("In the Main Menu");
-
-		bg = new FlxSprite().loadGraphic(Paths.image('menu/backgrounds/menuBG'));
-		bg.scale.set(1.2,1.2);
-		bg.updateHitbox();
-		bg.screenCenter(X);
+		
+		if (FlxG.random.bool(50)){
+		bg = new FlxSprite(-640, -500).loadGraphic(Paths.image(fuck + 'que'));
 		add(bg);
 		
-		bgMag = new FlxSprite().loadGraphic(Paths.image('menu/backgrounds/menuBGMagenta'));
-		bgMag.scale.set(bg.scale.x, bg.scale.y);
-		bgMag.updateHitbox();
-		bgMag.visible = false;
-		add(bgMag);
+		issoai = 'manha';
+		}
+		else{
+		bg = new FlxSprite(0, 0).loadGraphic(Paths.image(fuck + 'sky'));
+		bg.screenCenter();
+		add(bg);
+		
+		moth = new FlxSprite(0, 0).loadGraphic(Paths.image(fuck + 'moun'));
+		moth.screenCenter();
+		add(moth);
+		
+		mothy = new FlxSprite(0, 0).loadGraphic(Paths.image(fuck + 'moun2'));
+		mothy.screenCenter();
+		add(mothy);
+		
+		mothz = new FlxSprite(0, 0).loadGraphic(Paths.image(fuck + 'moun3'));
+		mothz.screenCenter();
+		add(mothz);
+		
+		issoai = 'tadi';
+		}
+		
+		cao = new FlxBackdrop(Paths.image(fuck + 'chao'), 0x01, -5, 0);
+		cao.velocity.set(-10, 0);
+		cao.y = coloy;
+		add(cao);
 		
 		var gabo = new FlxSprite(0, 0);
-		gabo.frames = Paths.getSparrowAtlas('menu/mainmenu/personaxey');
+		gabo.frames = Paths.getSparrowAtlas(fuck + 'personaxey');
 		gabo.animation.addByPrefix('idle', "gagbis", 24, true);
 		gabo.animation.play('idle');
 		gabo.x = FlxG.width - gabo.width + 60;
@@ -67,7 +100,7 @@ class MainMenuState extends MusicBeatState
 		for(i in 0...optionShit.length)
 		{
 		    var item = new FlxSprite();
-		    item.frames = Paths.getSparrowAtlas('menu/mainmenu/menus');
+		    item.frames = Paths.getSparrowAtlas(fuck + 'menus');
 		    item.animation.addByPrefix('idle',  optionShit[i] + "_normal", 2, true);
 		    item.animation.addByPrefix('hover', optionShit[i] + "_selected", 2, true);
 		    item.animation.play('idle');
@@ -108,6 +141,18 @@ class MainMenuState extends MusicBeatState
 		    grpOptions.members[2].x = grpOptions.members[3].x + 110;
 		    grpOptions.members[2].y = grpOptions.members[3].y;
 		}
+		
+		shad = new FlxSprite(0, 0).loadGraphic(Paths.image(fuck + issoai));
+		shad.setGraphicSize(Std.int(shad.width * 1.2));
+		shad.screenCenter();
+		shad.alpha = 0.17;
+		add(shad);
+		
+		new FlxTimer().start(1.65, function(tmr:FlxTimer)
+		{
+		if(cao.y == coloy) FlxTween.tween(cao, {y: coloy +20}, 1.65, {ease: FlxEase.quartInOut});
+		else FlxTween.tween(cao, {y: coloy}, 1.65, {ease: FlxEase.quartInOut});
+		}, 0);
 		
 		var doidoSplash:String = 'Doidinho Engine ${lime.app.Application.current.meta.get('version')}';
 		var funkySplash:String = 'Vs Gabin\' V2';
@@ -246,7 +291,6 @@ class MainMenuState extends MusicBeatState
 	                if(flickMag >= 0.15)
 	                {
 	                    flickMag = 0;
-	                    bgMag.visible = !bgMag.visible;
 	                }
 	            }
 	            
@@ -262,7 +306,6 @@ class MainMenuState extends MusicBeatState
 	    }
 	    
 	    //bg.y = FlxMath.lerp(bg.y, bgPosY, elapsed * 6);
-	    bgMag.setPosition(bg.x, bg.y);
 	}
 
 	public function changeSelection(change:Int = 0)
