@@ -50,7 +50,8 @@ class MainMenuState extends MusicBeatState
 		DiscordIO.changePresence("In the Main Menu");
 		
 		if (FlxG.random.bool(50)){
-		bg = new FlxSprite(-640, -500).loadGraphic(Paths.image(fuck + 'que'));
+		bg = new FlxSprite(0, -100).loadGraphic(Paths.image(fuck + 'que'));
+		bg.screenCenter(X);
 		add(bg);
 		
 		issoai = 'manha';
