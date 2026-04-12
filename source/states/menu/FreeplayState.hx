@@ -53,7 +53,6 @@ class FreeplayState extends MusicBeatState
 	var dohTween:FlxTween;
 	var grpItems:FlxGroup;
 	
-	var bg:FlxSprite;
 	var ponto:FlxBackdrop;
 	var oh:FlxBackdrop;
 	var doh:FlxBackdrop;
