@@ -241,12 +241,12 @@ class FreeplayState extends MusicBeatState
 		
 					Main.switchState(new ChartingState());
 				}
+				});
 			}
 			catch(e)
 			{
 				FlxG.sound.play(Paths.sound('menu/cancelMenu'));
 			}
-			});
 		}
 		
 		if(Controls.justPressed(BACK))
