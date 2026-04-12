@@ -124,6 +124,7 @@ class Alphabet extends FlxSpriteGroup
 		{
 			rawLetter.scale.set(scale.x, scale.y);
 			rawLetter.updateHitbox();
+			rawLetter.screenCenter(X);
 
 			if(Std.isOfType(rawLetter, AlphaLetter))
 			{
