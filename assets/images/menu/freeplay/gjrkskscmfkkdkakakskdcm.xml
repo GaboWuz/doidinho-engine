@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gjrkskscmfkkdkakakskdcm.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="idles0000" x="0" y="440" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0001" x="0" y="440" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0002" x="0" y="0" width="648" height="440" frameX="-79" frameY="-48" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0003" x="0" y="0" width="648" height="440" frameX="-79" frameY="-48" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0004" x="648" y="0" width="646" height="439" frameX="-80" frameY="-49" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0005" x="648" y="0" width="646" height="439" frameX="-80" frameY="-49" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0006" x="1294" y="0" width="638" height="411" frameX="-84" frameY="-77" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0007" x="1294" y="0" width="638" height="411" frameX="-84" frameY="-77" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0008" x="0" y="440" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0009" x="0" y="440" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0010" x="0" y="440" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0011" x="0" y="440" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0012" x="0" y="440" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0013" x="0" y="440" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0014" x="0" y="440" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0015" x="0" y="440" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0016" x="0" y="440" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0017" x="0" y="440" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0018" x="0" y="440" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="idles0019" x="0" y="440" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="sherek0000" x="644" y="440" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="sherek0001" x="644" y="440" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="sherek0002" x="0" y="852" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="sherek0003" x="0" y="852" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="sherek0004" x="644" y="852" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="sherek0005" x="644" y="852" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="sherek0006" x="644" y="852" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="sherek0007" x="644" y="852" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="sherek0008" x="644" y="852" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="sherek0009" x="644" y="852" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="sherek0010" x="644" y="852" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="sherek0011" x="644" y="852" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="sherek0012" x="644" y="852" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="sherek0013" x="644" y="852" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="sherek0014" x="644" y="852" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+	<SubTexture name="sherek0015" x="644" y="852" width="644" height="412" frameX="-81" frameY="-76" frameWidth="806" frameHeight="500"/>
+</TextureAtlas>
