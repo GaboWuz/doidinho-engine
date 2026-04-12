@@ -59,7 +59,6 @@ class FreeplayState extends MusicBeatState
 	var freet:FlxSprite;
 	
 	var fuck:String = 'menu/freeplay/';
-	var issoai:String = '';
 
 	var scoreCounter:ScoreCounter;
 
@@ -74,7 +73,7 @@ class FreeplayState extends MusicBeatState
 
 		bg = new FlxSprite().loadGraphic(Paths.image('menu/backgrounds/menuDesat'));
 		bg.scale.set(1.2,1.2); bg.updateHitbox();
-		bg.alpha = 0.65;
+		bg.alpha = 0.75;
 		bg.screenCenter();
 		add(bg);
 		
@@ -95,12 +94,11 @@ class FreeplayState extends MusicBeatState
 		doh.y = 700;
 		add(doh);
 		
-		issoai = 'idle';
-		freet = new FlxSprite(-65, 100);
+		freet = new FlxSprite(512.75, 100);
 		freet.frames = Paths.getSparrowAtlas(fuck + 'gjrkskscmfkkdkakakskdcm');
 		freet.animation.addByPrefix('idle', "idles", 24, true);
 		freet.animation.addByPrefix('ohyeah', "sherek", 24, false);
-		freet.animation.play(issoai);
+		freet.animation.play('idle');
 		add(freet);
 		
 		// adding songs
@@ -141,7 +139,6 @@ class FreeplayState extends MusicBeatState
 			//label = label.replace("-", " ");
 
 			var item = new AlphabetMenu(0, 0, label, true);
-			item.align = CENTER;
 			grpItems.add(item);
 
 			var icon = new HealthIcon();
@@ -186,9 +183,6 @@ class FreeplayState extends MusicBeatState
 		if(oh.y == -35) FlxTween.tween(oh, {y: -25}, 1, {ease: FlxEase.quartInOut});
 		else FlxTween.tween(oh, {y: -35}, 1, {ease: FlxEase.quartInOut});
 		
-		if(bg.alpha == 0.65) FlxTween.tween(bg, {alpha: 0.75}, 1, {ease: FlxEase.quartInOut});
-		else FlxTween.tween(bg, {alpha: 0.65}, 1, {ease: FlxEase.quartInOut});
-		
 		if(freet.angle == -2) FlxTween.angle(freet, freet.angle, 2, 1, {ease: FlxEase.quartInOut});
 		else FlxTween.angle(freet, freet.angle, -2, 1, {ease: FlxEase.quartInOut});
 		
@@ -227,7 +221,7 @@ class FreeplayState extends MusicBeatState
 		{
 			try
 			{
-				issoai = 'ohyeah';
+				freet.animation.play('ohyeah');
 				FlxG.sound.play(Paths.sound('menu/confirmMenu'));
 				new FlxTimer().start(1.5, function(tmr:FlxTimer)
 	            {
