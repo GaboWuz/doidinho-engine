@@ -9,6 +9,7 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.addons.display.FlxBackdrop;
 import flixel.util.FlxAxes;
+import flixel.util.FlxTimer;
 import flixel.util.FlxColor;
 import backend.song.Highscore;
 import backend.song.Highscore.ScoreData;
@@ -51,6 +52,13 @@ class FreeplayState extends MusicBeatState
 	var ohTween:FlxTween;
 	var dohTween:FlxTween;
 	var grpItems:FlxGroup;
+	
+	var bg:FlxSprite;
+	var ponto:FlxBackdrop;
+	var oh:FlxBackdrop;
+	var doh:FlxBackdrop;
+	var freet:FlxSprite;
+	
 	var fuck:String = 'menu/freeplay/';
 	var issoai:String = '';
 
@@ -88,6 +96,7 @@ class FreeplayState extends MusicBeatState
 		doh.y = 700;
 		add(doh);
 		
+		issoai = 'idle';
 		freet = new FlxSprite(-65, 100);
 		freet.frames = Paths.getSparrowAtlas(fuck + 'gjrkskscmfkkdkakakskdcm');
 		freet.animation.addByPrefix('idle', "idles", 24, true);
@@ -214,13 +223,13 @@ class FreeplayState extends MusicBeatState
 			updateScoreCount();
 		}
 		
-		issoai = 'idle';
 		var toChartEditor:Bool = FlxG.keys.justPressed.SEVEN;
 		if(Controls.justPressed(ACCEPT) || toChartEditor)
 		{
 			try
 			{
 				issoai = 'ohyeah';
+				FlxG.sound.play(Paths.sound('menu/confirmMenu'));
 				new FlxTimer().start(1.5, function(tmr:FlxTimer)
 	            {
 				var curSong = songList[curSelected];
