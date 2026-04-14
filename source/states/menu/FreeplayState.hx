@@ -5,7 +5,11 @@ import flixel.FlxObject;
 import flixel.group.FlxGroup;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
+import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.addons.display.FlxBackdrop;
+import flixel.util.FlxAxes;
+import flixel.util.FlxTimer;
 import flixel.util.FlxColor;
 import backend.song.Highscore;
 import backend.song.Highscore.ScoreData;
@@ -45,7 +49,16 @@ class FreeplayState extends MusicBeatState
 
 	var bg:FlxSprite;
 	var bgTween:FlxTween;
+	var ohTween:FlxTween;
+	var dohTween:FlxTween;
 	var grpItems:FlxGroup;
+	
+	var ponto:FlxBackdrop;
+	var oh:FlxBackdrop;
+	var doh:FlxBackdrop;
+	var freet:FlxSprite;
+	
+	var fuck:String = 'menu/freeplay/';
 
 	var scoreCounter:ScoreCounter;
 
@@ -60,8 +73,33 @@ class FreeplayState extends MusicBeatState
 
 		bg = new FlxSprite().loadGraphic(Paths.image('menu/backgrounds/menuDesat'));
 		bg.scale.set(1.2,1.2); bg.updateHitbox();
+		bg.alpha = 0.75;
 		bg.screenCenter();
 		add(bg);
+		
+		ponto = new FlxBackdrop(Paths.image(fuck + 'backdrd'), FlxAxes.XY, 0, 0);
+		ponto.setGraphicSize(Std.int(ponto.height * 1.2));
+		ponto.velocity.set(20, 20);
+		add(ponto);
+		
+		oh = new FlxBackdrop(Paths.image(fuck + 'yil'), FlxAxes.X, 0, 0);
+		oh.scale.set(1, 4);
+		oh.y = -35;
+		oh.velocity.set(20, 0);
+		add(oh);
+		
+		doh = new FlxBackdrop(Paths.image(fuck + 'yil'), FlxAxes.X, 0, 0);
+		doh.scale.set(1, 4);
+		doh.velocity.set(20, 0);
+		doh.y = 700;
+		add(doh);
+		
+		freet = new FlxSprite(512.75, 100);
+		freet.frames = Paths.getSparrowAtlas(fuck + 'gjrkskscmfkkdkakakskdcm');
+		freet.animation.addByPrefix('idle', "idles", 24, true);
+		freet.animation.addByPrefix('ohyeah', "sherek", 24, false);
+		freet.animation.play('idle');
+		add(freet);
 		
 		// adding songs
 		for(i in 0...SongData.weeks.length)
@@ -138,6 +176,19 @@ class FreeplayState extends MusicBeatState
 		add(resetBg);
 		add(resetTxt);
 		#end
+		
+		FlxTween.angle(freet, freet.angle, -2, 1, {ease: FlxEase.quartInOut});
+		new FlxTimer().start(1, function(tmr:FlxTimer)
+		{
+		if(oh.y == -35) FlxTween.tween(oh, {y: -25}, 1, {ease: FlxEase.quartInOut});
+		else FlxTween.tween(oh, {y: -35}, 1, {ease: FlxEase.quartInOut});
+		
+		if(freet.angle == -2) FlxTween.angle(freet, freet.angle, 2, 1, {ease: FlxEase.quartInOut});
+		else FlxTween.angle(freet, freet.angle, -2, 1, {ease: FlxEase.quartInOut});
+		
+		if(doh.y == 700) FlxTween.tween(doh, {y: 690}, 1, {ease: FlxEase.quartInOut});
+		else FlxTween.tween(doh, {y: 700}, 1, {ease: FlxEase.quartInOut});
+		}, 0);
 
 		changeSelection();
 	}
@@ -164,12 +215,16 @@ class FreeplayState extends MusicBeatState
 			DeleteScoreSubState.deletedScore = false;
 			updateScoreCount();
 		}
-
+		
 		var toChartEditor:Bool = FlxG.keys.justPressed.SEVEN;
 		if(Controls.justPressed(ACCEPT) || toChartEditor)
 		{
 			try
 			{
+				freet.animation.play('ohyeah');
+				FlxG.sound.play(Paths.sound('menu/confirmMenu'));
+				new FlxTimer().start(1.5, function(tmr:FlxTimer)
+	            {
 				var curSong = songList[curSelected];
 				PlayState.playList = [];
 				PlayState.songDiff = curSong.diffs[curDiff];
@@ -188,6 +243,7 @@ class FreeplayState extends MusicBeatState
 		
 					Main.switchState(new ChartingState());
 				}
+				});
 			}
 			catch(e)
 			{
@@ -247,6 +303,12 @@ class FreeplayState extends MusicBeatState
 		
 		if(bgTween != null) bgTween.cancel();
 		bgTween = FlxTween.color(bg, 0.4, bg.color, songList[curSelected].color);
+		
+		if(ohTween != null) ohTween.cancel();
+		ohTween = FlxTween.color(oh, 0.4, oh.color, songList[curSelected].color);
+		
+		if(dohTween != null) dohTween.cancel();
+		dohTween = FlxTween.color(doh, 0.4, doh.color, songList[curSelected].color);
 
 		if(change != 0)
 			FlxG.sound.play(Paths.sound("menu/scrollMenu"));
