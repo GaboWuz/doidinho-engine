@@ -82,6 +82,7 @@ class ChartingState extends MusicBeatState
 		'none',
 		'no animation',
 		'gf note',
+		'idk note',
 		'bomb',
 		'hurt note',
 		'warn note',
