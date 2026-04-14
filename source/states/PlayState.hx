@@ -86,7 +86,6 @@ class PlayState extends MusicBeatState
 
 	public var characters:Array<CharGroup> = [];
 	public var dad:CharGroup;
-	public var mom:CharGroup; // para a primeira música
 	public var boyfriend:CharGroup;
 	public var gf:CharGroup;
 
@@ -341,20 +340,16 @@ class PlayState extends MusicBeatState
 		*/
 		gf = new CharGroup(false, stageBuild.gfVersion);
 		dad = new CharGroup(false, SONG.player2);
-		if (SONG.song == "sixxey") mom = new CharGroup(false, "idklool");
 		boyfriend = new CharGroup(true, SONG.player1);
 
 		preloadEvents(unspawnEvents);
 
 		characters.push(gf);
 		characters.push(dad);
-		if (SONG.song == "sixxey") characters.push(mom);
 		characters.push(boyfriend);
 		for(char in characters) {
 			changeChar(char, char.curChar, (char != gf));
 		}
-		
-		if (SONG.song == "sixxey") changeChar(mom, "idklool");
 
 		changeStage(stageBuild.curStage);
 		
@@ -875,9 +870,6 @@ class PlayState extends MusicBeatState
 		var thisChar = strumline.character.char;
 		if(note.noteType == "gf note" && gf.char != null)
 			thisChar = gf.char;
-			
-		if(note.noteType == "idk note" && mom.char != null)
-			thisChar = mom.char;
 
 		// anything else
 		note.gotHeld = true;
@@ -981,9 +973,6 @@ class PlayState extends MusicBeatState
 		var thisChar = strumline.character.char;
 		if(note.noteType == "gf note" && gf.char != null)
 			thisChar = gf.char;
-			
-		if(note.noteType == "idk note" && mom.char != null)
-			thisChar = mom.char;
 		
 		if(strumline.isPlayer || vocalsOpp == null)
 			vocals.volume = 1;

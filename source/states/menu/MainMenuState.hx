@@ -132,7 +132,7 @@ class MainMenuState extends MusicBeatState
 		
 		if (grpOptions.members.length > 3) {
 		    grpOptions.members[0].x -= 460;
-		    grpOptions.members[0].y += 50;
+		    grpOptions.members[0].y += 40;
 		    
 		    grpOptions.members[1].x -= 170;
 		    grpOptions.members[1].y += 90;
@@ -141,7 +141,7 @@ class MainMenuState extends MusicBeatState
 		    grpOptions.members[3].y += 30;
 		    
 		    grpOptions.members[2].x = grpOptions.members[3].x + 110;
-		    grpOptions.members[2].y = grpOptions.members[3].y;
+		    grpOptions.members[2].y = grpOptions.members[3].y + 20;
 		}
 		
 		shad = new FlxSprite(0, 0).loadGraphic(Paths.image(fuck + issoai));
@@ -152,8 +152,8 @@ class MainMenuState extends MusicBeatState
 		
 		new FlxTimer().start(1.65, function(tmr:FlxTimer)
 		{
-		if(cao.y == coloy) FlxTween.tween(cao, {y: coloy +20}, 1.65, {ease: FlxEase.quartInOut});
-		else FlxTween.tween(cao, {y: coloy}, 1.65, {ease: FlxEase.quartInOut});
+			if(cao.y == coloy) FlxTween.tween(cao, {y: coloy +20}, 1.65, {ease: FlxEase.quartInOut});
+			else FlxTween.tween(cao, {y: coloy}, 1.65, {ease: FlxEase.quartInOut});
 		}, 0);
 		
 		var doidoSplash:String = 'Doidinho Engine ${lime.app.Application.current.meta.get('version')}';
@@ -166,7 +166,7 @@ class MainMenuState extends MusicBeatState
 		add(splashTxt);
 
 		changeSelection();
-		bg.y = bgPosY;
+		if (bg != null) bg.y = bgPosY;
 
 		#if TOUCH_CONTROLS
 		createPad("back");
@@ -312,7 +312,7 @@ class MainMenuState extends MusicBeatState
 
 	public function changeSelection(change:Int = 0)
 	{
-	    if(change != 0) FlxG.sound.play(Paths.sound('menu/scrollMenu'));
+	    //if(change != 0) FlxG.sound.play(Paths.sound('menu/scrollMenu'));
 	    
 	    curSelected += change;
 	    curSelected = FlxMath.wrap(curSelected, 0, optionShit.length - 1);
