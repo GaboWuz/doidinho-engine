@@ -517,6 +517,14 @@ class Stage extends FlxGroup
 		}
 	}
 	
+	private function sixxeyStepHit(curStep:Int):Void
+	{
+	    switch(curStep)
+	    {
+	        case 486: FlxTween.tween(gf, {x: 650, y: 600}, 1, {ease: FlxEase.quadInOut});
+	    }
+	}
+	
 	private function lapoluzStepHit(curStep:Int):Void
 	{
 	    switch(curStep)
@@ -599,6 +607,8 @@ class Stage extends FlxGroup
 	
 		switch(songName)
 		{
+		    case "sixxey":
+				sixxeyStepHit(curStep);
 			case "lapoluz":
 				lapoluzStepHit(curStep);
 			case "faker-identity":
