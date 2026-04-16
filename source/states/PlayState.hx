@@ -1770,6 +1770,9 @@ class PlayState extends MusicBeatState
 		hudBuild.stepHit(curStep);
 		syncSong();
 		
+		if (SONG.song == "sixxey" && curStep == 486)
+			FlxTween.tween(gf, {x: 523.5, y: 850}, 1, {ease: FlxEase.quadInOut});
+		}
 		if (SONG.song == "moogusxey") {
             if (curStep == 1) {
                 dedbg.animation.play('idle', true);

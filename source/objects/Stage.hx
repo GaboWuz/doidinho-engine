@@ -181,7 +181,7 @@ class Stage extends FlxGroup
 			    this.curStage = "picnic";
 			    camZoom = 0.657;
 			
-				gfPos.set(523.5, 850);
+				gfPos.set(300, 650);
 				dadPos.set(440, 760);
 				bfPos.set(1350, 830);
 			
@@ -517,14 +517,6 @@ class Stage extends FlxGroup
 		}
 	}
 	
-	private function sixxeyStepHit(curStep:Int):Void
-	{
-	    switch(curStep)
-	    {
-	        case 486: FlxTween.tween(PlayState.instance.gf, {x: 650, y: 600}, 1, {ease: FlxEase.quadInOut});
-	    }
-	}
-	
 	private function lapoluzStepHit(curStep:Int):Void
 	{
 	    switch(curStep)
@@ -607,8 +599,6 @@ class Stage extends FlxGroup
 	
 		switch(songName)
 		{
-		    case "sixxey":
-				sixxeyStepHit(curStep);
 			case "lapoluz":
 				lapoluzStepHit(curStep);
 			case "faker-identity":
