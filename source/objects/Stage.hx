@@ -521,7 +521,7 @@ class Stage extends FlxGroup
 	{
 	    switch(curStep)
 	    {
-	        case 486: FlxTween.tween(PlayState.gf, {x: 650, y: 600}, 1, {ease: FlxEase.quadInOut});
+	        case 486: FlxTween.tween(PlayState.instance.gf, {x: 650, y: 600}, 1, {ease: FlxEase.quadInOut});
 	    }
 	}
 	
