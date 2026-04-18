@@ -338,15 +338,27 @@ class PlayState extends MusicBeatState
 		*	remember to put false after "new char" for non-singers (like gf)
 		*	so it doesnt reload the icons
 		*/
-		gf = new CharGroup(false, stageBuild.gfVersion);
-		dad = new CharGroup(false, SONG.player2);
-		boyfriend = new CharGroup(true, SONG.player1);
+		if (SONG.song == "sixxey") {
+			dad = new CharGroup(false, SONG.player2);
+			boyfriend = new CharGroup(true, SONG.player1);
+			gf = new CharGroup(false, stageBuild.gfVersion);
+		} else {
+	    	gf = new CharGroup(false, stageBuild.gfVersion);
+			dad = new CharGroup(false, SONG.player2);
+			boyfriend = new CharGroup(true, SONG.player1);
+		}
 
 		preloadEvents(unspawnEvents);
 
-		characters.push(gf);
-		characters.push(dad);
-		characters.push(boyfriend);
+        if (SONG.song == "sixxey") {
+			characters.push(dad);
+			characters.push(boyfriend);
+			characters.push(gf);
+		} else {
+			characters.push(gf);
+			characters.push(dad);
+			characters.push(boyfriend);
+		}
 		for(char in characters) {
 			changeChar(char, char.curChar, (char != gf));
 		}
