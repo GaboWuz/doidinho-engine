@@ -181,7 +181,7 @@ class Stage extends FlxGroup
 			    this.curStage = "picnic";
 			    camZoom = 0.657;
 			
-				gfPos.set(140, 1000);
+				gfPos.set(150, 820);
 				dadPos.set(440, 760);
 				bfPos.set(1350, 830);
 			
@@ -264,7 +264,7 @@ class Stage extends FlxGroup
 				bfPos.y += 100;
 				dadPos.y += 130;
 				
-				dadCam.y += 50;
+				dadCam.y -= 20;
 
 			    var back = new FlxSprite(0, -700).loadGraphic(Paths.image('stages/luke/back'));
 				back.setGraphicSize(Std.int(back.width * 2.67));
