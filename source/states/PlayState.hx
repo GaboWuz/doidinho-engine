@@ -1783,7 +1783,7 @@ class PlayState extends MusicBeatState
 		syncSong();
 		
 		if (SONG.song == "sixxey" && curStep == 486) { //brooo chilll
-			FlxTween.tween(gf.char, {x: -275}, 4, {ease: FlxEase.quadInOut});
+			FlxTween.tween(gf.char, {x: -250}, 4, {ease: FlxEase.quadInOut});
 		}
 		if (SONG.song == "moogusxey") {
             if (curStep == 1) {
