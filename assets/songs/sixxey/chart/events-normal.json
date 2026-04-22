@@ -66,45 +66,9 @@
 			[
 				[
 					"Flash Screen",
-					"8",
+					"10",
 					"white",
 					""
-				]
-			]
-		],
-		[
-			13,
-			22773.7226277372,
-			[
-				[
-					"Change Cam Angle",
-					"2.5",
-					"5",
-					"cubeInOut"
-				],
-				[
-					"Change Cam Zoom",
-					"0.830",
-					"6",
-					"cubeInOut"
-				]
-			]
-		],
-		[
-			15,
-			26277.3722627737,
-			[
-				[
-					"Change Cam Angle",
-					"-2.5",
-					"8",
-					"cubeInOut"
-				],
-				[
-					"Change Cam Zoom",
-					"0.896",
-					"4",
-					"cubeInOut"
 				]
 			]
 		],
@@ -134,7 +98,7 @@
 					"Change Cam Pos",
 					"410",
 					"500",
-					"1"
+					""
 				],
 				[
 					"Change Cam Pos",
@@ -152,7 +116,7 @@
 					"Change Cam Pos",
 					"1150",
 					"640",
-					"1"
+					""
 				],
 				[
 					"Change Cam Pos",
@@ -246,428 +210,14 @@
 			[
 				[
 					"Change Note Speed",
-					"1.6",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			36,
-			63284.6715328467,
-			[
-				[
-					"Change Note Speed",
-					"3.6",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			36,
-			64379.5620437956,
-			[
-				[
-					"Change Note Speed",
-					"1.6",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			37,
-			65036.4963503649,
-			[
-				[
-					"Change Note Speed",
-					"3.6",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			37,
-			66131.3868613138,
-			[
-				[
-					"Change Note Speed",
-					"1.6",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			38,
-			66569.3430656934,
-			[
-				[
-					"Change Note Speed",
-					"3.6",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			39,
-			68321.1678832116,
-			[
-				[
-					"Change Note Speed",
-					"1.6",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			40,
-			70072.9927007299,
-			[
-				[
-					"Change Note Speed",
-					"2.5",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			44,
-			77956.204379562,
-			[
-				[
-					"Freeze Notes",
-					"true",
-					"bf",
-					""
-				]
-			]
-		],
-		[
-			44,
-			78394.1605839416,
-			[
-				[
-					"Freeze Notes",
-					"false",
-					"bf",
-					""
-				]
-			]
-		],
-		[
-			45,
-			79708.0291970803,
-			[
-				[
-					"Change Note Speed",
-					"4.0",
-					"4",
-					" cubeOut"
-				]
-			]
-		],
-		[
-			46,
-			80583.9416058394,
-			[
-				[
-					"Change Note Speed",
-					"2.5",
-					"4",
-					" cubeOut"
-				]
-			]
-		],
-		[
-			47,
-			83211.6788321168,
-			[
-				[
-					"Shake Screen",
-					"6.0",
-					"8",
-					"camGame"
-				]
-			]
-		],
-		[
-			48,
-			84087.5912408759,
-			[
-				[
-					"Change Note Speed",
-					"3.6",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			51,
-			89343.0656934307,
-			[
-				[
-					"Change Note Speed",
-					"4.0",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			51,
-			90656.9343065694,
-			[
-				[
-					"Change Note Speed",
-					"2.5",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			54,
-			94598.5401459854,
-			[
-				[
-					"Change Note Speed",
 					"2.0",
 					"4",
 					"cubeOut"
-				]
-			]
-		],
-		[
-			54,
-			95474.4525547446,
-			[
+				],
 				[
-					"Change Note Speed",
-					"1.5",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			55,
-			96350.3649635037,
-			[
-				[
-					"Change Note Speed",
-					"1.0",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			56,
-			98102.1897810219,
-			[
-				[
-					"Change Note Speed",
-					"2.5",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			55,
-			97226.2773722628,
-			[
-				[
-					"Change Note Speed",
-					"0.5",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			64,
-			112116.788321168,
-			[
-				[
-					"Change Note Speed",
-					"3.8",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			89,
-			155912.408759124,
-			[
-				[
-					"Change Note Speed",
-					"2.5",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			89,
-			156350.364963504,
-			[
-				[
-					"Change Note Speed",
-					"2.0",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			90,
-			157664.233576642,
-			[
-				[
-					"Change Note Speed",
-					"1.9",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			90,
-			157883.211678832,
-			[
-				[
-					"Change Note Speed",
-					"1.8",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			90,
-			158102.189781022,
-			[
-				[
-					"Change Note Speed",
-					"1.7",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			90,
-			158321.167883212,
-			[
-				[
-					"Change Note Speed",
-					"1.6",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			90,
-			158540.145985401,
-			[
-				[
-					"Change Note Speed",
-					"1.5",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			90,
-			158759.124087591,
-			[
-				[
-					"Change Note Speed",
-					"1.4",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			90,
-			158978.102189781,
-			[
-				[
-					"Change Note Speed",
-					"1.3",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			90,
-			159197.080291971,
-			[
-				[
-					"Change Note Speed",
-					"1.2",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			91,
-			159416.058394161,
-			[
-				[
-					"Change Note Speed",
-					"1.1",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			91,
-			159635.03649635,
-			[
-				[
-					"Change Note Speed",
-					"1.0",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			93,
-			162919.708029197,
-			[
-				[
-					"Change Note Speed",
-					"7.0",
-					"4",
-					"cubeOut"
-				]
-			]
-		],
-		[
-			93,
-			164233.576642336,
-			[
-				[
-					"Change Note Speed",
-					"2.5",
-					"4",
+					"Change Cam Zoom",
+					"0.657",
+					"6",
 					"cubeOut"
 				]
 			]
@@ -678,8 +228,236 @@
 			[
 				[
 					"Change Note Speed",
-					"0.2",
+					"0.6",
+					"2",
+					"cubeOut"
+				],
+				[
+					"Change Cam Zoom",
+					"0.657",
+					"8",
+					"cubeOut"
+				]
+			]
+		],
+		[
+			11,
+			19270.0729927007,
+			[
+				[
+					"Change Cam Angle",
+					"2.5",
+					"5",
+					"cubeInOut"
+				],
+				[
+					"Change Cam Zoom",
+					"0.830",
+					"6",
+					"cubeInOut"
+				]
+			]
+		],
+		[
+			14,
+			24525.5474452555,
+			[
+				[
+					"Change Cam Angle",
+					"-2.5",
+					"8",
+					"cubeInOut"
+				],
+				[
+					"Change Cam Zoom",
+					"0.896",
 					"4",
+					"cubeInOut"
+				]
+			]
+		],
+		[
+			31,
+			54306.5693430657,
+			[
+				[
+					"Change Cam Zoom",
+					"0.760",
+					"5",
+					"cubeOut"
+				]
+			]
+		],
+		[
+			39,
+			69635.0364963503,
+			[
+				[
+					"Change Note Speed",
+					"2.0",
+					"4",
+					"cubeOut"
+				],
+				[
+					"Change Cam Zoom",
+					"0.800",
+					"10",
+					"cubeOut"
+				]
+			]
+		],
+		[
+			40,
+			70072.9927007299,
+			[
+				[
+					"Change Cam Zoom",
+					"0.657",
+					"4  ",
+					"cubeOut"
+				]
+			]
+		],
+		[
+			48,
+			84087.5912408759,
+			[
+				[
+					"Flash Screen",
+					"8",
+					"white",
+					""
+				],
+				[
+					"Change Cam Pos",
+					"370",
+					"500",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.800",
+					"2",
+					"cubeOut"
+				]
+			]
+		],
+		[
+			52,
+			91094.8905109489,
+			[
+				[
+					"Change Cam Pos",
+					"1200",
+					"640",
+					""
+				]
+			]
+		],
+		[
+			56,
+			98102.1897810219,
+			[
+				[
+					"Change Cam Pos",
+					"",
+					"",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.730",
+					"6",
+					"cubeOut"
+				]
+			]
+		],
+		[
+			64,
+			112116.788321168,
+			[
+				[
+					"Flash Screen",
+					"8",
+					"white",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.657",
+					"4",
+					"cubeOut"
+				],
+				[
+					"Change Note Speed",
+					"3.2",
+					"6",
+					"cubeOut"
+				]
+			]
+		],
+		[
+			80,
+			140145.98540146,
+			[
+				[
+					"Flash Screen",
+					"8",
+					"white",
+					""
+				],
+				[
+					"Change Note Speed",
+					"2.0",
+					"6",
+					"cubeOut"
+				]
+			]
+		],
+		[
+			95,
+			166423.357664233,
+			[
+				[
+					"Change Cam Zoom",
+					"0.700",
+					"12",
+					"cubeInOut"
+				]
+			]
+		],
+		[
+			88,
+			154160.583941606,
+			[
+				[
+					"Change Note Speed",
+					"2.4",
+					"5",
+					"cubeOut"
+				]
+			]
+		],
+		[
+			36,
+			63065.6934306569,
+			[
+				[
+					"Change Note Speed",
+					"2.4",
+					"5",
+					"cubeOut"
+				]
+			]
+		],
+		[
+			49,
+			85839.4160583942,
+			[
+				[
+					"Change Note Speed",
+					"2.6",
+					"5",
 					"cubeOut"
 				]
 			]
