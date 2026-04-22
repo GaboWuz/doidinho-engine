@@ -1782,8 +1782,14 @@ class PlayState extends MusicBeatState
 		hudBuild.stepHit(curStep);
 		syncSong();
 		
-		if (SONG.song == "sixxey" && curStep == 486) { //brooo chilll
-			FlxTween.tween(gf.char, {x: -250}, 4, {ease: FlxEase.quadInOut});
+		if (SONG.song == "sixxey" && curStep == 484) { //brooo chilll
+		    gf.char.playAnim("walkLeft", true);
+			FlxTween.tween(gf.char, {x: -250}, 1, {
+			    ease: FlxEase.linear,
+			    onComplete: function(twn:FlxTween) {
+			        gf.char.playAnim('idle');
+			    }
+			});
 		}
 		if (SONG.song == "moogusxey") {
             if (curStep == 1) {
