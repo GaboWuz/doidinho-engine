@@ -1782,9 +1782,9 @@ class PlayState extends MusicBeatState
 		hudBuild.stepHit(curStep);
 		syncSong();
 		
-		if (SONG.song == "sixxey" && curStep == 484) { //brooo chilll
+		if (SONG.song == "sixxey" && curStep == 482) { //brooo chilll
 		    gf.char.playAnim('walkLeft', true);
-			FlxTween.tween(gf.char, {x: -250}, 3, {
+			FlxTween.tween(gf.char, {x: -250}, 2, {
 			    ease: FlxEase.linear,
 			    onComplete: function(twn:FlxTween) {
 			        gf.char.playAnim('idle');
