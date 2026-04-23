@@ -81,6 +81,8 @@ class Character extends FlxAnimate
 					['singDOWN', 	'down', 24, false],
 					['singUP', 		'up', 24, false],
 					['singLEFT',	'left', 24, false],
+					['walkLeft', 		'andaesquerda', 24, true],
+					['walkRight',	'andadireita', 24, true],
 				];
 			scale.set(1, 1);
 			
