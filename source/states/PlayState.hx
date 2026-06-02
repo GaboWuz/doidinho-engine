@@ -429,24 +429,20 @@ class PlayState extends MusicBeatState
 			composerTxt = new FlxText(0, 190 + 50, 0, Paths.text('songs/' + SONG.song + '/credits'), 30);
 			composerTxt.alignment = LEFT;
 			
-			var textWidth:Float = songnameText.width;
-			if (composerTxt.width > textWidth) {
-			    textWidth = composerTxt.width;
-			}
+			var textWidth:Float = (composerTxt.fieldWidth > songnameText.fieldWidth) ? composerTxt.fieldWidth : songnameText.fieldWidth;
 			
-			var padding:Int = 100;
-			box = new FlxSprite(-740, 190).makeGraphic(Std.int(textWidth + padding), 140, FlxColor.WHITE);
+			box = new FlxSprite(-740, 190).makeGraphic(Std.int(songnameText.height + composerTxt.height + 15), 140, FlxColor.WHITE);
 			box.alpha = 0.5;
 			box.cameras = [camOther];
 			add(box);
 			
 			songnameText.x = box.x + 70;
-			songnameText.font = Paths.font("liberbold.ttf");
+			songnameText.setFormat(Paths.font("liberbold.ttf"), 24, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			songnameText.cameras = [camOther];
 			add(songnameText);
 			
 			composerTxt.x = box.x + 70;
-			composerTxt.font = Paths.font("liber.ttf");
+			composerTxt.setFormat(Paths.font("liber.ttf"), 24, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			composerTxt.cameras = [camOther];
 			add(composerTxt);
 		}
