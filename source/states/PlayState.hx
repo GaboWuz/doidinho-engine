@@ -88,7 +88,6 @@ class PlayState extends MusicBeatState
 	public var dad:CharGroup;
 	public var boyfriend:CharGroup;
 	public var gf:CharGroup;
-	public var gfTwo:CharGroup;
 
 	// strumlines
 	public static var hasModchart:Bool = false;
@@ -340,7 +339,6 @@ class PlayState extends MusicBeatState
 		*	so it doesnt reload the icons
 		*/
 		if (SONG.song == "sixxey") {
-		    gfTwo = new CharGroup(false, "geef");
 			dad = new CharGroup(false, SONG.player2);
 			boyfriend = new CharGroup(true, SONG.player1);
 			gf = new CharGroup(false, stageBuild.gfVersion);
@@ -353,7 +351,6 @@ class PlayState extends MusicBeatState
 		preloadEvents(unspawnEvents);
 
         if (SONG.song == "sixxey") {
-            characters.push(gfTwo);
 			characters.push(dad);
 			characters.push(boyfriend);
 			characters.push(gf);
@@ -363,7 +360,7 @@ class PlayState extends MusicBeatState
 			characters.push(boyfriend);
 		}
 		for(char in characters) {
-			changeChar(char, char.curChar, (char != gf || char != gfTwo));
+			changeChar(char, char.curChar, (char != gf));
 		}
 
 		changeStage(stageBuild.curStage);
@@ -378,13 +375,6 @@ class PlayState extends MusicBeatState
 				changeChar(char, gf.curChar);
 				char.setPos(stageBuild.gfPos.x, stageBuild.gfPos.y);
 				gf.visible = false;
-			}
-			
-			if(char.curChar == gfTwo.curChar && char != gfTwo && gfTwo.visible)
-			{
-				changeChar(char, gfTwo.curChar);
-				char.setPos(965.5, -5);
-				gfTwo.visible = false;
 			}
 			
 			addList.push(char);
