@@ -210,11 +210,11 @@ class PlayState extends MusicBeatState
 			'faker-identity',
 		];
 		
-		if(legacySongs.contains(SONG.song)) {
+		if(legacySongs.contains(SONG.song))
 			assetModifier = "base";
-		} else {
+		else 
 		    assetModifier = "new";
-	    }
+	    
 		countdownModifier = "base";
 		startedCountdown = false;
 		startedSong = false;
@@ -441,12 +441,12 @@ class PlayState extends MusicBeatState
 			add(box);
 			
 			songnameText.x = box.x + 70;
-			songnameText.font = Paths.font("vcr.ttf");
+			songnameText.font = Paths.font("liberbold.ttf");
 			songnameText.cameras = [camOther];
 			add(songnameText);
 			
 			composerTxt.x = box.x + 70;
-			composerTxt.font = Paths.font("vcr.ttf");
+			composerTxt.font = Paths.font("liber.ttf");
 			composerTxt.cameras = [camOther];
 			add(composerTxt);
 		}
@@ -1787,10 +1787,10 @@ class PlayState extends MusicBeatState
                 ease: FlxEase.linear,
                 onUpdate: (twn) -> {
                    gf.char.playAnim('walkLeft', false);
-                    gf.char.specialAnim = 1;
+                   gf.char.specialAnim = 1;
                 },
                 onComplete: (twn:FlxTween) -> {
-                    gf.char.playAnim('idle');
+                   gf.char.playAnim('idle');
                 }
             });
 		}

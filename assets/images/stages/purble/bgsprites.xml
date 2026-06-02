@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bgsprites.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="luke0000" x="0" y="0" width="493" height="620" frameX="-40" frameY="-72" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="star0000" x="476" y="620" width="435" height="551" frameX="-99" frameY="-141" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="azedin0000" x="911" y="620" width="424" height="522" frameX="-121" frameY="-170" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="linn0000" x="0" y="620" width="476" height="565" frameX="-73" frameY="-127" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dgl0000" x="1004" y="0" width="455" height="614" frameX="-61" frameY="-78" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="wmult0000" x="1459" y="0" width="404" height="608" frameX="-131" frameY="-84" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="quik0000" x="493" y="0" width="511" height="586" frameX="-31" frameY="-106" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="cadu0000" x="0" y="1185" width="408" height="579" frameX="-66" frameY="-113" frameWidth="690" frameHeight="690"/>
+</TextureAtlas>
