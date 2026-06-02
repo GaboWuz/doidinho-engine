@@ -441,7 +441,7 @@ class PlayState extends MusicBeatState
 			
 			var textWidth:Float = (composerTxt.fieldWidth > songnameText.fieldWidth) ? composerTxt.fieldWidth : songnameText.fieldWidth;
 			
-			box = new FlxSprite(-740, 190).makeGraphic(Math.floor(size + 24), Std.int(text.height + subtext.height + 15), FlxColor.WHITE);
+			box = new FlxSprite(-740, 190).makeGraphic(Math.floor(textWidth + 24), Std.int(songnameText.height + composerTxt.height + 15), FlxColor.WHITE);
 			box.height = songnameText.height + composerTxt.height;
 			box.alpha = 0.5;
 			box.cameras = [camOther];
