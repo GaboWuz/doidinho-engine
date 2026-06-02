@@ -87,7 +87,7 @@ class Character extends FlxAnimate
 			scale.set(1, 1);
 			
 			case "gagbis":
-				doidoChar.spritesheet += 'gagbis/gagbis_ded';
+				doidoChar.spritesheet += 'gabo/gagbis_ded';
 				
 				doidoChar.anims = [
 					['idle',		'idles', 12, false],
@@ -100,7 +100,7 @@ class Character extends FlxAnimate
 			scale.set(1.1, 1.1);
 			
 			case "mortonaofala":
-				doidoChar.spritesheet += 'gagbis/gagbis_ded';
+				doidoChar.spritesheet += 'gabo/gagbis_ded';
 				
 				doidoChar.anims = [
 					['idle',		'uff', 12, false],
@@ -112,7 +112,7 @@ class Character extends FlxAnimate
 			scale.set(1.1, 1.1);
 			
 			case "susbo":
-				doidoChar.spritesheet += 'susbo/ops_susset';
+				doidoChar.spritesheet += 'gabo/ops_susset';
 				
 				doidoChar.anims = [
 					['danceLeft',	'ddle',	24, false],
@@ -142,7 +142,7 @@ class Character extends FlxAnimate
 			scale.set(1.1, 1.1);
 			
 			case "gabos":
-				doidoChar.spritesheet += 'gabolegacy/gagbis_assets';
+				doidoChar.spritesheet += 'gabo/gagbis_assetslegacy';
 				
 				doidoChar.anims = [
 					['idle',		'idle', 24, false],
@@ -154,7 +154,7 @@ class Character extends FlxAnimate
 			scale.set(1.3, 1.3);
 				
 			case "faker":
-				doidoChar.spritesheet += 'fakerlegacy/fakerer_assets';
+				doidoChar.spritesheet += 'faker/fakerer_assetslegacy';
 				
 				doidoChar.anims = [
 					['idle',		'idle', 24, false],
@@ -166,7 +166,7 @@ class Character extends FlxAnimate
 			scale.set(1.3, 1.3);
 			
 			case "boof":
-				doidoChar.spritesheet += 'boof/bf_furset';
+				doidoChar.spritesheet += 'bf/bf_furset';
 				doidoChar.anims = [
 					['idle', 			'idle dance', 		24, false],
 					['singUP', 			'uo', 			24, false],
@@ -182,7 +182,7 @@ class Character extends FlxAnimate
 				flipX = true;
 			
 			case "kyzu":
-				doidoChar.spritesheet += 'kyzu/kyzu_friend';
+				doidoChar.spritesheet += 'bf/kyzu_friend';
 				doidoChar.anims = [
 					['idle', 			'boykisser', 		12, false],
 					['singUP', 			'up', 			24, false],
@@ -210,6 +210,19 @@ class Character extends FlxAnimate
 					['singRIGHT', 	'GF Right Note',24, false],
 					['singUP', 		'GF Up Note', 	24, false],
 					['singDOWN', 	'GF Down Note', 24, false],
+				];
+
+				idleAnims = ["danceLeft", "danceRight"];
+				quickDancer = true;
+				flipX = isPlayer;
+			
+			case "geef":
+				spriteType = ATLAS;
+				doidoChar.spritesheet += 'gf/gf_furset';
+				doidoChar.anims = [
+					['sad',			'sad',			24, false],
+					['danceLeft',	'dleft',	24, false],
+					['danceRight',	'dright',	24, false],
 				];
 
 				idleAnims = ["danceLeft", "danceRight"];
