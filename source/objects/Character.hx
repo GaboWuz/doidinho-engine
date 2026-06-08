@@ -136,6 +136,12 @@ class Character extends FlxAnimate
 					['singDOWN', 	'down', 24, false],
 					['singUP', 		'up', 24, false],
 					['singLEFT',	'left', 24, false],
+					['danceLeft-alt',	'alti',	24, false],
+					['danceRight-alt',	'alti',	24, false],
+					['singRIGHT-alt',	'altr', 24, false],
+					['singDOWN-alt', 	'altd', 24, false],
+					['singUP-alt', 		'altu', 24, false],
+					['singLEFT-alt',	'altl', 24, false],
 				];
 			idleAnims = ["danceLeft", "danceRight"];
 			quickDancer = true;
