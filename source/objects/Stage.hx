@@ -255,7 +255,7 @@ class Stage extends FlxGroup
 				geef.animation.addByPrefix('danceLeft', 'dleft', 24, false);
 				geef.animation.addByPrefix('danceRight', 'dright', 24, false);
 				geef.animation.addByPrefix('sad', 'sad', 24, false);
-				geef.updateHitbox();
+				//geef.updateHitbox();
 				//geef.scrollFactor.set(0.9, 0.9);
 				add(geef);
 				
