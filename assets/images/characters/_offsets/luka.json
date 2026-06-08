@@ -7,7 +7,7 @@
 		[
 			"singDOWN",
 			8,
-		   -8
+			-8
 		],
 		[
 			"singUP",
@@ -22,7 +22,7 @@
 		[
 			"singRIGHT",
 			5,
-		 -12
+			-12
 		],
 		[
 			"danceLeft",
@@ -31,6 +31,36 @@
 		],
 		[
 			"danceRight",
+			0,
+	        0
+		],
+		[
+			"singDOWN-alt",
+			0,
+			0
+		],
+		[
+			"singUP-alt",
+			0,
+			0
+		],
+		[
+			"singLEFT-alt",
+			0,
+			0
+		],
+		[
+			"singRIGHT-alt",
+			0,
+			0
+		],
+		[
+			"danceLeft-alt",
+			0,
+			0
+		],
+		[
+			"danceRight-alt",
 			0,
 	        0
 		]
