@@ -55,6 +55,7 @@ class Stage extends FlxGroup
 	var frente:FlxSprite;
 	
 	// coisas públicas
+	var geef:FlxSprite;
 	var staticSpr:FlxSprite;
 
 	public function new() {
@@ -182,6 +183,16 @@ class Stage extends FlxGroup
 			    camZoom = 0.657;
 			
 				gfPos.set(-750, 920);
+				
+				geef = new FlxSprite(965.5, -5);
+				geef.frames = Paths.getSparrowAtlas('characters/gf/gf_furset');
+				geef.animation.addByPrefix('danceLeft', 'dleft', 24, false);
+				geef.animation.addByPrefix('danceRight', 'dright', 24, false);
+				geef.animation.addByPrefix('sad', 'sad', 24, false);
+				geef.updateHitbox();
+				//geef.scrollFactor.set(0.9, 0.9);
+				add(geef);
+				
 				dadPos.set(440, 760);
 				bfPos.set(1350, 830);
 			
@@ -618,6 +629,10 @@ class Stage extends FlxGroup
 			case "stageg":
 			   if (curBeat % 2 == 0)
 				 staticSpr.animation.play('idle', true);
+		}
+		
+		if (curBeat % 2 == 0) {
+		    geef.animation.play('idle', true);
 		}
 	}
 
