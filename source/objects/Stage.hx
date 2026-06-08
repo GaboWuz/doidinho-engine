@@ -182,17 +182,7 @@ class Stage extends FlxGroup
 			    this.curStage = "picnic";
 			    camZoom = 0.657;
 			
-				gfPos.set(-750, 920);
-				
-				geef = new FlxSprite(965.5, -5);
-				geef.frames = Paths.getSparrowAtlas('characters/gf/gf_furset');
-				geef.animation.addByPrefix('danceLeft', 'dleft', 24, false);
-				geef.animation.addByPrefix('danceRight', 'dright', 24, false);
-				geef.animation.addByPrefix('sad', 'sad', 24, false);
-				geef.updateHitbox();
-				//geef.scrollFactor.set(0.9, 0.9);
-				add(geef);
-				
+				gfPos.set(-750, 920);				
 				dadPos.set(440, 760);
 				bfPos.set(1350, 830);
 			
@@ -259,6 +249,15 @@ class Stage extends FlxGroup
 		        pano.updateHitbox();
 				pano.scrollFactor.set(1, 1);
 				add(pano);
+				
+				geef = new FlxSprite(965.5, -5);
+				geef.frames = Paths.getSparrowAtlas('characters/gf/gf_furset');
+				geef.animation.addByPrefix('danceLeft', 'dleft', 24, false);
+				geef.animation.addByPrefix('danceRight', 'dright', 24, false);
+				geef.animation.addByPrefix('sad', 'sad', 24, false);
+				geef.updateHitbox();
+				//geef.scrollFactor.set(0.9, 0.9);
+				add(geef);
 				
 				var paps = new FlxSprite(-500, 500).loadGraphic(Paths.image("stages/purble/superfront"));
 		    	paps.setGraphicSize(Std.int(ground.width * 1));
