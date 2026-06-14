@@ -625,13 +625,12 @@ class Stage extends FlxGroup
 	{
 		switch(curStage)
         {
+            case "picnic":
+               if (curBeat % 2 == 0)
+		          geef.animation.play('idle', true);
 			case "stageg":
 			   if (curBeat % 2 == 0)
 				 staticSpr.animation.play('idle', true);
-		}
-		
-		if (curBeat % 2 == 0) {
-		    geef.animation.play('idle', true);
 		}
 	}
 
