@@ -631,7 +631,7 @@ class Stage extends FlxGroup
 		}
 		
 		if (curBeat % 2 == 0) {
-		    geef.animation.play('idle', true);
+		    geef?.animation.play('idle', true);
 		}
 	}
 
