@@ -366,11 +366,11 @@ class PlayState extends MusicBeatState
 
 		if(hasExtra) {
 			extraChar = new CharGroup(false, extraName);
-			characters.push(extra);
+			characters.push(extraChar);
 		}
 
 		for(char in characters) {
-			changeChar(char, char.curChar, (char != gf && char != extra));
+			changeChar(char, char.curChar, (char != gf && char != extraChar));
 		}
 
 		changeStage(stageBuild.curStage);
@@ -1147,7 +1147,7 @@ class PlayState extends MusicBeatState
 			default: dad;
 			case 'bf'|'boyfriend': 	boyfriend;
 			case 'gf'|'girlfriend': gf;
-			case 'extra' | 'third': extra;
+			case 'extra' | 'third': extraChar;
 		}
 	}
 
