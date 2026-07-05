@@ -88,6 +88,10 @@ class PlayState extends MusicBeatState
 	public var dad:CharGroup;
 	public var boyfriend:CharGroup;
 	public var gf:CharGroup;
+	public var extraChar:CharGroup;
+
+	var hasExtra:Bool = false;
+	var extraName:String = "face";
 
 	// strumlines
 	public static var hasModchart:Bool = false;
@@ -359,8 +363,14 @@ class PlayState extends MusicBeatState
 			characters.push(dad);
 			characters.push(boyfriend);
 		}
+
+		if(hasExtra) {
+			extraChar = new CharGroup(false, extraName);
+			characters.push(extra);
+		}
+
 		for(char in characters) {
-			changeChar(char, char.curChar, (char != gf));
+			changeChar(char, char.curChar, (char != gf && char != extra));
 		}
 
 		changeStage(stageBuild.curStage);
@@ -1137,6 +1147,7 @@ class PlayState extends MusicBeatState
 			default: dad;
 			case 'bf'|'boyfriend': 	boyfriend;
 			case 'gf'|'girlfriend': gf;
+			case 'extra' | 'third': extra;
 		}
 	}
 
@@ -2028,6 +2039,7 @@ class PlayState extends MusicBeatState
 		switch(newStage)
 		{
 			default: // add custom stuff here
+				extraChar.setPos(0, 0);
 		}
 	}
 
