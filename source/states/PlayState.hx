@@ -2039,6 +2039,7 @@ class PlayState extends MusicBeatState
 		switch(newStage)
 		{
 			default: // add custom stuff here
+        if (hasExtra)
 				extraChar.setPos(0, 0);
 		}
 	}
