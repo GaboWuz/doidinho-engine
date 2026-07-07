@@ -47,7 +47,6 @@ class Stage extends FlxGroup
   var stageSkr:String = "";
 	
 	// coisas públicas
-	var nuul:FlxBackdrop;
 	var staticSpr:FlxSprite;
 
 	public function new() {
@@ -189,10 +188,10 @@ class Stage extends FlxGroup
         sky.updateHitbox();
         add(sky);
         
-        nuul = new FlxBackdrop(Paths.image(curStage + 'nuvens'), 0x11, 0, 0);
+        var nuul = new FlxBackdrop(Paths.image(curStage + 'nuvens'), X);
         nuul.setGraphicSize(Std.int(nuul.height * 2.12));
         nuul.scrollFactor.set(0.4, 0.4);
-        nuul.velocity.set(20, 0);
+        clou2ds.velocity.x = 15;
         nuul.y = 200;
         nuul.x = -480;
         nuul.updateHitbox();
@@ -232,22 +231,19 @@ class Stage extends FlxGroup
         add(it2);
         
         var gag:FlxSprite = new FlxSprite(-320, 520).loadGraphic(Paths.image(stageSkr + 'Gangorra'));
-        gag.zIndex = 6969;
         gag.updateHitbox();
-        add(gag);
+        foreground.add(gag);
         
         var kr:FlxSprite = new FlxSprite(1800, 420).loadGraphic(Paths.image(stageSkr + 'balanco'));
         kr.setGraphicSize(Std.int(kr.height * 1.010));
-        kr.zIndex = 6970;
         kr.updateHitbox();
-        add(kr);
+        foreground.add(kr);
         
         var skr:FlxSprite = new FlxSprite(-600, -600).loadGraphic(Paths.image(stageSkr + 'shad'));
         skr.setGraphicSize(Std.int(skr.height * 2.4));
-        skr.zIndex = 6971;
         skr.alpha = 0.56;
         skr.updateHitbox();
-        add(skr);
+        foreground.add(skr);
 				
 			case "stageg":
 			  this.curStage = "stageg";
