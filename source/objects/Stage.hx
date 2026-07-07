@@ -407,7 +407,7 @@ class Stage extends FlxGroup
         stageSkr = stSkr + 'legacy/';
 				camZoom = 0.767;
 				
-				var bfPos.x = 1470;
+				bfPos.x = 1470;
 				dadPos.x = 800;
 				gfPos.x = 1150;
 				bfPos.y += 850;
