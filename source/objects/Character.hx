@@ -223,7 +223,6 @@ class Character extends FlxAnimate
 				flipX = isPlayer;
 			
 			case "geef":
-				spriteType = ATLAS;
 				doidoChar.spritesheet += 'gf/gf_furset';
 				doidoChar.anims = [
 					['sad',			'sad',			24, false],
@@ -233,7 +232,7 @@ class Character extends FlxAnimate
 
 				idleAnims = ["danceLeft", "danceRight"];
 				quickDancer = true;
-				flipX = isPlayer;
+				// flipX = isPlayer;
 			
 			case "no-gf":
 				doidoChar.spritesheet += 'gf/no-gf/no-gf';
