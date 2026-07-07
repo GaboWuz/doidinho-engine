@@ -52,11 +52,12 @@ class SongData
 				['redkid', 'luka'],
 			],
 			weekFile: 'week1',
-			weekName: 'gabo jumpscare hell yeah',
-			chars: ['', 'bf', 'gf'],
+			weekName: 'uma pequena historia.'
+			chars: ['', 'bf', ''],
 			diffs: ['easy', 'normal'],
 			freeplayOnly: false,
 		},
+    /* // sem legacy por enquanto
 		{
 			songs: [
 				["lapoluz", "gabos"],
@@ -65,9 +66,11 @@ class SongData
 			diffs: ['easy', 'normal'],
 			freeplayOnly: true,
 		},
+    */
 		{
 			songs: [
 				["moogusxey", "susbo"],
+        ["gagbis", "gabo"],
 			],
 			diffs: ['normal'],
 			freeplayOnly: true,
