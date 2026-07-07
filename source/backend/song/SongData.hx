@@ -52,8 +52,8 @@ class SongData
 				['redkid', 'luka'],
 			],
 			weekFile: 'week1',
-			weekName: 'uma pequena historia.'
-			chars: ['', 'bf', ''],
+			weekName: 'ggabis'
+			chars: ['', 'bf', 'gf'],
 			diffs: ['easy', 'normal'],
 			freeplayOnly: false,
 		},
