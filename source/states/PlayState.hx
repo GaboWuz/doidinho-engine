@@ -91,7 +91,7 @@ class PlayState extends MusicBeatState
 	public var extraChar:CharGroup;
 
 	var hasExtra:Bool = false;
-	var extraName:String = "face";
+	var extraName:String = "geef";
 
 	// strumlines
 	public static var hasModchart:Bool = false;
@@ -354,17 +354,18 @@ class PlayState extends MusicBeatState
 
 		preloadEvents(unspawnEvents);
 
-        if (SONG.song == "sixxey") {
+    if (SONG.song == "sixxey") {
 			characters.push(dad);
 			characters.push(boyfriend);
 			characters.push(gf);
+      hasExtra = true;
 		} else {
 			characters.push(gf);
 			characters.push(dad);
 			characters.push(boyfriend);
 		}
 
-		if(hasExtra) {
+		if (hasExtra) {
 			extraChar = new CharGroup(false, extraName);
 			characters.push(extraChar);
 		}
@@ -2040,7 +2041,7 @@ class PlayState extends MusicBeatState
 		{
 			default: // add custom stuff here
         if (hasExtra)
-				extraChar.setPos(0, 0);
+				extraChar.setPos(965.5, -5);
 		}
 	}
 
