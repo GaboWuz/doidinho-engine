@@ -52,7 +52,7 @@ class SongData
 				['redkid', 'luka'],
 			],
 			weekFile: 'week1',
-			weekName: 'ggabis'
+			weekName: 'ggabis',
 			chars: ['', 'bf', 'gf'],
 			diffs: ['easy', 'normal'],
 			freeplayOnly: false,
