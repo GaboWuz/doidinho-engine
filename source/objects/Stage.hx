@@ -191,7 +191,7 @@ class Stage extends FlxGroup
         var nuul = new FlxBackdrop(Paths.image(curStage + 'nuvens'), X);
         nuul.setGraphicSize(Std.int(nuul.height * 2.12));
         nuul.scrollFactor.set(0.4, 0.4);
-        clou2ds.velocity.x = 15;
+        nuul.velocity.x = 20;
         nuul.y = 200;
         nuul.x = -480;
         nuul.updateHitbox();
