@@ -176,9 +176,9 @@ class Stage extends FlxGroup
 			  this.curStage = "picnic";
 			  camZoom = 0.657;
 			
-				gfPos.set(-750, 920);				
-				dadPos.set(300, 65);
-				bfPos.set(1250, 100);
+				gfPos.set(-750, 920);
+    		dadPos.set(260, 700);
+    		bfPos.set(1100, 700);;
 			
 				bfCam.x = -300;
 				dadCam.x = 100;
@@ -188,7 +188,7 @@ class Stage extends FlxGroup
         sky.updateHitbox();
         add(sky);
         
-        var nuul = new FlxBackdrop(Paths.image(curStage + 'nuvens'), X);
+        var nuul = new FlxBackdrop(Paths.image(stageSkr + 'nuvens'), X);
         nuul.setGraphicSize(Std.int(nuul.height * 2.12));
         nuul.scrollFactor.set(0.4, 0.4);
         nuul.velocity.x = 20;
