@@ -232,7 +232,7 @@ class Character extends FlxAnimate
 
 				idleAnims = ["danceLeft", "danceRight"];
 				quickDancer = true;
-				flipX = true;
+				flipX = false;
 			
 			case "no-gf":
 				doidoChar.spritesheet += 'gf/no-gf/no-gf';
