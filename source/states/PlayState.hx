@@ -2041,7 +2041,7 @@ class PlayState extends MusicBeatState
 		{
 			default: // add custom stuff here
         if (hasExtra)
-				extraChar.setPos(965.5, -5);
+				extraChar.setPos(965.5, 745);
 		}
 	}
 
