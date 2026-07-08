@@ -178,7 +178,7 @@ class Stage extends FlxGroup
 			
 				gfPos.set(-750, 920);
     		dadPos.set(260, 700);
-    		bfPos.set(1100, 700);;
+    		bfPos.set(1100, 700);
 			
 				bfCam.x = -300;
 				dadCam.x = 100;
@@ -247,6 +247,7 @@ class Stage extends FlxGroup
 				
 			case "stageg":
 			  this.curStage = "stageg";
+        stageSkr = stSkr + 'luke/';
 			  camZoom = 0.7;
 			
 			  bfPos.x += 200;
