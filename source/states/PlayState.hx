@@ -335,10 +335,6 @@ class PlayState extends MusicBeatState
 			staticSpr.alpha = 0;
 			add(staticSpr);
 		}
-
-    if (SONG.song == "sixxey" && SONG.song == "gagbis") {
-      hasExtra = true;
-    }
 		
 		/*
 		*	if you want to change characters
@@ -346,11 +342,11 @@ class PlayState extends MusicBeatState
 		*	remember to put false after "new char" for non-singers (like gf)
 		*	so it doesnt reload the icons
 		*/
-		if (SONG.song == "sixxey" && SONG.song == "gagbis") {
+		if (SONG.song == "sixxey" || SONG.song == "gagbis") {
 			dad = new CharGroup(false, SONG.player2);
-      extraChar = new CharGroup(false, extraName);
 			boyfriend = new CharGroup(true, SONG.player1);
 			gf = new CharGroup(false, stageBuild.gfVersion);
+      hasExtra = true;
 		} else {
 	    	gf = new CharGroup(false, stageBuild.gfVersion);
 			dad = new CharGroup(false, SONG.player2);
@@ -359,9 +355,13 @@ class PlayState extends MusicBeatState
 
 		preloadEvents(unspawnEvents);
 
-    if (SONG.song == "sixxey" && SONG.song == "gagbis") {
+    if(hasExtra) {
+			extraChar = new CharGroup(false, extraName);
+			characters.push(extraChar);
+    }
+
+    if (SONG.song == "sixxey" || SONG.song == "gagbis") {
 			characters.push(dad);
-      characters.push(extraChar);
 			characters.push(boyfriend);
 			characters.push(gf);
 		} else {
@@ -888,7 +888,7 @@ class PlayState extends MusicBeatState
 	{
 		var thisStrum = strumline.strumGroup.members[note.noteData];
 		var thisChar = strumline.character.char;
-		if(note.noteType == "gf note" && gf.char != null)
+		if(note.noteType == "gf note" || note.noteType == "idk note" && gf.char != null)
 			thisChar = gf.char;
 
 		// anything else
@@ -950,7 +950,7 @@ class PlayState extends MusicBeatState
 	{
 		var thisStrum = strumline.strumGroup.members[note.noteData];
 		var thisChar = strumline.character.char;
-		if(note.noteType == "gf note" && gf.char != null)
+		if(note.noteType == "gf note" || note.noteType == "idk note" && gf.char != null)
 			thisChar = gf.char;
 
 		note.gotHit = false;
@@ -991,7 +991,7 @@ class PlayState extends MusicBeatState
 		
 		var thisStrum = strumline.strumGroup.members[note.noteData];
 		var thisChar = strumline.character.char;
-		if(note.noteType == "gf note" && gf.char != null)
+		if(note.noteType == "" || note.noteType == "idk note" && gf.char != null)
 			thisChar = gf.char;
 		
 		if(strumline.isPlayer || vocalsOpp == null)
