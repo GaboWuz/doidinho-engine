@@ -1792,7 +1792,7 @@ class PlayState extends MusicBeatState
 		syncSong();
 		
 		if (SONG.song == "sixxey" && curStep == 482) { //brooo chilll
-            FlxTween.tween(gf.char, {x: -250}, 1.3, {
+            FlxTween.tween(gf.char, {x: -220}, 1.3, {
                 ease: FlxEase.linear,
                 onUpdate: (twn) -> {
                    gf.char.playAnim('walkLeft', false);
@@ -2041,7 +2041,7 @@ class PlayState extends MusicBeatState
 		{
 			default: // add custom stuff here
         if (hasExtra)
-				extraChar.setPos(965.5, 745);
+				extraChar.setPos(1320, 752);
 		}
 	}
 
