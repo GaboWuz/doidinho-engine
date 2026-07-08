@@ -335,6 +335,10 @@ class PlayState extends MusicBeatState
 			staticSpr.alpha = 0;
 			add(staticSpr);
 		}
+
+    if (SONG.song == "sixxey" && SONG.song == "gagbis") {
+      hasExtra = true;
+    }
 		
 		/*
 		*	if you want to change characters
@@ -342,8 +346,9 @@ class PlayState extends MusicBeatState
 		*	remember to put false after "new char" for non-singers (like gf)
 		*	so it doesnt reload the icons
 		*/
-		if (SONG.song == "sixxey") {
+		if (SONG.song == "sixxey" && SONG.song == "gagbis") {
 			dad = new CharGroup(false, SONG.player2);
+      extraChar = new CharGroup(false, extraName);
 			boyfriend = new CharGroup(true, SONG.player1);
 			gf = new CharGroup(false, stageBuild.gfVersion);
 		} else {
@@ -352,18 +357,13 @@ class PlayState extends MusicBeatState
 			boyfriend = new CharGroup(true, SONG.player1);
 		}
 
-    if (hasExtra) {
-			extraChar = new CharGroup(false, extraName);
-			characters.push(extraChar);
-    }
-
 		preloadEvents(unspawnEvents);
 
-    if (SONG.song == "sixxey") {
+    if (SONG.song == "sixxey" && SONG.song == "gagbis") {
 			characters.push(dad);
+      characters.push(extraChar);
 			characters.push(boyfriend);
 			characters.push(gf);
-      hasExtra = true;
 		} else {
 			characters.push(gf);
 			characters.push(dad);
@@ -1792,7 +1792,7 @@ class PlayState extends MusicBeatState
 		syncSong();
 		
 		if (SONG.song == "sixxey" && curStep == 482) { //brooo chilll
-            FlxTween.tween(gf.char, {x: -220}, 1.3, {
+            FlxTween.tween(gf.char, {x: -205}, 1.3, {
                 ease: FlxEase.linear,
                 onUpdate: (twn) -> {
                    gf.char.playAnim('walkLeft', false);
