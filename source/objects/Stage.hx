@@ -177,8 +177,8 @@ class Stage extends FlxGroup
 			  camZoom = 0.657;
 			
 				gfPos.set(-750, 920);
-    		dadPos.set(470, 760);
-				bfPos.set(1512, 795);
+    		dadPos.set(480, 760);
+				bfPos.set(1512, 770);
 			
 				bfCam.x = -300;
 				dadCam.x = 100;
@@ -230,7 +230,7 @@ class Stage extends FlxGroup
         it2.updateHitbox();
         add(it2);
         
-        var gag:FlxSprite = new FlxSprite(-320, 520).loadGraphic(Paths.image(stageSkr + 'Gangorra'));
+        var gag:FlxSprite = new FlxSprite(-350, 520).loadGraphic(Paths.image(stageSkr + 'Gangorra'));
         gag.updateHitbox();
         foreground.add(gag);
         
