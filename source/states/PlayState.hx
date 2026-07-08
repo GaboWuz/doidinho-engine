@@ -352,6 +352,11 @@ class PlayState extends MusicBeatState
 			boyfriend = new CharGroup(true, SONG.player1);
 		}
 
+    if (hasExtra) {
+			extraChar = new CharGroup(false, extraName);
+			characters.push(extraChar);
+    }
+
 		preloadEvents(unspawnEvents);
 
     if (SONG.song == "sixxey") {
@@ -363,11 +368,6 @@ class PlayState extends MusicBeatState
 			characters.push(gf);
 			characters.push(dad);
 			characters.push(boyfriend);
-		}
-
-		if (hasExtra) {
-			extraChar = new CharGroup(false, extraName);
-			characters.push(extraChar);
 		}
 
 		for(char in characters) {
@@ -2041,7 +2041,7 @@ class PlayState extends MusicBeatState
 		{
 			default: // add custom stuff here
         if (hasExtra)
-				extraChar.setPos(1320, 752);
+				extraChar.setPos(1280, 775);
 		}
 	}
 
