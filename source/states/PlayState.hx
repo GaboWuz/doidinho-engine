@@ -888,7 +888,7 @@ class PlayState extends MusicBeatState
 	{
 		var thisStrum = strumline.strumGroup.members[note.noteData];
 		var thisChar = strumline.character.char;
-		if(note.noteType == "gf note" || note.noteType == "idk note" && gf.char != null)
+		if(note.noteType == "gf note" && gf.char != null)
 			thisChar = gf.char;
 
 		// anything else
@@ -950,7 +950,7 @@ class PlayState extends MusicBeatState
 	{
 		var thisStrum = strumline.strumGroup.members[note.noteData];
 		var thisChar = strumline.character.char;
-		if(note.noteType == "gf note" || note.noteType == "idk note" && gf.char != null)
+		if(note.noteType == "gf note" && gf.char != null)
 			thisChar = gf.char;
 
 		note.gotHit = false;
@@ -991,7 +991,7 @@ class PlayState extends MusicBeatState
 		
 		var thisStrum = strumline.strumGroup.members[note.noteData];
 		var thisChar = strumline.character.char;
-		if(note.noteType == "" || note.noteType == "idk note" && gf.char != null)
+		if(note.noteType == ""  && gf.char != null)
 			thisChar = gf.char;
 		
 		if(strumline.isPlayer || vocalsOpp == null)
@@ -2041,7 +2041,7 @@ class PlayState extends MusicBeatState
 		{
 			default: // add custom stuff here
         if (hasExtra)
-				extraChar.setPos(1280, 775);
+				extraChar.setPos(1280, 787);
 		}
 	}
 
