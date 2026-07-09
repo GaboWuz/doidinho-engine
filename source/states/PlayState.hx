@@ -91,7 +91,7 @@ class PlayState extends MusicBeatState
 	public var extraChar:CharGroup;
 
 	var hasExtra:Bool = false;
-	var extraName:String = "geef";
+	var extraName:String = "face";
 
 	// strumlines
 	public static var hasModchart:Bool = false;
@@ -368,7 +368,7 @@ class PlayState extends MusicBeatState
 			characters.push(gf);
 			characters.push(dad);
 			characters.push(boyfriend);
-		}
+    }
 
 		for(char in characters) {
 			changeChar(char, char.curChar, (char != gf && char != extraChar));
@@ -991,7 +991,7 @@ class PlayState extends MusicBeatState
 		
 		var thisStrum = strumline.strumGroup.members[note.noteData];
 		var thisChar = strumline.character.char;
-		if(note.noteType == ""  && gf.char != null)
+		if(note.noteType == "gf note" && gf.char != null)
 			thisChar = gf.char;
 		
 		if(strumline.isPlayer || vocalsOpp == null)
@@ -1792,7 +1792,7 @@ class PlayState extends MusicBeatState
 		syncSong();
 		
 		if (SONG.song == "sixxey" && curStep == 482) { //brooo chilll
-            FlxTween.tween(gf.char, {x: -205}, 1.3, {
+            FlxTween.tween(gf.char, {x: -200}, 1.2, {
                 ease: FlxEase.linear,
                 onUpdate: (twn) -> {
                    gf.char.playAnim('walkLeft', false);
@@ -2040,8 +2040,8 @@ class PlayState extends MusicBeatState
 		switch(newStage)
 		{
 			default: // add custom stuff here
-        if (hasExtra)
-				extraChar.setPos(1280, 787);
+        if(hasExtra) {
+				  extraChar.setPos(0, 0);
 		}
 	}
 
