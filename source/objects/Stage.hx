@@ -187,15 +187,15 @@ class Stage extends FlxGroup
         sky.scrollFactor.set(0.1, 0.1);
         sky.updateHitbox();
         add(sky);
-        
-        var nuul = new FlxBackdrop(Paths.image(stageSkr + 'nuvens'), X);
-        nuul.setGraphicSize(Std.int(nuul.height * 2.12));
-        nuul.scrollFactor.set(0.4, 0.4);
-        nuul.velocity.x = 20;
-        nuul.y = 200;
-        nuul.x = -480;
-        nuul.updateHitbox();
-        add(nuul);
+
+        var clouds = new FlxBackdrop(Paths.image(stageSkr + 'nuvens'), X);
+				clouds.x = -480;
+				clouds.y = 200;
+		    clouds.setGraphicSize(Std.int(clouds.width * 2.12));
+		    clouds.updateHitbox();
+				clouds.scrollFactor.set(0.4, 0.4);
+				clouds.velocity.x = 20;
+				add(clouds);
         
         var caac:FlxSprite = new FlxSprite(-300, -235).loadGraphic(Paths.image(stageSkr + 'casa'));
         caac.setGraphicSize(Std.int(caac.height * 1.3));
