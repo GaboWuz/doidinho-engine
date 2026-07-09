@@ -188,7 +188,7 @@ class Stage extends FlxGroup
         sky.updateHitbox();
         add(sky);
 
-        var clouds = new FlxBackdrop(Paths.image(stageSkr + 'nuvens'), X);
+        var clouds = new FlxBackdrop(Paths.image(stageSkr + 'nuvens'), XY);
 				clouds.x = -480;
 				clouds.y = 200;
 		    clouds.setGraphicSize(Std.int(clouds.width * 2.12));
