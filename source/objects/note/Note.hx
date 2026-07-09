@@ -120,13 +120,6 @@ class Note extends FlxSprite
 				
 				animation.addByPrefix('warn', '$typeName', 0, false);
 				animation.play('warn');
-      case "idk note"|"gf note":
-				noteType = "idk note";
-				frames = Paths.getSparrowAtlas('notes/base/nof_notes'); // idk
-				var typeName:String = (isHold ? (isHoldEnd ? "hold end" : "hold0") : 'note $direction');
-				
-				animation.addByPrefix('idk', '$typeName', 0, false);
-				animation.play('idk');
 		}
 
 		scale.set(noteSize, noteSize);
