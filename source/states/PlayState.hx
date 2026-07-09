@@ -91,7 +91,7 @@ class PlayState extends MusicBeatState
 	public var extraChar:CharGroup;
 
 	var hasExtra:Bool = false;
-	var extraName:String = "face";
+	var extraName:String = "geef";
 
 	// strumlines
 	public static var hasModchart:Bool = false;
