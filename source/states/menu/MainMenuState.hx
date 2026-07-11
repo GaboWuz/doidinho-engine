@@ -20,7 +20,7 @@ class MainMenuState extends MusicBeatState
 	var optionCoords:Array<Array<Float>> = [
 		[-460, 40],
 		[-170, 90],
-		[-450, 70],
+		[-450, 40],
 		[-560, 30]
 	];
 	
@@ -49,6 +49,7 @@ class MainMenuState extends MusicBeatState
 	var fuck:String = 'menu/mainmenu/';
 	
 	var selectedSum:Bool = false;
+	var touchDelay:Float = 0;
 	
 	override function create()
 	{
@@ -176,6 +177,11 @@ class MainMenuState extends MusicBeatState
 	{
 		super.update(elapsed);
 	
+	    #if mobile
+		if(touchDelay > 0)
+			touchDelay -= elapsed;
+		#end
+
 		#if debug
 		if(FlxG.keys.justPressed.R)
 			null.draw();
@@ -207,11 +213,12 @@ class MainMenuState extends MusicBeatState
 					isHoveringSomething = true;
 	
 					#if mobile
-					if (FlxG.mouse.justReleased)
+					if (FlxG.mouse.justPressed)
 					{
 						if (curSelected != item.ID) {
 							changeSelection(item.ID - curSelected);
-						} else {
+							touchDelay = 0.25;
+						} else if (touchDelay <= 0) {
 							accepted = true;
 						}
 					}
