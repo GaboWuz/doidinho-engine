@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="idk_geefset.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="dleft0000" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0001" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0002" x="0" y="0" width="359" height="568" frameX="-121" frameY="-74" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0003" x="0" y="0" width="359" height="568" frameX="-121" frameY="-74" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0004" x="359" y="0" width="351" height="566" frameX="-127" frameY="-73" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0005" x="359" y="0" width="351" height="566" frameX="-127" frameY="-73" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0006" x="936" y="568" width="312" height="565" frameX="-150" frameY="-66" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0007" x="936" y="568" width="312" height="565" frameX="-150" frameY="-66" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0008" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0009" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0010" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0011" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0012" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0013" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0014" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0015" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0016" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0017" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0018" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dleft0019" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0000" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0001" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0002" x="710" y="0" width="320" height="557" frameX="-160" frameY="-74" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0003" x="710" y="0" width="320" height="557" frameX="-160" frameY="-74" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0004" x="1030" y="0" width="318" height="558" frameX="-160" frameY="-73" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0005" x="1030" y="0" width="318" height="558" frameX="-160" frameY="-73" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0006" x="1348" y="0" width="312" height="565" frameX="-150" frameY="-66" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0007" x="1348" y="0" width="312" height="565" frameX="-150" frameY="-66" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0008" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0009" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0010" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0011" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0012" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0013" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0014" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0015" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0016" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0017" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0018" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="dright0019" x="624" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="sad0000" x="312" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="sad0001" x="312" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="sad0002" x="0" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="sad0003" x="0" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="sad0004" x="0" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="sad0005" x="0" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="sad0006" x="0" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="sad0007" x="0" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="sad0008" x="0" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="sad0009" x="0" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="sad0010" x="0" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="sad0011" x="0" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="sad0012" x="0" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+	<SubTexture name="sad0013" x="0" y="568" width="312" height="567" frameX="-149" frameY="-64" frameWidth="690" frameHeight="690"/>
+</TextureAtlas>
