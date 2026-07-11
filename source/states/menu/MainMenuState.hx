@@ -20,7 +20,7 @@ class MainMenuState extends MusicBeatState
 	var optionCoords:Array<Array<Float>> = [
 		[-460, 40],
 		[-170, 90],
-		[-450, 40],
+		[-450, -30],
 		[-560, 30]
 	];
 	
@@ -218,7 +218,8 @@ class MainMenuState extends MusicBeatState
 						if (curSelected != item.ID) {
 							changeSelection(item.ID - curSelected);
 							touchDelay = 0.25;
-						} else if (touchDelay <= 0) {
+						}
+                        if (touchDelay <= 0) {
 							accepted = true;
 						}
 					}
