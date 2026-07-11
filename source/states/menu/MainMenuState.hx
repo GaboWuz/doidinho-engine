@@ -20,7 +20,7 @@ class MainMenuState extends MusicBeatState
 	var optionCoords:Array<Array<Float>> = [
 		[-460, 40],
 		[-170, 90],
-		[-450, 150],
+		[-450, 180],
 		[-560, 30]
 	];
 	
