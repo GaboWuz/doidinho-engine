@@ -1791,52 +1791,59 @@ class PlayState extends MusicBeatState
 		hudBuild.stepHit(curStep);
 		syncSong();
 		
-		if (SONG.song == "sixxey" && curStep == 482) { //brooo chilll
-            FlxTween.tween(gf.char, {x: -200}, 1.2, {
-                ease: FlxEase.linear,
-                onUpdate: (twn) -> {
-                   gf.char.playAnim('walkLeft', false);
-                   gf.char.specialAnim = 1;
-                },
-                onComplete: (twn:FlxTween) -> {
-                   gf.char.playAnim('idle');
-                }
-            });
-		}
-		if (SONG.song == "moogusxey") {
-            if (curStep == 1) {
-                dedbg.animation.play('idle', true);
-			    staticSpr.animation.play('idle', true);
-			}
-			
-			if (curStep == 8) {
-			    FlxTween.tween(staticSpr, {alpha: 1}, 0.3, {ease: FlxEase.expoOut});
-			}
-			
-			if (curStep == 25) {
-			    FlxTween.tween(staticSpr, {alpha: 0}, 0.27, {ease: FlxEase.expoIn});
-			}
-			
-			if (curStep == 32) {
-				FlxTween.tween(box, {x: -50}, 1.2, {
-				    ease: FlxEase.expoOut,
-				    onComplete: function(twn:FlxTween) {
-				        
-				        new FlxTimer().start(2.5, function(tmr:FlxTimer) {
-				            
-				            FlxTween.tween(box, {x: -740}, 0.8, {
-				                ease: FlxEase.expoIn,
-				                onComplete: function(twn2:FlxTween) {
-				                    
-				                    remove(composerTxt);
-				                    remove(songnameText);
-				                    remove(box);
-				                }
-				            });
-				        });
-				    }
-				});
-			}
+		switch (SONG.song) {
+			case "sixxey":
+				if (curStep == 482) {
+					FlxTween.tween(gf.char, {x: -200}, 1.2, {
+						ease: FlxEase.linear,
+						onUpdate: (_) -> {
+							gf.char.playAnim('walkLeft', false);
+							gf.char.specialAnim = 1;
+						},
+						onComplete: (_) -> {
+							gf.char.playAnim('idle');
+						}
+					});
+				}
+		
+			case "moogusxey":
+				switch (curStep) {
+					case 1:
+						dedbg.animation.play('idle', true);
+						staticSpr.animation.play('idle', true);
+					
+					case 8:
+						FlxTween.tween(staticSpr, {alpha: 1}, 0.3, {ease: FlxEase.expoOut});
+					
+					case 25:
+						FlxTween.tween(staticSpr, {alpha: 0}, 0.27, {ease: FlxEase.expoIn});
+					
+					case 32:
+						FlxTween.tween(box, {x: -50}, 1.2, {
+							ease: FlxEase.expoOut,
+							onComplete: (_) -> {
+								new FlxTimer().start(2.5, (_) -> {
+									FlxTween.tween(box, {x: -740}, 0.8, {
+										ease: FlxEase.expoIn,
+										onComplete: (_) -> {
+											remove(composerTxt);
+											remove(songnameText);
+											remove(box);
+										}
+									});
+								});
+							}
+						});
+				}
+		
+			case "redkid":
+				switch (curStep) {
+					case 640:
+						dad.char.altSing = "-alt";
+					
+					case 769:
+						dad.char.altSing = "";
+				}
 		}
 		
 		callScript("stepHit", [curStep]);
