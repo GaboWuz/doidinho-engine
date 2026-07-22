@@ -346,7 +346,6 @@ class PlayState extends MusicBeatState
 			dad = new CharGroup(false, SONG.player2);
 			boyfriend = new CharGroup(true, SONG.player1);
 			gf = new CharGroup(false, stageBuild.gfVersion);
-      hasExtra = true;
 		} else {
 	    	gf = new CharGroup(false, stageBuild.gfVersion);
 			dad = new CharGroup(false, SONG.player2);
@@ -360,7 +359,8 @@ class PlayState extends MusicBeatState
 			characters.push(extraChar);
     }
 
-    if (SONG.song == "sixxey" || SONG.song == "gagbis") {
+    if (SONG.song == "sixxey") {
+      hasExtra = true;
 			characters.push(dad);
 			characters.push(boyfriend);
 			characters.push(gf);
