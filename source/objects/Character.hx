@@ -103,7 +103,7 @@ class Character extends FlxAnimate
 				doidoChar.spritesheet += 'faker/faker_ersset';
 				
 				doidoChar.anims = [
-					['idle',		'faker', 12, false],
+					['idle',		'faker', 24, false],
 					['singRIGHT',	'right', 24, false],
 					['singDOWN', 	'down', 24, false],
 					['singUP', 		'up', 24, false],
