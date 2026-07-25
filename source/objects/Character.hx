@@ -98,7 +98,8 @@ class Character extends FlxAnimate
 					['ded',	'ded', 24, false],
 				];
 			scale.set(1.1, 1.1);
-      case "kevin":
+			
+			case "kevin":
 				doidoChar.spritesheet += 'faker/faker_ersset';
 				
 				doidoChar.anims = [
