@@ -43,15 +43,16 @@ class Stage extends FlxGroup
 
 	var gfSong:String = "stage-set";
 
-  var stSkr:String = "stages/";
-  var stageSkr:String = "";
+	var stSkr:String = "stages/";
+	var stageSkr:String = "";
 
 	// coisas públicas
 	var staticSpr:FlxSprite;
 
-  var songName:String = "";
+	var songName:String = "";
 
-	public function new() {
+	public function new() 
+	{
 		super();
 		foreground = new FlxGroup();
 		instance = this;
@@ -61,21 +62,21 @@ class Stage extends FlxGroup
 	{
 		var stageList:Array<String> = [];
 
-    songName = song.toLowerCase();
+		songName = song.toLowerCase();
 		
 		stageList = switch(song)
 		{
 			default: ["stage"];
 			
 			case "sixxey": ["picnic"];
-      case "faker-self": ["picnic"];
+			case "faker-self": ["picnic"];
 			case "redkid": ["stageg"];
 			
 			case "lapoluz": ["daylegacy"];
 			case "faker-identity": ["nightlegacy"];
 			
 			case "moogusxey": ["legacymoogus"];
-      case "gagbis": ["picnic"]; //sem stage por enquanto
+			case "gagbis": ["picnic"]; 
 			
 			//case "template": ["preload1", "preload2", "starting-stage"];
 		};
@@ -90,7 +91,8 @@ class Stage extends FlxGroup
 		*	a bunch of stages at the create function
 		*	(remember to put the starting stage at the last spot of the array)
 		*/
-		for(i in stageList) {
+		for(i in stageList) 
+		{
 			preloadScript(i);
 			reloadStage(i);
 		}
@@ -127,7 +129,6 @@ class Stage extends FlxGroup
 
 		var newScript:Iris = new Iris(Paths.script('$path'), {name: path, autoRun: false, autoPreset: true});
 
-		// variables to be used inside the scripts
 		newScript.set("FlxSprite", FlxSprite);
 		newScript.set("Paths", Paths);
 		newScript.set("this", instance);
@@ -155,7 +156,8 @@ class Stage extends FlxGroup
 	public function loadCode(curStage:String = "")
 	{
 		gfVersion = getGfVersion(curStage);
-    stageSkr = stSkr + curStage + '/';
+		stageSkr = stSkr + curStage + '/';
+
 		switch(curStage)
 		{
 			default:
@@ -163,105 +165,106 @@ class Stage extends FlxGroup
 				camZoom = 0.9;
 				
 				var bg = new FlxSprite(-600, -600).loadGraphic(Paths.image("stages/stage/stageback"));
-				bg.scrollFactor.set(0.6,0.6);
+				bg.scrollFactor.set(0.6, 0.6);
 				add(bg);
 				
 				var front = new FlxSprite(-580, 440);
 				front.loadGraphic(Paths.image("stages/stage/stagefront"));
 				add(front);
 				
-				if(!lowQuality) {
+				if(!lowQuality) 
+				{
 					var curtains = new FlxSprite(-600, -400).loadGraphic(Paths.image("stages/stage/stagecurtains"));
-					curtains.scrollFactor.set(1.4,1.4);
+					curtains.scrollFactor.set(1.4, 1.4);
 					foreground.add(curtains);
 				}
 				
 			case "picnic":
-			  this.curStage = "picnic";
-			  camZoom = 0.657;
+				this.curStage = "picnic";
+				camZoom = 0.657;
 			
 				gfPos.set(-750, 920);
-    		dadPos.set(500, 760);
+				dadPos.set(500, 760);
 				bfPos.set(1512, 770);
 			
 				bfCam.x = -300;
 				dadCam.x = 100;
 
-        var songName:String = PlayState.SONG.song.toLowerCase();
-        
-			  var sky:FlxSprite = new FlxSprite(-500, -500).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), songName == 'faker-self' ? 0xFFffdcb6 : 0xFFcef1ff);
-        sky.scrollFactor.set(0.1, 0.1);
-        sky.updateHitbox();
-        add(sky);
+				var songName:String = PlayState.SONG.song.toLowerCase();
+				
+				var sky:FlxSprite = new FlxSprite(-500, -500).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), songName == 'faker-self' ? 0xFFffdcb6 : 0xFFcef1ff);
+				sky.scrollFactor.set(0.1, 0.1);
+				sky.updateHitbox();
+				add(sky);
 
-        var clouds = new FlxBackdrop(Paths.image(stageSkr + 'nuvens'), XY);
+				var clouds = new FlxBackdrop(Paths.image(stageSkr + 'nuvens'), XY);
 				clouds.x = -480;
 				clouds.y = 200;
-		    clouds.setGraphicSize(Std.int(clouds.width * 2.12));
-		    clouds.updateHitbox();
+				clouds.setGraphicSize(Std.int(clouds.width * 2.12));
+				clouds.updateHitbox();
 				clouds.scrollFactor.set(0.4, 0.4);
 				clouds.velocity.x = 20;
 				add(clouds);
 
-        if (songName == 'gaboegae'){
-          // nada
-        }
+				if (songName == 'gaboegae')
+				{
+					// nada
+				}
 
-        var caac:FlxSprite = new FlxSprite(-300, -235).loadGraphic(Paths.image(songName == 'faker-self' ? stageSkr + 'tadicasa' : stageSkr + 'casa'));
-        caac.setGraphicSize(Std.int(caac.height * 1.3));
-        caac.scrollFactor.set(0.57, 0.57);
-        caac.updateHitbox();
-        add(caac);
-        
-        var saas:FlxSprite = new FlxSprite(1285, -165).loadGraphic(Paths.image(songName == 'faker-self' ? stageSkr + 'tadicasa2' : stageSkr + 'casa2'));
-        saas.setGraphicSize(Std.int(saas.height * 1.7));
-        saas.scrollFactor.set(0.62, 0.62);
-        saas.updateHitbox();
-        add(saas);
-        
-        var cerc:FlxSprite = new FlxSprite(-300, 95).loadGraphic(Paths.image(stageSkr + 'cerca'));
-        cerc.setGraphicSize(Std.int(cerc.height * 2.2));
-        cerc.scrollFactor.set(0.7, 0.7);
-        cerc.updateHitbox();
-        add(cerc);
-        
-        var ground:FlxSprite = new FlxSprite(-500, 167).loadGraphic(Paths.image(songName == 'faker-self' ? stageSkr + 'tadiground' : stageSkr + 'ground'));
-        ground.setGraphicSize(Std.int(ground.height * 2.3));
-        ground.updateHitbox();
-        add(ground);
-        
-        var it:FlxSprite = new FlxSprite(-100, 390).loadGraphic(Paths.image(stageSkr + 'item'));
-        it.setGraphicSize(Std.int(it.height * 1.6));
-        it.updateHitbox();
-        add(it);
-        
-        var it2:FlxSprite = new FlxSprite(846, 450).loadGraphic(Paths.image(stageSkr + 'item2'));
-        it2.setGraphicSize(Std.int(it.height * 2));
-        it2.updateHitbox();
-        add(it2);
-        
-        var gag:FlxSprite = new FlxSprite(-350, 520).loadGraphic(Paths.image(stageSkr + 'Gangorra'));
-        gag.updateHitbox();
-        foreground.add(gag);
-        
-        var kr:FlxSprite = new FlxSprite(1800, 420).loadGraphic(Paths.image(stageSkr + 'balanco'));
-        kr.setGraphicSize(Std.int(kr.height * 1.010));
-        kr.updateHitbox();
-        foreground.add(kr);
-        
-
-        var skr:FlxSprite = new FlxSprite(-600, -600).loadGraphic(Paths.image(songName == 'faker-self' ? stageSkr + 'tadishad' : stageSkr + 'shad'));
-        skr.setGraphicSize(Std.int(skr.height * 2.4));
-        skr.alpha = 0.56;
-        skr.updateHitbox();
-        foreground.add(skr);
+				var caac:FlxSprite = new FlxSprite(-300, -235).loadGraphic(Paths.image(songName == 'faker self' ? stageSkr + 'tadicasa' : stageSkr + 'casa'));
+				caac.setGraphicSize(Std.int(caac.height * 1.3));
+				caac.scrollFactor.set(0.57, 0.57);
+				caac.updateHitbox();
+				add(caac);
+				
+				var saas:FlxSprite = new FlxSprite(1285, -165).loadGraphic(Paths.image(songName == 'faker self' ? stageSkr + 'tadicasa2' : stageSkr + 'casa2'));
+				saas.setGraphicSize(Std.int(saas.height * 1.7));
+				saas.scrollFactor.set(0.62, 0.62);
+				saas.updateHitbox();
+				add(saas);
+				
+				var cerc:FlxSprite = new FlxSprite(-300, 95).loadGraphic(Paths.image(stageSkr + 'cerca'));
+				cerc.setGraphicSize(Std.int(cerc.height * 2.2));
+				cerc.scrollFactor.set(0.7, 0.7);
+				cerc.updateHitbox();
+				add(cerc);
+				
+				var ground:FlxSprite = new FlxSprite(-500, 167).loadGraphic(Paths.image(songName == 'faker self' ? stageSkr + 'tadiground' : stageSkr + 'ground'));
+				ground.setGraphicSize(Std.int(ground.height * 2.3));
+				ground.updateHitbox();
+				add(ground);
+				
+				var it:FlxSprite = new FlxSprite(-100, 390).loadGraphic(Paths.image(stageSkr + 'item'));
+				it.setGraphicSize(Std.int(it.height * 1.6));
+				it.updateHitbox();
+				add(it);
+				
+				var it2:FlxSprite = new FlxSprite(846, 450).loadGraphic(Paths.image(stageSkr + 'item2'));
+				it2.setGraphicSize(Std.int(it.height * 2));
+				it2.updateHitbox();
+				add(it2);
+				
+				var gag:FlxSprite = new FlxSprite(-350, 520).loadGraphic(Paths.image(stageSkr + 'Gangorra'));
+				gag.updateHitbox();
+				foreground.add(gag);
+				
+				var kr:FlxSprite = new FlxSprite(1800, 420).loadGraphic(Paths.image(stageSkr + 'balanco'));
+				kr.setGraphicSize(Std.int(kr.height * 1.010));
+				kr.updateHitbox();
+				foreground.add(kr);
+				
+				var skr:FlxSprite = new FlxSprite(-600, -600).loadGraphic(Paths.image(songName == 'faker self' ? stageSkr + 'tadishad' : stageSkr + 'shad'));
+				skr.setGraphicSize(Std.int(skr.height * 2.4));
+				skr.alpha = 0.56;
+				skr.updateHitbox();
+				foreground.add(skr);
 				
 			case "stageg":
-			  this.curStage = "stageg";
-        stageSkr = stSkr + 'luke/';
-			  camZoom = 0.7;
+				this.curStage = "stageg";
+				stageSkr = stSkr + 'luke/';
+				camZoom = 0.7;
 			
-			  bfPos.x += 200;
+				bfPos.x += 200;
 				dadPos.x += 350;
 				bfPos.y += 100;
 				dadPos.y += 130;
@@ -269,7 +272,7 @@ class Stage extends FlxGroup
 				dadCam.y -= 20;
 				bfCam.x -= 25;
 
-			  var back = new FlxSprite(0, -700).loadGraphic(Paths.image(stageSkr + 'back'));
+				var back = new FlxSprite(0, -700).loadGraphic(Paths.image(stageSkr + 'back'));
 				back.setGraphicSize(Std.int(back.width * 2.67));
 				back.updateHitbox();
 				back.scrollFactor.set(0.1, 0.1);
@@ -346,7 +349,7 @@ class Stage extends FlxGroup
 				foreground.add(eh);
 				
 			case "daylegacy":
-        stageSkr = stSkr + 'legacy/';
+				stageSkr = stSkr + 'legacy/';
 				camZoom = 0.675;
 				
 				bfPos.x = 1470;
@@ -361,58 +364,58 @@ class Stage extends FlxGroup
 				
 				var fundo = new FlxSprite(-200, -200).loadGraphic(Paths.image(stageSkr + "gabofundotarde0009"));
 				fundo.setGraphicSize(Std.int(fundo.width * 2));
-				fundo.scrollFactor.set(0.1,0.1);
+				fundo.scrollFactor.set(0.1, 0.1);
 				add(fundo);
 				
 				var coisa = new FlxSprite(-25, 600).loadGraphic(Paths.image(stageSkr + "gabofundotarde0008"));
 				coisa.setGraphicSize(Std.int(coisa.width * 1.9));
-				coisa.scrollFactor.set(0.78,0.85);
+				coisa.scrollFactor.set(0.78, 0.85);
 				add(coisa);
 				
 				var nuvens = new FlxSprite(-120, 570).loadGraphic(Paths.image(stageSkr + "gabofundotarde0006"));
 				nuvens.setGraphicSize(Std.int(nuvens.width * 2.167));
-				nuvens.scrollFactor.set(0.85,0.87);
+				nuvens.scrollFactor.set(0.85, 0.87);
 				add(nuvens);
 				
 				var sol = new FlxSprite(-50, 300).loadGraphic(Paths.image(stageSkr + "gabofundotarde0007"));
 				sol.setGraphicSize(Std.int(sol.width * 1.9));
-				sol.scrollFactor.set(0.75,0.8);
+				sol.scrollFactor.set(0.75, 0.8);
 				add(sol);
 				
 				var arbuto = new FlxSprite(100, 350).loadGraphic(Paths.image(stageSkr + "gabofundotarde0005"));
 				arbuto.setGraphicSize(Std.int(arbuto.width * 2.2));
-				arbuto.scrollFactor.set(0.93,0.91);
+				arbuto.scrollFactor.set(0.93, 0.91);
 				add(arbuto);
 				
 				var predio = new FlxSprite(425, 390).loadGraphic(Paths.image(stageSkr + "gabofundotarde0003"));
 				predio.setGraphicSize(Std.int(predio.width * 2.2267));
-				predio.scrollFactor.set(0.92,0.9);
+				predio.scrollFactor.set(0.92, 0.9);
 				add(predio);
 				
 				var th = new FlxSprite(210, 390).loadGraphic(Paths.image(stageSkr + "gabofundotarde0004"));
 				th.setGraphicSize(Std.int(th.width * 2.067));
-				th.scrollFactor.set(0.95,0.95);
+				th.scrollFactor.set(0.95, 0.95);
 				add(th);
 				
 				var rua = new FlxSprite(210, 340).loadGraphic(Paths.image(stageSkr + "gabofundotarde0002"));
 				rua.setGraphicSize(Std.int(rua.width * 2.1267));
-				rua.scrollFactor.set(0.9,0.9);
+				rua.scrollFactor.set(0.9, 0.9);
 				add(rua);
 				
 				var chao = new FlxSprite(210, 360).loadGraphic(Paths.image(stageSkr + "gabofundotarde0001"));
 				chao.setGraphicSize(Std.int(chao.width * 2.1267));
-				chao.scrollFactor.set(0.9,0.9);
+				chao.scrollFactor.set(0.9, 0.9);
 				add(chao);
 				
 				var frente = new FlxSprite(-260, 0).loadGraphic(Paths.image(stageSkr + "gabofundotarde0009"));
 				frente.setGraphicSize(Std.int(frente.width * 2.9));
-				frente.scrollFactor.set(0.1,0.1);
+				frente.scrollFactor.set(0.1, 0.1);
 				frente.alpha = 0.25;
 				frente.blend = BlendMode.SCREEN; 
 				foreground.add(frente);
 				
 			case "nightlegacy":
-        stageSkr = stSkr + 'legacy/';
+				stageSkr = stSkr + 'legacy/';
 				camZoom = 0.767;
 				
 				bfPos.x = 1470;
@@ -424,42 +427,42 @@ class Stage extends FlxGroup
 				
 				var fundo = new FlxSprite(0, 0).loadGraphic(Paths.image(stageSkr + "gabofundonoite0008"));
 				fundo.setGraphicSize(Std.int(fundo.width * 2));
-				fundo.scrollFactor.set(0.1,0.1);
+				fundo.scrollFactor.set(0.1, 0.1);
 				add(fundo);
 				
 				var nuvens = new FlxSprite(-120, 570).loadGraphic(Paths.image(stageSkr + "gabofundotarde0006"));
 				nuvens.setGraphicSize(Std.int(nuvens.width * 2.167));
-				nuvens.scrollFactor.set(0.85,0.87);
+				nuvens.scrollFactor.set(0.85, 0.87);
 				add(nuvens);
 				
 				var sol = new FlxSprite(-50, 650).loadGraphic(Paths.image(stageSkr + "gabofundonoite0007"));
 				sol.setGraphicSize(Std.int(sol.width * 1.9));
-				sol.scrollFactor.set(0.75,0.8);
+				sol.scrollFactor.set(0.75, 0.8);
 				add(sol);
 				
 				var arbuto = new FlxSprite(100, 350).loadGraphic(Paths.image(stageSkr + "gabofundotarde0005"));
 				arbuto.setGraphicSize(Std.int(arbuto.width * 2.2));
-				arbuto.scrollFactor.set(0.93,0.91);
+				arbuto.scrollFactor.set(0.93, 0.91);
 				add(arbuto);
 				
 				var predio = new FlxSprite(425, 390).loadGraphic(Paths.image(stageSkr + "gabofundotarde0003"));
 				predio.setGraphicSize(Std.int(predio.width * 2.2267));
-				predio.scrollFactor.set(0.92,0.9);
+				predio.scrollFactor.set(0.92, 0.9);
 				add(predio);
 				
 				var th = new FlxSprite(210, 390).loadGraphic(Paths.image(stageSkr + "gabofundotarde0004"));
 				th.setGraphicSize(Std.int(th.width * 2.067));
-				th.scrollFactor.set(0.95,0.95);
+				th.scrollFactor.set(0.95, 0.95);
 				add(th);
 				
 				var rua = new FlxSprite(210, 340).loadGraphic(Paths.image(stageSkr + "gabofundotarde0002"));
 				rua.setGraphicSize(Std.int(rua.width * 2.1267));
-				rua.scrollFactor.set(0.9,0.9);
+				rua.scrollFactor.set(0.9, 0.9);
 				add(rua);
 				
 				var chao = new FlxSprite(210, 360).loadGraphic(Paths.image(stageSkr + "gabofundotarde0001"));
 				chao.setGraphicSize(Std.int(chao.width * 2.1267));
-				chao.scrollFactor.set(0.9,0.9);
+				chao.scrollFactor.set(0.9, 0.9);
 				add(chao);
 				
 				var frente = new FlxSprite(0, 120).loadGraphic(Paths.image(stageSkr + "gabofundonoite0008"));
@@ -468,13 +471,13 @@ class Stage extends FlxGroup
 				frente.blend = BlendMode.MULTIPLY;
 				foreground.add(frente);
 				
-			case "legacymoogus": //piadas fools
+			case "legacymoogus": // piadas fools
 				this.curStage = "legacymoogus";
-        stageSkr = stSkr + 'moogus/';
-			  camZoom = 0.6;
+				stageSkr = stSkr + 'moogus/';
+				camZoom = 0.6;
 			
 				// uh
-			  bfPos.x += 450;
+				bfPos.x += 450;
 				bfPos.y += 150;
 				
 				dadPos.x += 450;
@@ -526,54 +529,54 @@ class Stage extends FlxGroup
 	
 	private function lapoluzStepHit(curStep:Int):Void
 	{
-	    switch(curStep)
-	    {
-	        case 128: tweenCamZoom(1, 5.50, FlxEase.sineInOut);
-	        case 256: tweenCamZoom(0.675, 0.453);
-	        case 320: tweenCamZoom(0.715, 0.453);
-	        case 352: tweenCamZoom(0.915, 0.453);
-	        case 356: tweenCamZoom(0.715, 0.453);
-	        case 358: tweenCamZoom(0.815, 0.453);
-	        case 362: tweenCamZoom(0.715, 0.453);
-	        case 364: tweenCamZoom(0.635, 0.453);
-	        case 380: tweenCamZoom(0.605, 0.453);
-	        case 382: tweenCamZoom(0.635, 0.453);
-	        case 384: tweenCamZoom(0.715, 0.453);
-	        case 512: tweenCamZoom(1.0, 0.453);
-	        case 539: tweenCamZoom(1.25, 0.453);
-	        case 544: tweenCamZoom(1.0, 0.453);
-	        case 576: tweenCamZoom(1.15, 0.453);
-	        case 640: tweenCamZoom(1.0, 0.453);
-	        case 667: tweenCamZoom(1.25, 0.453);
-	        case 672: tweenCamZoom(1.0, 0.453);
-	        case 704: tweenCamZoom(1.15, 0.453);
-	        case 768: tweenCamZoom(1.0, 0.453);
-	        case 910: tweenCamZoom(0.915, 0.453);
-	        case 918: tweenCamZoom(0.815, 0.453);
-	        case 960: tweenCamZoom(1.0, 0.453);
-	        case 976: tweenCamZoom(0.915, 0.453);
-	        case 1008: tweenCamZoom(0.635, 0.453);
-	        case 1016: tweenCamZoom(0.605, 0.453);
-	        case 1026: tweenCamZoom(0.635, 0.453);
-	        case 1068: tweenCamZoom(0.915, 0.453);
-	        case 1090: tweenCamZoom(0.815, 0.453);
-	        case 1136: tweenCamZoom(0.605, 0.453);
-	        case 1152: tweenCamZoom(0.815, 0.453);
-	        case 1280: tweenCamZoom(1.15, 0.453);
-	        case 1344: tweenCamZoom(1.25, 0.453);
-	        case 1408: tweenCamZoom(0.635, 0.453);
-	    }
+		switch(curStep)
+		{
+			case 128: tweenCamZoom(1, 5.50, FlxEase.sineInOut);
+			case 256: tweenCamZoom(0.675, 0.453);
+			case 320: tweenCamZoom(0.715, 0.453);
+			case 352: tweenCamZoom(0.915, 0.453);
+			case 356: tweenCamZoom(0.715, 0.453);
+			case 358: tweenCamZoom(0.815, 0.453);
+			case 362: tweenCamZoom(0.715, 0.453);
+			case 364: tweenCamZoom(0.635, 0.453);
+			case 380: tweenCamZoom(0.605, 0.453);
+			case 382: tweenCamZoom(0.635, 0.453);
+			case 384: tweenCamZoom(0.715, 0.453);
+			case 512: tweenCamZoom(1.0, 0.453);
+			case 539: tweenCamZoom(1.25, 0.453);
+			case 544: tweenCamZoom(1.0, 0.453);
+			case 576: tweenCamZoom(1.15, 0.453);
+			case 640: tweenCamZoom(1.0, 0.453);
+			case 667: tweenCamZoom(1.25, 0.453);
+			case 672: tweenCamZoom(1.0, 0.453);
+			case 704: tweenCamZoom(1.15, 0.453);
+			case 768: tweenCamZoom(1.0, 0.453);
+			case 910: tweenCamZoom(0.915, 0.453);
+			case 918: tweenCamZoom(0.815, 0.453);
+			case 960: tweenCamZoom(1.0, 0.453);
+			case 976: tweenCamZoom(0.915, 0.453);
+			case 1008: tweenCamZoom(0.635, 0.453);
+			case 1016: tweenCamZoom(0.605, 0.453);
+			case 1026: tweenCamZoom(0.635, 0.453);
+			case 1068: tweenCamZoom(0.915, 0.453);
+			case 1090: tweenCamZoom(0.815, 0.453);
+			case 1136: tweenCamZoom(0.605, 0.453);
+			case 1152: tweenCamZoom(0.815, 0.453);
+			case 1280: tweenCamZoom(1.15, 0.453);
+			case 1344: tweenCamZoom(1.25, 0.453);
+			case 1408: tweenCamZoom(0.635, 0.453);
+		}
 	}
 	
 	private function tweenCamZoom(zoomAlvo:Float, duracao:Float = 0.95, ?ease:Dynamic):Void
 	{
-	    FlxTween.cancelTweensOf(PlayState, ["defaultCamZoom"]);
-	    
-	    if (ease == null) ease = FlxEase.quadInOut;
-	    
-	    FlxTween.tween(PlayState, {defaultCamZoom: zoomAlvo}, duracao, {
-	        ease: ease
-	    });
+		FlxTween.cancelTweensOf(PlayState, ["defaultCamZoom"]);
+		
+		if (ease == null) ease = FlxEase.quadInOut;
+		
+		FlxTween.tween(PlayState, {defaultCamZoom: zoomAlvo}, duracao, {
+			ease: ease
+		});
 	}
 
 	public function getGfVersion(curStage:String)
@@ -584,7 +587,7 @@ class Stage extends FlxGroup
 		return switch(curStage)
 		{
 			case "mugen": "no-gf";
-			case "school"|"school-evil": "gf-pixel";
+			case "school" | "school-evil": "gf-pixel";
 			default: "gf";
 		}
 	}
@@ -601,6 +604,7 @@ class Stage extends FlxGroup
 		// if(curStep % 4 == 0)
 		
 		if (PlayState.SONG == null) return;
+
 		switch(songName)
 		{
 			case "lapoluz":
@@ -615,27 +619,32 @@ class Stage extends FlxGroup
 	public function beatHit(curBeat:Int = -1)
 	{
 		switch(curStage)
-    {
+		{
 			case "stageg":
-			   if (curBeat % 2 == 0)
-				   staticSpr.animation.play('idle', true);
+				if (curBeat % 2 == 0)
+					staticSpr.animation.play('idle', true);
 		}
 	}
 
 	public function callScript(fun:String, ?args:Array<Dynamic>)
 	{
-		for(i in 0...loadedScripts.length) {
+		for(i in 0...loadedScripts.length) 
+		{
 			if(scripted[i] != curStage)
 				continue;
 
 			var script:Iris = loadedScripts[i];
 
-			@:privateAccess {
+			@:privateAccess 
+			{
 				var ny: Dynamic = script.interp.variables.get(fun);
-				try {
+				try 
+				{
 					if(ny != null && Reflect.isFunction(ny))
 						script.call(fun, args);
-				} catch(e) {
+				} 
+				catch(e) 
+				{
 					Logs.print('error parsing script: ' + e, ERROR);
 				}
 			}
