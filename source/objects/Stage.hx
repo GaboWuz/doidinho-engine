@@ -46,10 +46,10 @@ class Stage extends FlxGroup
   var stSkr:String = "stages/";
   var stageSkr:String = "";
 
-  var songName:String = PlayState.SONG.song.toLowerCase();
-
 	// coisas públicas
 	var staticSpr:FlxSprite;
+
+  var songName:String = "";
 
 	public function new() {
 		super();
@@ -60,6 +60,8 @@ class Stage extends FlxGroup
 	public function reloadStageFromSong(song:String = "test", gfSong:String = "stage-set"):Void
 	{
 		var stageList:Array<String> = [];
+
+    songName = song.toLowerCase();
 		
 		stageList = switch(song)
 		{
@@ -184,6 +186,8 @@ class Stage extends FlxGroup
 			
 				bfCam.x = -300;
 				dadCam.x = 100;
+
+        var songName:String = PlayState.SONG.song.toLowerCase();
         
 			  var sky:FlxSprite = new FlxSprite(-500, -500).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), songName == 'faker-self' ? 0xFFffdcb6 : 0xFFcef1ff);
         sky.scrollFactor.set(0.1, 0.1);
