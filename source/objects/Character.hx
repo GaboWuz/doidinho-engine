@@ -98,8 +98,6 @@ class Character extends FlxAnimate
 					['ded',	'ded', 24, false],
 				];
 			scale.set(1.1, 1.1);
-<<<<<<< HEAD
-
       case "kevin":
 				doidoChar.spritesheet += 'faker/faker_ersset';
 				
@@ -111,9 +109,7 @@ class Character extends FlxAnimate
 					['singLEFT',	'left', 24, false],
 				];
 			scale.set(1.1, 1.1);
-=======
->>>>>>> f482111bc25f599f44388d92c07bd8e03d264855
-			
+        
 			case "mortonaofala":
 				doidoChar.spritesheet += 'gabo/gagbis_ded';
 				
