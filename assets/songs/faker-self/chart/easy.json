@@ -1,7 +1,11 @@
 {
 	"song": {
 		"player1": "boof",
+<<<<<<< HEAD
+		"player2": "kevin",
+=======
 		"player2": "faker",
+>>>>>>> f482111bc25f599f44388d92c07bd8e03d264855
 		"events": [],
 		"notes": [
 			{
@@ -6487,7 +6491,11 @@
 		"splashSkin": "noteSplashes",
 		"song": "Faker Self",
 		"validScore": true,
+<<<<<<< HEAD
+		"stage": "picnic",
+=======
 		"stage": "stage",
+>>>>>>> f482111bc25f599f44388d92c07bd8e03d264855
 		"arrowSkin": "",
 		"needsVoices": true,
 		"speed": 2.7,
