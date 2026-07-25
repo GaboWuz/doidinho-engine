@@ -189,8 +189,6 @@ class Stage extends FlxGroup
 			
 				bfCam.x = -300;
 				dadCam.x = 100;
-
-				var songName:String = PlayState.SONG.song.toLowerCase();
 				
 				var sky:FlxSprite = new FlxSprite(-500, -500).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), songName == 'faker-self' ? 0xFFffdcb6 : 0xFFcef1ff);
 				sky.scrollFactor.set(0.1, 0.1);
@@ -206,18 +204,13 @@ class Stage extends FlxGroup
 				clouds.velocity.x = 20;
 				add(clouds);
 
-				if (songName == 'gaboegae')
-				{
-					// nada
-				}
-
-				var caac:FlxSprite = new FlxSprite(-300, -235).loadGraphic(Paths.image(songName == 'faker self' ? stageSkr + 'tadicasa' : stageSkr + 'casa'));
+				var caac:FlxSprite = new FlxSprite(-300, -235).loadGraphic(Paths.image(songName == 'faker-self' ? stageSkr + 'tadicasa' : stageSkr + 'casa'));
 				caac.setGraphicSize(Std.int(caac.height * 1.3));
 				caac.scrollFactor.set(0.57, 0.57);
 				caac.updateHitbox();
 				add(caac);
 				
-				var saas:FlxSprite = new FlxSprite(1285, -165).loadGraphic(Paths.image(songName == 'faker self' ? stageSkr + 'tadicasa2' : stageSkr + 'casa2'));
+				var saas:FlxSprite = new FlxSprite(1285, -165).loadGraphic(Paths.image(songName == 'faker-self' ? stageSkr + 'tadicasa2' : stageSkr + 'casa2'));
 				saas.setGraphicSize(Std.int(saas.height * 1.7));
 				saas.scrollFactor.set(0.62, 0.62);
 				saas.updateHitbox();
@@ -229,7 +222,7 @@ class Stage extends FlxGroup
 				cerc.updateHitbox();
 				add(cerc);
 				
-				var ground:FlxSprite = new FlxSprite(-500, 167).loadGraphic(Paths.image(songName == 'faker self' ? stageSkr + 'tadiground' : stageSkr + 'ground'));
+				var ground:FlxSprite = new FlxSprite(-500, 167).loadGraphic(Paths.image(songName == 'faker-self' ? stageSkr + 'tadiground' : stageSkr + 'ground'));
 				ground.setGraphicSize(Std.int(ground.height * 2.3));
 				ground.updateHitbox();
 				add(ground);
@@ -253,7 +246,7 @@ class Stage extends FlxGroup
 				kr.updateHitbox();
 				foreground.add(kr);
 				
-				var skr:FlxSprite = new FlxSprite(-600, -600).loadGraphic(Paths.image(songName == 'faker self' ? stageSkr + 'tadishad' : stageSkr + 'shad'));
+				var skr:FlxSprite = new FlxSprite(-600, -600).loadGraphic(Paths.image(songName == 'faker-self' ? stageSkr + 'tadishad' : stageSkr + 'shad'));
 				skr.setGraphicSize(Std.int(skr.height * 2.4));
 				skr.alpha = 0.56;
 				skr.updateHitbox();
