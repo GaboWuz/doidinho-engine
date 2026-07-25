@@ -66,7 +66,7 @@ class Stage extends FlxGroup
 			default: ["stage"];
 			
 			case "sixxey": ["picnic"];
-      case "faker-self": ["semstage"];
+      case "faker-self": ["picnic"];
 			case "redkid": ["stageg"];
 			
 			case "lapoluz": ["daylegacy"];
