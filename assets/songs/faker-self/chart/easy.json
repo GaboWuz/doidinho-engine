@@ -1,7 +1,7 @@
 {
 	"song": {
 		"player1": "boof",
-		"player2": "kevin",
+		"player2": "kevinangry",
 		"events": [],
 		"notes": [
 			{
@@ -6483,7 +6483,7 @@
 				"mustHitSection": true
 			}
 		],
-		"gfVersion": "idklool",
+		"gfVersion": "geef",
 		"splashSkin": "noteSplashes",
 		"song": "Faker Self",
 		"validScore": true,

@@ -99,6 +99,8 @@ class HealthIcon extends FlxSprite
 			"gabo"		=> 0xFF8668FF,
 			"luka"		=> 0xFFE45D9E,
 			"boof"		=> 0xFF78ACE1,
+			"kevin"		=> 0xFFB9B1EF,
+      "kevinangry"		=> 0xFFB9B1EF,
 			// primeiro de abril
 			"susbo"		=> 0xFF8F83E1,
 			"kyzu"		=> 0xFFEAE7FF,

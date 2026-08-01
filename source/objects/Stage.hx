@@ -183,7 +183,11 @@ class Stage extends FlxGroup
 				this.curStage = "picnic";
 				camZoom = 0.657;
 			
-				gfPos.set(-750, 920);
+				if (songName == 'sixxey'){
+          gfPos.set(-750, 920);
+        } else {
+          gfPos.set(1280, 800);
+        }
 				dadPos.set(500, 760);
 				bfPos.set(1512, 770);
 			
