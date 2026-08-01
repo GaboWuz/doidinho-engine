@@ -110,6 +110,18 @@ class Character extends FlxAnimate
 					['singLEFT',	'left', 24, false],
 				];
 			scale.set(1.1, 1.1);
+
+     case "kevinangry":
+				doidoChar.spritesheet += 'faker/faker_angersset';
+				
+				doidoChar.anims = [
+					['idle',		'fakerangry', 24, false],
+					['singRIGHT',	'right', 24, false],
+					['singDOWN', 	'down', 24, false],
+					['singUP', 		'up', 24, false],
+					['singLEFT',	'left', 24, false],
+				];
+			scale.set(1.1, 1.1);
         
 			case "mortonaofala":
 				doidoChar.spritesheet += 'gabo/gagbis_ded';
