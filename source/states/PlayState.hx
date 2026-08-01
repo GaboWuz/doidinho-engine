@@ -360,7 +360,7 @@ class PlayState extends MusicBeatState
     }
 
     if (SONG.song == "sixxey") {
-      hasExtra = true;
+      // hasExtra = true;
 			characters.push(dad);
 			characters.push(boyfriend);
 			characters.push(gf);
