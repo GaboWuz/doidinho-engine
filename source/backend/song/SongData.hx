@@ -48,7 +48,7 @@ class SongData
 		{
 			songs: [
 				['sixxey', 'gabo'],
-				['faker-self', 'faker'],
+				['faker-self', 'kevin'],
 				['redkid', 'luka'],
 			],
 			weekFile: 'week1',
