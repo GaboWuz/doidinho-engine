@@ -18,22 +18,39 @@ class HealthIcon extends FlxSprite
 	public function setIcon(curIcon:String = "face", isPlayer:Bool = false):HealthIcon
 	{
 		this.curIcon = curIcon;
+		
 		if(!Paths.fileExists('images/icons/icon-${curIcon}.png'))
 		{
-			if(curIcon.contains('-'))
-				return setIcon(CharacterUtil.formatChar(curIcon), isPlayer);
-			else
+			if(curIcon != "face")
+			{
+				if(curIcon.contains('-'))
+				{
+					var formatted = CharacterUtil.formatChar(curIcon);
+					if(formatted != curIcon)
+						return setIcon(formatted, isPlayer);
+				}
 				return setIcon("face", isPlayer);
+			}
 		}
 
 		var iconGraphic = Paths.image("icons/icon-" + curIcon);
+		
+		if(iconGraphic == null)
+		{
+			if(curIcon != "face") 
+				return setIcon("face", isPlayer);
+				
+			return this;
+		}
 
 		maxFrames = Math.floor(iconGraphic.width / 150);
+		if(maxFrames <= 0) maxFrames = 1; 
 
 		loadGraphic(iconGraphic, true, Math.floor(iconGraphic.width / maxFrames), iconGraphic.height);
 
 		antialiasing = FlxSprite.defaultAntialiasing;
 		isPixelSprite = false;
+		
 		if(curIcon.contains('pixel'))
 		{
 			antialiasing = false;
@@ -89,21 +106,24 @@ class HealthIcon extends FlxSprite
 			"mortonaofala"		=> 0xFFEAE7FF,
 		];
 
-		function loopMap()
+		var curChar:String = char;
+		
+		while(!colorMap.exists(curChar))
 		{
-			if(!colorMap.exists(char))
+			if(curChar != "face" && curChar.contains('-'))
 			{
-				if(char.contains('-'))
-				{
-					char = CharacterUtil.formatChar(char);
-					loopMap();
-				}
+				var formatted = CharacterUtil.formatChar(curChar);
+				if(formatted == curChar)
+					curChar = "face";
 				else
-					char = "face";
+					curChar = formatted;
+			}
+			else
+			{
+				curChar = "face";
 			}
 		}
-		loopMap();
 
-		return colorMap.get(char);
+		return colorMap.get(curChar);
 	}
 }
